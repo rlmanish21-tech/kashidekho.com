@@ -1,0 +1,2181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kashi Yatra — Sacred Tours of Varanasi</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Varanasi Saffron — deeper, richer burnt orange */
+  --saffron:#B84000; --saffron-light:#D95C1A; --saffron-glow:rgba(184,64,0,.18);
+  /* Kashi Gold — warm antique gold */
+  --gold:#9A6A00; --gold-light:#C8900A; --gold-pale:#F5E9C8;
+  /* Maroon — deep temple red */
+  --maroon:#6B0F0F; --maroon-light:#8C1515;
+  /* Neutrals — aged parchment & ivory */
+  --cream:#FAF3E8; --off-white:#F5ECD8; --parchment:#EDE0C4;
+  /* Text */
+  --text:#120D06; --text-muted:#5C4A32; --text-light:#8C7458;
+  /* UI */
+  --border:#DDD0B8; --border-light:#EDE0C4; --white:#FFFFFF;
+  /* Shadows — warmer, deeper */
+  --shadow-sm:0 1px 5px rgba(60,30,0,.09); --shadow-md:0 6px 24px rgba(60,30,0,.13); --shadow-lg:0 16px 48px rgba(60,30,0,.18);
+  /* Ayodhya accent — rose gold / marigold */
+  --ayodhya:#C2600A; --ayodhya-pale:#FDF0E3;
+  /* Prayagraj accent — deep river blue-teal */
+  --prayagraj:#1A5276; --prayagraj-pale:#EAF4FB;
+  /* Vindhyachal accent — forest sage */
+  --vindhya:#3D5A2E; --vindhya-pale:#EDF5E5;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--cream);overflow-x:hidden}
+
+/* ── UTILITY BAR ── */
+.util-bar{background:var(--maroon);padding:.42rem 2rem;display:flex;justify-content:space-between;align-items:center;font-size:.72rem;color:rgba(255,255,255,.8)}
+.util-bar a{color:rgba(255,255,255,.8);text-decoration:none;transition:color .2s}
+.util-bar a:hover{color:#fff}
+.util-left{display:flex;gap:1.8rem;align-items:center}
+.util-right{display:flex;gap:1.5rem;align-items:center}
+.util-bar svg{width:14px;height:14px;margin-right:.3rem;vertical-align:middle;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.util-phone{color:#fff!important;font-weight:600;letter-spacing:.02em}
+
+/* ── NAV ── */
+nav{
+  position:sticky;top:0;z-index:900;background:#fff;
+  border-bottom:1px solid var(--border);
+  padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;
+  box-shadow:var(--shadow-sm);
+}
+.nav-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;cursor:pointer}
+.nav-logo-icon{width:38px;height:38px}
+.nav-logo-text{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--text)}
+.nav-logo-text span{color:var(--saffron)}
+.nav-links{display:flex;gap:.2rem;list-style:none;align-items:center}
+.nav-links li a{
+  padding:.5rem .85rem;font-size:.78rem;font-weight:500;color:var(--text-muted);
+  text-decoration:none;cursor:pointer;border-radius:4px;transition:color .2s,background .2s;white-space:nowrap;
+}
+.nav-links li a:hover{color:var(--saffron);background:rgba(212,82,10,.05)}
+.nav-cta{background:var(--saffron)!important;color:#fff!important;border-radius:4px!important;padding:.5rem 1.3rem!important;font-weight:600!important;transition:background .2s,box-shadow .2s!important}
+.nav-cta:hover{background:var(--saffron-light)!important;box-shadow:0 4px 12px rgba(212,82,10,.35)!important}
+
+/* ── HERO ── */
+.hero{position:relative;height:680px;overflow:hidden}
+.hero-bg{
+  position:absolute;inset:0;
+  background:url('https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=1920&auto=format&fit=crop&q=90') center 40%/cover no-repeat;
+  animation:hero-zoom 18s ease-in-out infinite alternate;
+}
+@keyframes hero-zoom{from{transform:scale(1.02)}to{transform:scale(1.07)}}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(8,3,0,.85) 0%,rgba(12,5,0,.6) 50%,rgba(8,3,0,.25) 100%)}
+.hero-content{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 4rem;max-width:640px}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:rgba(212,82,10,.9);color:#fff;
+  padding:.28rem .85rem;border-radius:20px;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  margin-bottom:1.2rem;width:fit-content;
+}
+.hero-tag svg{width:12px;height:12px;fill:currentColor}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5vw,3.8rem);line-height:1.1;color:#fff;font-weight:800;margin-bottom:.8rem}
+.hero-title span{color:var(--gold-light)}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:2rem;font-weight:300}
+.hero-btns{display:flex;gap:.9rem;flex-wrap:wrap}
+.btn-fill{background:var(--saffron);color:#fff;padding:.82rem 2rem;font-size:.82rem;font-weight:600;border:none;cursor:pointer;border-radius:4px;transition:background .25s,box-shadow .25s;letter-spacing:.02em}
+.btn-fill:hover{background:var(--saffron-light);box-shadow:0 6px 20px rgba(212,82,10,.4)}
+.btn-ghost{background:transparent;color:#fff;padding:.82rem 2rem;font-size:.82rem;font-weight:500;border:1.5px solid rgba(255,255,255,.55);cursor:pointer;border-radius:4px;transition:border-color .25s,background .25s;letter-spacing:.02em}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+
+/* ── SEARCH / ENQUIRY BAR ── */
+.search-bar-wrap{background:#fff;border-radius:6px;box-shadow:0 8px 32px rgba(0,0,0,.18);margin:0 4rem;margin-top:-52px;position:relative;z-index:10;display:flex;align-items:stretch;overflow:hidden;border:1px solid var(--border)}
+.search-field{flex:1;display:flex;flex-direction:column;padding:.9rem 1.2rem;border-right:1px solid var(--border);cursor:pointer;transition:background .2s}
+.search-field:hover{background:var(--off-white)}
+.search-field:last-of-type{border-right:none}
+.sf-label{font-size:.67rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted);margin-bottom:.25rem}
+.sf-val{font-size:.9rem;font-weight:500;color:var(--text)}
+.sf-placeholder{font-size:.88rem;color:var(--text-light)}
+.search-bar-wrap select,.search-bar-wrap input{
+  width:100%;border:none;outline:none;background:transparent;font-size:.9rem;font-weight:500;color:var(--text);font-family:'Inter',sans-serif;cursor:pointer;
+}
+.search-bar-wrap select option{background:#fff}
+.search-btn{background:var(--saffron);color:#fff;border:none;padding:0 2rem;cursor:pointer;font-size:.82rem;font-weight:600;letter-spacing:.04em;transition:background .2s;display:flex;align-items:center;gap:.5rem;white-space:nowrap}
+.search-btn:hover{background:var(--saffron-light)}
+.search-btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.5}
+
+/* ── TRUST STRIP ── */
+.trust-strip{background:var(--off-white);border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;justify-content:center;gap:3.5rem;flex-wrap:wrap;margin-top:1.5rem}
+.trust-item{display:flex;align-items:center;gap:.55rem;font-size:.8rem;color:var(--text-muted);font-weight:500}
+.trust-item svg{width:20px;height:20px;color:var(--saffron);flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.8}
+.trust-item strong{color:var(--text)}
+
+/* ── SECTION COMMONS ── */
+.section{padding:5rem 2rem}
+.section-wrap{max-width:1240px;margin:0 auto}
+.sec-header{margin-bottom:2.8rem}
+.sec-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--saffron);margin-bottom:.5rem;display:block}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3vw,2.4rem);color:var(--text);line-height:1.15;margin-bottom:.5rem}
+.sec-title span{color:var(--saffron)}
+.sec-sub{font-size:.95rem;color:var(--text-muted);line-height:1.7;max-width:520px}
+.sec-divider{width:48px;height:3px;background:var(--saffron);border-radius:2px;margin:.9rem 0}
+.see-all{font-size:.8rem;font-weight:600;color:var(--saffron);text-decoration:none;display:inline-flex;align-items:center;gap:.3rem;cursor:pointer;transition:gap .2s}
+.see-all:hover{gap:.6rem}
+.sec-header-row{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+
+/* ── DESTINATION CARDS ── */
+.destinations{background:#fff}
+.dest-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.4rem}
+.dest-card{border-radius:8px;overflow:hidden;background:#fff;border:1px solid var(--border);cursor:pointer;transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s}
+.dest-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.dest-card-img{height:200px;overflow:hidden;position:relative}
+.dest-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;display:block}
+.dest-card:hover .dest-card-img img{transform:scale(1.07)}
+.dest-badge{position:absolute;top:.7rem;left:.7rem;background:rgba(122,16,16,.88);color:#fff;font-size:.65rem;font-weight:600;padding:.22rem .65rem;border-radius:20px;letter-spacing:.06em;text-transform:uppercase}
+.dest-card-body{padding:1.1rem 1.2rem 1.3rem}
+.dest-card-loc{display:flex;align-items:center;gap:.3rem;font-size:.72rem;color:var(--text-light);margin-bottom:.35rem;font-weight:500}
+.dest-card-loc svg{width:12px;height:12px;fill:none;stroke:var(--saffron);stroke-width:2}
+.dest-card-name{font-family:'Playfair Display',serif;font-size:1.12rem;font-weight:700;color:var(--text);margin-bottom:.45rem}
+.dest-card-desc{font-size:.82rem;color:var(--text-muted);line-height:1.6;margin-bottom:.9rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.dest-card-footer{display:flex;align-items:center;justify-content:space-between}
+.dest-explore{font-size:.75rem;font-weight:600;color:var(--saffron);display:inline-flex;align-items:center;gap:.3rem;transition:gap .25s}
+.dest-card:hover .dest-explore{gap:.6rem}
+.dest-explore svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2.5}
+
+/* ── TOUR PACKAGES ── */
+.tours{background:var(--off-white)}
+.tour-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:1.4rem}
+.tour-card{background:#fff;border-radius:8px;border:1px solid var(--border);overflow:hidden;cursor:pointer;transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s}
+.tour-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.tour-card-img{height:185px;overflow:hidden;position:relative}
+.tour-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.tour-card:hover .tour-card-img img{transform:scale(1.07)}
+.tour-card-ribbon{position:absolute;top:.7rem;left:.7rem;background:var(--saffron);color:#fff;font-size:.63rem;font-weight:700;padding:.22rem .65rem;border-radius:20px;letter-spacing:.08em;text-transform:uppercase}
+.tour-card-body{padding:1.2rem 1.3rem 1.4rem}
+.tour-card-days{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--saffron);margin-bottom:.35rem;display:flex;align-items:center;gap:.35rem}
+.tour-card-days svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2}
+.tour-card-name{font-family:'Playfair Display',serif;font-size:1.18rem;font-weight:700;color:var(--text);margin-bottom:.45rem}
+.tour-card-desc{font-size:.82rem;color:var(--text-muted);line-height:1.6;margin-bottom:1rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tour-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.1rem}
+.tour-tag{background:rgba(212,82,10,.07);color:var(--saffron);font-size:.7rem;font-weight:600;padding:.2rem .6rem;border-radius:20px;border:1px solid rgba(212,82,10,.18)}
+.tour-card-footer{display:flex;align-items:center;justify-content:space-between;padding-top:1rem;border-top:1px solid var(--border)}
+.tour-price-label{font-size:.68rem;color:var(--text-light);font-weight:500}
+.tour-price{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--maroon)}
+.tour-price sub{font-size:.55em;font-family:'Inter',sans-serif;font-weight:500;color:var(--text-muted)}
+.tour-btn{background:var(--saffron);color:#fff;border:none;padding:.6rem 1.3rem;border-radius:4px;font-size:.78rem;font-weight:600;cursor:pointer;transition:background .2s;white-space:nowrap}
+.tour-btn:hover{background:var(--saffron-light)}
+
+/* ── GHATS STRIP ── */
+.ghats-section{background:#fff}
+.ghats-row{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.ghat-item{background:#fff;padding:1.5rem 1.2rem;cursor:pointer;transition:background .25s}
+.ghat-item:hover{background:var(--off-white)}
+.ghat-item svg{width:28px;height:28px;fill:none;stroke:var(--saffron);stroke-width:1.6;margin-bottom:.7rem;display:block}
+.ghat-num{font-size:.65rem;font-weight:700;letter-spacing:.12em;color:var(--text-light);text-transform:uppercase;margin-bottom:.3rem}
+.ghat-name{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--text);margin-bottom:.3rem}
+.ghat-desc{font-size:.75rem;color:var(--text-muted);line-height:1.5}
+
+/* ── AARTI SPLIT ── */
+.aarti-split{background:var(--cream)}
+.aarti-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:1100px;margin:0 auto}
+.aarti-img-wrap{position:relative;border-radius:8px;overflow:hidden;box-shadow:var(--shadow-lg)}
+.aarti-img-wrap img{width:100%;height:460px;object-fit:cover;display:block}
+.aarti-img-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(10,4,0,.8),transparent);padding:2rem 1.4rem .9rem;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.aarti-text .sec-divider{margin:.9rem 0 1.5rem}
+.aarti-text p{font-size:.97rem;color:var(--text-muted);line-height:1.85;margin-bottom:1rem}
+.timings-table{width:100%;border-collapse:collapse;margin-top:1.5rem;border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.timings-table th{background:var(--maroon);color:#fff;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:.65rem 1rem;text-align:left;font-weight:600}
+.timings-table td{padding:.65rem 1rem;font-size:.85rem;border-bottom:1px solid var(--border);color:var(--text)}
+.timings-table tr:last-child td{border-bottom:none}
+.timings-table tr:nth-child(even) td{background:var(--off-white)}
+.timings-table td:last-child{font-weight:600;color:var(--saffron)}
+
+/* ── WHY US ── */
+.why-us{background:var(--maroon)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
+.why-item{text-align:center;padding:1.5rem 1rem}
+.why-icon{width:52px;height:52px;margin:0 auto 1rem;background:rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.why-icon svg{width:26px;height:26px;fill:none;stroke:var(--gold-light);stroke-width:1.8}
+.why-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:.45rem}
+.why-desc{font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.65}
+
+/* ── GALLERY ── */
+.gallery-section{background:#fff}
+.gallery-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:220px 220px;gap:1px;border-radius:8px;overflow:hidden;border:1px solid var(--border)}
+.gal-item{overflow:hidden;cursor:pointer;position:relative}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;display:block}
+.gal-item:hover img{transform:scale(1.07)}
+.gal-item.span-2{grid-row:span 2}
+.gal-label{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,4,0,.7),transparent 55%);opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:.9rem}
+.gal-item:hover .gal-label{opacity:1}
+.gal-label span{font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#fff}
+
+/* ── HOW TO REACH ── */
+.reach-section{background:var(--off-white)}
+.reach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.reach-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:1.8rem 1.4rem;transition:border-color .25s,box-shadow .25s}
+.reach-card:hover{border-color:var(--saffron);box-shadow:0 4px 20px rgba(212,82,10,.12)}
+.reach-card svg{width:36px;height:36px;fill:none;stroke:var(--saffron);stroke-width:1.6;margin-bottom:1rem;display:block}
+.reach-mode{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--text);margin-bottom:.5rem}
+.reach-info{font-size:.82rem;color:var(--text-muted);line-height:1.65}
+
+/* ── CONTACT ── */
+.contact-section{background:linear-gradient(135deg,#0D0500,#1A0800)}
+.contact-wrap{max-width:920px;margin:0 auto}
+.contact-top{text-align:center;margin-bottom:3rem}
+.contact-top .sec-title{color:#fff}
+.contact-top .sec-sub{color:rgba(255,255,255,.55);margin:0 auto}
+.contact-top .sec-divider{margin:.9rem auto}
+.contact-info-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2.5rem}
+.contact-info-item{text-align:center;padding:1.2rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px}
+.contact-info-item svg{width:24px;height:24px;fill:none;stroke:var(--gold-light);stroke-width:1.8;margin:0 auto .6rem;display:block}
+.ci-label{font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(212,160,23,.7);margin-bottom:.3rem}
+.ci-val{font-size:.9rem;color:rgba(255,255,255,.75)}
+.ci-val a{color:var(--gold-light);text-decoration:none}
+.contact-form-wrap{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:2.4rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-bottom:1.2rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-group label{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(212,160,23,.8)}
+.form-group input,.form-group select,.form-group textarea{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+  color:#fff;padding:.75rem 1rem;font-family:'Inter',sans-serif;font-size:.88rem;border-radius:4px;outline:none;
+  transition:border-color .25s,background .25s;
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:rgba(200,144,10,.6);background:rgba(255,255,255,.09)}
+.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,.3)}
+.form-group select option{background:#1A0800;color:#fff}
+.form-group textarea{height:100px;resize:vertical}
+.form-submit{width:100%;padding:1rem;background:var(--saffron);color:#fff;border:none;font-family:'Inter',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:4px;cursor:pointer;transition:background .25s,box-shadow .25s;margin-top:.4rem}
+.form-submit:hover{background:var(--saffron-light);box-shadow:0 6px 20px rgba(212,82,10,.4)}
+
+/* ── FOOTER ── */
+footer{background:#0A0500;border-top:1px solid rgba(255,255,255,.06);padding:3rem 2rem 1.5rem}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;max-width:1200px;margin:0 auto}
+.footer-brand-logo{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:.9rem}
+.footer-brand-logo span{color:var(--saffron)}
+.footer-tagline{font-size:.82rem;color:rgba(255,255,255,.38);line-height:1.75}
+.footer-col h4{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(200,144,10,.7);margin-bottom:1.2rem}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.footer-links a{font-size:.83rem;color:rgba(255,255,255,.38);text-decoration:none;cursor:pointer;transition:color .2s,padding-left .2s}
+.footer-links a:hover{color:rgba(255,255,255,.8);padding-left:4px}
+.footer-bottom{max-width:1200px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem;font-size:.75rem;color:rgba(255,255,255,.25)}
+.back-top{position:fixed;bottom:1.8rem;right:1.8rem;width:44px;height:44px;background:var(--saffron);color:#fff;border:none;cursor:pointer;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(212,82,10,.45);transition:transform .25s,opacity .25s,box-shadow .25s;z-index:800;opacity:0;pointer-events:none}
+.back-top:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(212,82,10,.6)}
+.back-top svg{width:18px;height:18px;fill:none;stroke:#fff;stroke-width:2.5}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s cubic-bezier(.16,1,.3,1),transform .65s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ── MODAL ── */
+.modal-bg{position:fixed;inset:0;z-index:9000;background:rgba(0,0,0,.65);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:1rem;opacity:0;pointer-events:none;transition:opacity .3s}
+.modal-bg.open{opacity:1;pointer-events:all}
+.modal-box{background:#fff;border-radius:10px;max-width:760px;width:100%;max-height:90vh;overflow-y:auto;position:relative;transform:translateY(20px) scale(.98);transition:transform .38s cubic-bezier(.16,1,.3,1);scrollbar-width:thin}
+.modal-bg.open .modal-box{transform:translateY(0) scale(1)}
+.modal-hero{height:250px;overflow:hidden;border-radius:10px 10px 0 0;position:relative}
+.modal-hero img{width:100%;height:100%;object-fit:cover;display:block}
+.modal-hero-label{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,4,0,.7),transparent 55%);display:flex;align-items:flex-end;padding:1.2rem 1.5rem}
+.modal-hero-label h2{font-family:'Playfair Display',serif;font-size:1.6rem;color:#fff;font-weight:700}
+.modal-hero-label span{display:block;font-size:.75rem;color:rgba(255,255,255,.7);margin-top:.2rem;font-weight:500}
+.modal-close{position:absolute;top:.8rem;right:.9rem;width:34px;height:34px;background:rgba(0,0,0,.5);border:none;border-radius:50%;color:#fff;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:2}
+.modal-close:hover{background:var(--saffron)}
+.modal-body{padding:1.8rem 2rem 2.2rem}
+.modal-divider{height:1px;background:var(--border);margin:1.4rem 0}
+.modal-text{font-size:.93rem;color:var(--text-muted);line-height:1.8;margin-bottom:.9rem}
+.modal-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin:1.2rem 0}
+.modal-fact{text-align:center;background:var(--off-white);border:1px solid var(--border);border-radius:6px;padding:.9rem .7rem}
+.modal-fact-val{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--saffron);display:block;margin-bottom:.2rem}
+.modal-fact-lbl{font-size:.68rem;color:var(--text-light);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.modal-section-title{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--maroon);margin:1.4rem 0 .8rem;display:flex;align-items:center;gap:.5rem}
+.modal-section-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.modal-hl-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.55rem}
+.modal-hl-list li{font-size:.85rem;color:var(--text-muted);padding-left:1.1rem;position:relative;line-height:1.5}
+.modal-hl-list li::before{content:'';position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:50%;background:var(--saffron)}
+.modal-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:.8rem}
+.modal-info-item{background:var(--off-white);border:1px solid var(--border);border-radius:6px;padding:.85rem 1rem}
+.modal-info-label{font-size:.67rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light);margin-bottom:.3rem}
+.modal-info-val{font-size:.88rem;color:var(--text);font-weight:500}
+.modal-itinerary{list-style:none;counter-reset:day;display:flex;flex-direction:column;gap:.6rem}
+.modal-itinerary li{counter-increment:day;padding:.8rem 1rem .8rem 2.8rem;background:var(--off-white);border:1px solid var(--border);border-radius:6px;font-size:.85rem;color:var(--text-muted);line-height:1.6;position:relative}
+.modal-itinerary li::before{content:counter(day);position:absolute;left:.85rem;top:.85rem;width:18px;height:18px;background:var(--saffron);color:#fff;border-radius:50%;font-size:.65rem;font-weight:700;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif}
+.modal-incl-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.modal-incl-item{font-size:.85rem;color:var(--text-muted);padding-left:1.3rem;position:relative;line-height:1.5}
+.modal-incl-item.inc::before{content:'✓';position:absolute;left:0;color:#2A8A3A;font-weight:700}
+.modal-incl-item.exc::before{content:'✗';position:absolute;left:0;color:#C0392B;font-weight:700}
+.modal-price-footer{display:flex;align-items:center;justify-content:space-between;background:var(--off-white);border:1px solid var(--border);border-radius:8px;padding:1.2rem 1.4rem;margin-top:1.6rem;flex-wrap:wrap;gap:1rem}
+.mpf-price-from{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);margin-bottom:.2rem}
+.mpf-price{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--maroon)}
+.mpf-price sub{font-size:.45em;font-family:'Inter',sans-serif;font-weight:500;color:var(--text-muted)}
+.mpf-book-btn{background:var(--saffron);color:#fff;border:none;padding:.85rem 2.2rem;border-radius:4px;font-size:.82rem;font-weight:700;letter-spacing:.04em;cursor:pointer;transition:background .2s,box-shadow .2s}
+.mpf-book-btn:hover{background:var(--saffron-light);box-shadow:0 4px 14px rgba(212,82,10,.4)}
+
+@media(max-width:1024px){
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .ghats-row{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .gal-item.span-2{grid-row:span 1}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .search-bar-wrap{flex-direction:column;margin:0 1rem;margin-top:-36px}
+  .search-field{border-right:none;border-bottom:1px solid var(--border)}
+  .aarti-grid{grid-template-columns:1fr}
+  .contact-info-row{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .reach-grid{grid-template-columns:1fr 1fr}
+  .modal-hl-list{grid-template-columns:1fr}
+  .modal-incl-grid{grid-template-columns:1fr}
+  .hero-content{padding:0 1.5rem;max-width:100%}
+  nav{padding:0 1rem}
+  .util-bar{display:none}
+  .ghats-row{grid-template-columns:1fr}
+}
+
+/* ── TRIP PLANNER — PREMIUM DARK ── */
+.planner-section{
+  background:linear-gradient(160deg,#0D0802 0%,#1C0E04 40%,#160A04 100%);
+  position:relative;overflow:hidden;
+  border-top:1px solid rgba(184,64,0,.25);
+  border-bottom:1px solid rgba(184,64,0,.25);
+}
+.planner-section::before{
+  content:'';position:absolute;inset:0;
+  background:url('https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=1400&auto=format&fit=crop&q=60') center/cover no-repeat;
+  opacity:.07;pointer-events:none;
+}
+.planner-section::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 70% 50%,rgba(184,64,0,.1) 0%,transparent 70%);
+  pointer-events:none;
+}
+.planner-wrap{max-width:900px;margin:0 auto;position:relative;z-index:1}
+.planner-header{text-align:center;margin-bottom:3rem}
+.planner-header .sec-eyebrow{color:rgba(200,144,10,.9);border-color:rgba(200,144,10,.3)}
+.planner-header .sec-title{color:#fff}
+.planner-header .sec-title span{color:#E8A820}
+.planner-header .sec-divider{background:linear-gradient(to right,transparent,#C8900A,transparent)}
+.planner-header .sec-sub{color:rgba(255,255,255,.55);max-width:540px;margin:0 auto}
+.planner-steps{display:flex;align-items:center;justify-content:center;gap:.4rem;margin-bottom:2.4rem;flex-wrap:wrap}
+.ps-step{display:flex;align-items:center;gap:.5rem;font-size:.68rem;font-weight:600;color:rgba(255,255,255,.3);transition:color .3s;letter-spacing:.05em;text-transform:uppercase}
+.ps-step.active{color:#E8A820}
+.ps-step.done{color:rgba(200,144,10,.65)}
+.ps-dot{width:30px;height:30px;border-radius:50%;border:1.5px solid rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:700;background:rgba(255,255,255,.04);transition:all .3s;flex-shrink:0}
+.ps-step.active .ps-dot{border-color:#E8A820;background:rgba(200,144,10,.18);color:#E8A820;box-shadow:0 0 14px rgba(200,144,10,.3)}
+.ps-step.done .ps-dot{border-color:rgba(200,144,10,.45);background:rgba(200,144,10,.12);color:rgba(200,144,10,.75)}
+.ps-line{width:32px;height:1px;background:rgba(255,255,255,.1);flex-shrink:0}
+.ps-line.done{background:rgba(200,144,10,.35)}
+.planner-progress{height:2px;background:rgba(255,255,255,.08);border-radius:2px;margin-bottom:2rem;overflow:hidden}
+.planner-progress-fill{height:100%;background:linear-gradient(to right,#B84000,#E8A820);border-radius:2px;transition:width .45s cubic-bezier(.4,0,.2,1)}
+.planner-card{
+  background:rgba(255,255,255,.04);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:16px;padding:2.8rem;
+  box-shadow:0 24px 60px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.07);
+  min-height:260px;position:relative;
+}
+.planner-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(to right,transparent,rgba(200,144,10,.4),transparent);
+  border-radius:16px 16px 0 0;
+}
+.pq-label{font-size:.6rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(200,144,10,.75);margin-bottom:.7rem}
+.pq-question{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:.45rem;line-height:1.3}
+.pq-hint{font-size:.82rem;color:rgba(255,255,255,.38);margin-bottom:1.8rem;line-height:1.55;font-style:italic}
+.pq-options{display:grid;gap:.65rem}
+.pq-options.cols-2{grid-template-columns:1fr 1fr}
+.pq-options.cols-3{grid-template-columns:1fr 1fr 1fr}
+.pq-options.cols-1{grid-template-columns:1fr}
+.pq-opt{border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:.9rem 1.15rem;cursor:pointer;background:rgba(255,255,255,.03);transition:all .22s;text-align:left;display:flex;align-items:center;gap:.8rem;font-family:'Inter',sans-serif}
+.pq-opt:hover{border-color:rgba(200,144,10,.45);background:rgba(200,144,10,.07);transform:translateY(-2px);box-shadow:0 6px 22px rgba(0,0,0,.3)}
+.pq-opt.selected{border-color:rgba(200,144,10,.65);background:rgba(200,144,10,.1);box-shadow:0 0 0 1px rgba(200,144,10,.25),0 6px 22px rgba(0,0,0,.3)}
+.pq-opt.multi.selected{border-color:rgba(184,64,0,.65);background:rgba(184,64,0,.1);box-shadow:0 0 0 1px rgba(184,64,0,.25)}
+.pq-opt-icon{font-size:1.4rem;flex-shrink:0;width:34px;text-align:center}
+.pq-opt-text{flex:1}
+.pq-opt-title{font-size:.87rem;font-weight:600;color:#fff;display:block}
+.pq-opt-desc{font-size:.73rem;color:rgba(255,255,255,.38);margin-top:.18rem;display:block}
+.pq-check{width:20px;height:20px;border-radius:50%;border:1.5px solid rgba(255,255,255,.18);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.7rem;transition:all .2s;color:transparent}
+.pq-opt.selected .pq-check{border-color:#E8A820;background:rgba(200,144,10,.22);color:#E8A820}
+.pq-opt.multi.selected .pq-check{border-color:#D95C1A;background:rgba(184,64,0,.22);color:#D95C1A}
+.planner-nav{display:flex;justify-content:space-between;align-items:center;margin-top:2rem;flex-wrap:wrap;gap:.8rem}
+.planner-nav-info{font-size:.72rem;color:rgba(255,255,255,.28);letter-spacing:.07em;text-transform:uppercase}
+.pb-back{background:transparent;border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.45);padding:.75rem 1.6rem;border-radius:6px;cursor:pointer;font-size:.78rem;font-weight:600;transition:all .2s;display:flex;align-items:center;gap:.4rem}
+.pb-back:hover{border-color:rgba(255,255,255,.32);color:rgba(255,255,255,.8)}
+.pb-next{background:linear-gradient(135deg,#B84000 0%,#C25000 100%);border:none;color:#fff;padding:.75rem 2rem;border-radius:6px;cursor:pointer;font-size:.82rem;font-weight:700;letter-spacing:.04em;transition:all .25s;display:flex;align-items:center;gap:.5rem;box-shadow:0 4px 20px rgba(184,64,0,.4)}
+.pb-next:hover{background:linear-gradient(135deg,#D95C1A 0%,#B84000 100%);box-shadow:0 6px 28px rgba(184,64,0,.55);transform:translateY(-1px)}
+.pb-next:disabled{background:rgba(255,255,255,.08);color:rgba(255,255,255,.25);cursor:not-allowed;box-shadow:none;transform:none}
+.pb-next svg,.pb-back svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2.5}
+.planner-results{animation:fadeUp .4s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.pr-summary{background:rgba(200,144,10,.07);border:1px solid rgba(200,144,10,.18);border-radius:10px;padding:1rem 1.4rem;margin-bottom:2rem;font-size:.84rem;color:rgba(255,255,255,.5);line-height:1.75}
+.pr-summary strong{color:rgba(255,255,255,.82)}
+.pr-match-label{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(200,144,10,.75);margin-bottom:1.2rem;display:block}
+.pr-card{border:1px solid rgba(255,255,255,.09);border-radius:12px;overflow:hidden;background:rgba(255,255,255,.04);margin-bottom:1rem;transition:all .3s;backdrop-filter:blur(8px)}
+.pr-card:hover{border-color:rgba(200,144,10,.4);background:rgba(200,144,10,.06);transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,.4)}
+.pr-card.best{border-color:rgba(200,144,10,.45);background:rgba(200,144,10,.07);box-shadow:0 0 0 1px rgba(200,144,10,.18),0 8px 32px rgba(0,0,0,.3)}
+.pr-card-top{display:flex;align-items:stretch}
+.pr-card-img{width:130px;flex-shrink:0;overflow:hidden;position:relative}
+.pr-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.pr-card:hover .pr-card-img img{transform:scale(1.06)}
+.pr-card-info{flex:1;padding:1.1rem 1.4rem;min-width:0}
+.pr-card-badges{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.55rem}
+.pr-badge{font-size:.6rem;font-weight:700;padding:.2rem .6rem;border-radius:20px;letter-spacing:.08em;text-transform:uppercase}
+.pr-badge.best{background:linear-gradient(135deg,#9A6A00,#C8900A);color:#0D0802}
+.pr-badge.good{background:rgba(200,144,10,.14);color:#E8A820;border:1px solid rgba(200,144,10,.28)}
+.pr-badge.days{background:rgba(255,255,255,.07);color:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.1)}
+.pr-card-name{font-family:'Playfair Display',serif;font-size:1.08rem;font-weight:700;color:#fff;margin-bottom:.32rem}
+.pr-card-desc{font-size:.78rem;color:rgba(255,255,255,.42);line-height:1.55;margin-bottom:.65rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pr-card-tags{display:flex;flex-wrap:wrap;gap:.3rem;margin-bottom:.7rem}
+.pr-card-tag{background:rgba(184,64,0,.14);color:rgba(255,140,70,.9);font-size:.64rem;font-weight:600;padding:.17rem .55rem;border-radius:20px;border:1px solid rgba(184,64,0,.22)}
+.pr-card-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.6rem}
+.pr-price-from{font-size:.64rem;color:rgba(255,255,255,.32);font-weight:500;text-transform:uppercase;letter-spacing:.06em}
+.pr-price{font-family:'Playfair Display',serif;font-size:1.28rem;font-weight:700;color:#E8A820}
+.pr-price sub{font-size:.42em;font-family:'Inter',sans-serif;font-weight:400;color:rgba(255,255,255,.35)}
+.pr-actions{display:flex;gap:.55rem}
+.pr-book-btn{background:linear-gradient(135deg,#B84000,#C25000);color:#fff;border:none;padding:.5rem 1.2rem;border-radius:5px;font-size:.73rem;font-weight:700;cursor:pointer;transition:all .2s;letter-spacing:.03em}
+.pr-book-btn:hover{box-shadow:0 4px 14px rgba(184,64,0,.5);transform:translateY(-1px)}
+.pr-details-btn{background:transparent;color:rgba(200,144,10,.85);border:1px solid rgba(200,144,10,.32);padding:.5rem 1rem;border-radius:5px;font-size:.73rem;font-weight:600;cursor:pointer;transition:all .2s}
+.pr-details-btn:hover{border-color:#E8A820;color:#E8A820;background:rgba(200,144,10,.07)}
+.pr-tc{font-size:.7rem;color:rgba(255,255,255,.28);margin-top:1.4rem;line-height:1.7;padding:.9rem 1.1rem;background:rgba(255,255,255,.03);border-radius:8px;border:1px solid rgba(255,255,255,.07)}
+.pr-tc strong{color:rgba(255,255,255,.42)}
+.pr-no-match{text-align:center;padding:3rem 1rem}
+.pr-no-match .nm-icon{font-size:3rem;margin-bottom:1rem}
+.pr-no-match h3{font-family:'Playfair Display',serif;font-size:1.25rem;color:#fff;margin-bottom:.55rem}
+.pr-no-match p{font-size:.86rem;color:rgba(255,255,255,.42);line-height:1.7;margin-bottom:1.4rem}
+@media(max-width:680px){
+  .pq-options.cols-2,.pq-options.cols-3{grid-template-columns:1fr}
+  .pr-card-img{width:85px}
+  .planner-card{padding:1.5rem}
+  .pr-card-info{padding:.85rem}
+  .ps-step span{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- MODAL -->
+<div class="modal-bg" id="modalBg">
+  <div class="modal-box" id="modalBox">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-hero"><img id="mImg" src="" alt=""><div class="modal-hero-label"><div><h2 id="mTitle"></h2><span id="mSub"></span></div></div></div>
+    <div class="modal-body" id="mBody"></div>
+  </div>
+</div>
+
+<!-- UTILITY BAR -->
+<div class="util-bar">
+  <div class="util-left">
+    <span>
+      <svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+      Dashashwamedh Ghat, Varanasi — 221001
+    </span>
+    <span>
+      <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      info@kashiyatra.in
+    </span>
+  </div>
+  <div class="util-right">
+    <a href="tel:+915420000000" class="util-phone">
+      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.27 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+      +91-542-XXX-XXXX
+    </a>
+    <a href="#contact" onclick="event.preventDefault();goTo('contact')">Contact Us</a>
+    <a href="#contact" onclick="event.preventDefault();openOfficeInfo()">Our Office</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="nav-logo" onclick="goTo('home')">
+    <svg class="nav-logo-icon" viewBox="0 0 38 38" fill="none">
+      <circle cx="19" cy="19" r="18" fill="#7A1010" opacity=".1"/>
+      <text x="19" y="25" font-size="18" text-anchor="middle" fill="#7A1010" font-family="serif" font-weight="bold">ॐ</text>
+    </svg>
+    <span class="nav-logo-text">Kashi <span>Yatra</span></span>
+  </div>
+  <ul class="nav-links">
+    <li><a onclick="goTo('destinations')">Destinations</a></li>
+    <li><a onclick="goTo('tours')">Tour Packages</a></li>
+    <li><a onclick="goTo('ghats-section')">Sacred Ghats</a></li>
+    <li><a onclick="goTo('aarti-section')">Ganga Aarti</a></li>
+    <li><a onclick="goTo('gallery-section')">Gallery</a></li>
+    <li><a onclick="goTo('reach-section')">How to Reach</a></li>
+    <li><a onclick="goTo('trip-planner')">Plan My Trip ✨</a></li>
+    <li><a onclick="goTo('contact')" class="nav-cta">Book Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-tag">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Trusted Since 2010 · Varanasi
+      </div>
+      <h1 class="hero-title">Sacred Journeys<br>through <span>Kashi</span></h1>
+      <p class="hero-sub">Experience the eternal city's temples, ghats and divine rituals — guided by local experts who know every sacred corner of Varanasi.</p>
+      <div class="hero-btns">
+        <button class="btn-fill" onclick="goTo('tours')">View Tour Packages</button>
+        <button class="btn-ghost" onclick="goTo('destinations')">Explore Destinations</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEARCH BAR -->
+  <!-- SEARCH RESULTS PANEL -->
+  <div id="searchResults" style="display:none;position:fixed;inset:0;z-index:8000;background:rgba(0,0,0,.55);backdrop-filter:blur(6px)" onclick="closeSearchResults()">
+    <div id="searchResultsBox" onclick="event.stopPropagation()" style="background:#fff;max-width:820px;width:calc(100% - 2rem);margin:5rem auto;border-radius:10px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.3);max-height:80vh;overflow-y:auto">
+      <div style="padding:1.2rem 1.5rem;border-bottom:1px solid #E8DDD0;display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div id="srTitle" style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#1A1208"></div>
+          <div id="srSub" style="font-size:.8rem;color:#9B8B77;margin-top:.2rem"></div>
+        </div>
+        <button onclick="closeSearchResults()" style="background:none;border:1px solid #E8DDD0;border-radius:50%;width:32px;height:32px;cursor:pointer;font-size:1rem;color:#6B5B47">✕</button>
+      </div>
+      <div id="srCards" style="padding:1.2rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem"></div>
+      <div style="padding:1rem 1.5rem;border-top:1px solid #E8DDD0;background:#F8F2EA;display:flex;justify-content:space-between;align-items:center">
+        <span style="font-size:.82rem;color:#6B5B47">Can't find what you need?</span>
+        <button onclick="closeSearchResults();openCustomTour()" style="background:#D4520A;color:#fff;border:none;padding:.55rem 1.2rem;border-radius:4px;font-size:.78rem;font-weight:600;cursor:pointer">Enquire for Custom Tour</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="search-bar-wrap">
+    <div class="search-field">
+      <div class="sf-label">Destination</div>
+      <select id="srDest" onchange="updatePackageOptions()">
+        <option value="all">All Destinations</option>
+        <option value="varanasi">Varanasi (Kashi)</option>
+        <option value="sarnath">Sarnath</option>
+        <option value="vindhyachal">Vindhyachal / Mirzapur</option>
+        <option value="prayagraj">Prayagraj</option>
+        <option value="ayodhya">Ayodhya</option>
+        <option value="multi">Multi-Destination</option>
+      </select>
+    </div>
+    <div class="search-field">
+      <div class="sf-label">Tour Package</div>
+      <select id="srPkg">
+        <option value="">Any Package</option>
+        <option value="kashi-darshan">Kashi Darshan (2N/3D) — ₹6,500</option>
+        <option value="sarnath-tour">Sarnath Spiritual (1N/2D) — ₹4,200</option>
+        <option value="vindhyachal">Vindhyachal Yatra (2N/3D) — ₹7,800</option>
+        <option value="prayagraj-tour">Prayagraj Sangam (3N/4D) — ₹9,500</option>
+        <option value="ayodhya-tour">Ayodhya Ram Yatra (4N/5D) — ₹12,000</option>
+        <option value="grand-circuit">Grand Kashi Circuit (6N/7D) — ₹22,500</option>
+      </select>
+    </div>
+    <div class="search-field">
+      <div class="sf-label">Travel Date</div>
+      <input type="date" id="srDate">
+    </div>
+    <div class="search-field">
+      <div class="sf-label">Travellers</div>
+      <select id="srTravellers">
+        <option value="1">1 Person</option>
+        <option value="2">2 Persons</option>
+        <option value="3">3–5 Persons</option>
+        <option value="6">6–10 Persons</option>
+        <option value="10">Group (10+)</option>
+      </select>
+    </div>
+    <button class="search-btn" onclick="searchPackages()">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      Search
+    </button>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+    <span><strong>15+ Years</strong> of Experience</span>
+  </div>
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+    <span><strong>12,000+</strong> Happy Pilgrims</span>
+  </div>
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+    <span><strong>100%</strong> Customisable Tours</span>
+  </div>
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+    <span><strong>Easy</strong> Online Booking</span>
+  </div>
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.27 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+    <span><strong>24/7</strong> Customer Support</span>
+  </div>
+</div>
+
+<!-- DESTINATIONS -->
+<section class="section destinations" id="destinations">
+  <div class="section-wrap">
+    <div class="sec-header-row sec-header reveal">
+      <div>
+        <span class="sec-eyebrow">Sacred Places</span>
+        <h2 class="sec-title">Popular <span>Destinations</span></h2>
+        <div class="sec-divider"></div>
+        <p class="sec-sub">Discover the temples, forts and pilgrimage sites across Varanasi and nearby sacred regions.</p>
+      </div>
+      <a class="see-all" onclick="goTo('destinations')">View All Destinations <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+    <div class="dest-grid">
+
+      <div class="dest-card reveal" onclick="openDest('kashi')">
+        <div class="dest-card-img">
+          <img src="https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=600&auto=format&fit=crop&q=80" alt="Kashi Vishwanath">
+          <span class="dest-badge">Jyotirlinga</span>
+        </div>
+        <div class="dest-card-body">
+          <div class="dest-card-loc"><svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg> City Centre, Varanasi</div>
+          <div class="dest-card-name">Kashi Vishwanath Temple</div>
+          <p class="dest-card-desc">One of India's twelve Jyotirlingas and Varanasi's holiest Shiva shrine, now part of the magnificent new Kashi Vishwanath Corridor.</p>
+          <div class="dest-card-footer"><span class="dest-explore">Explore <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
+        </div>
+      </div>
+
+      <div class="dest-card reveal" style="transition-delay:.08s" onclick="openDest('aarti-dest')">
+        <div class="dest-card-img">
+          <img src="https://images.unsplash.com/photo-1604871000636-074fa5117945?w=600&auto=format&fit=crop&q=80" alt="Ganga Aarti">
+          <span class="dest-badge">Must See</span>
+        </div>
+        <div class="dest-card-body">
+          <div class="dest-card-loc"><svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg> Dashashwamedh Ghat</div>
+          <div class="dest-card-name">Ganga Aarti Ceremony</div>
+          <p class="dest-card-desc">Every evening, seven priests perform the magnificent fire ritual at Dashashwamedh Ghat in a spectacle of flames and Vedic chants.</p>
+          <div class="dest-card-footer"><span class="dest-explore">Explore <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
+        </div>
+      </div>
+
+      <div class="dest-card reveal" style="transition-delay:.16s" onclick="openDest('sarnath')">
+        <div class="dest-card-img">
+          <img src="https://images.unsplash.com/photo-1609450104082-b9a47de3e793?w=600&auto=format&fit=crop&q=80" alt="Sarnath">
+          <span class="dest-badge">UNESCO</span>
+        </div>
+        <div class="dest-card-body">
+          <div class="dest-card-loc"><svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg> Sarnath · 13 km</div>
+          <div class="dest-card-name">Sarnath — Dhamek Stupa</div>
+          <p class="dest-card-desc">Where the Buddha delivered his first sermon after enlightenment. The Dhamek Stupa and Archaeological Museum are priceless heritage.</p>
+          <div class="dest-card-footer"><span class="dest-explore">Explore <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
+        </div>
+      </div>
+
+      <div class="dest-card reveal" style="transition-delay:.24s" onclick="openDest('vindhya')">
+        <div class="dest-card-img">
+          <img src="https://images.unsplash.com/photo-1602940659805-770d1b3b9911?w=600&auto=format&fit=crop&q=80" alt="Vindhyavasini">
+          <span class="dest-badge">Shakti Peetha</span>
+        </div>
+        <div class="dest-card-body">
+          <div class="dest-card-loc"><svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg> Vindhyachal · 65 km</div>
+          <div class="dest-card-name">Vindhyavasini Devi</div>
+          <p class="dest-card-desc">One of India's most powerful Shakti Peethas above the Ganges in Mirzapur — the holy triangle of Ashtabhuja and Kali Khoh temples.</p>
+          <div class="dest-card-footer"><span class="dest-explore">Explore <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
+        </div>
+      </div>
+
+      <div class="dest-card reveal" style="transition-delay:.32s" onclick="openDest('prayagraj')">
+        <div class="dest-card-img">
+          <img src="https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?w=600&auto=format&fit=crop&q=80" alt="Prayagraj">
+          <span class="dest-badge">Sangam</span>
+        </div>
+        <div class="dest-card-body">
+          <div class="dest-card-loc"><svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg> Prayagraj · 125 km</div>
+          <div class="dest-card-name">Prayagraj Triveni Sangam</div>
+          <p class="dest-card-desc">The confluence of Ganga, Yamuna and the mythical Saraswati — site of the Kumbh Mela and Hinduism's holiest bathing spot.</p>
+          <div class="dest-card-footer"><span class="dest-explore">Explore <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
+        </div>
+      </div>
+
+      <div class="dest-card reveal" style="transition-delay:.40s" onclick="openDest('ayodhya')">
+        <div class="dest-card-img">
+          <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?w=600&auto=format&fit=crop&q=80" alt="Ayodhya">
+          <span class="dest-badge">Ram Janmabhoomi</span>
+        </div>
+        <div class="dest-card-body">
+          <div class="dest-card-loc"><svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg> Ayodhya · 200 km</div>
+          <div class="dest-card-name">Ram Mandir, Ayodhya</div>
+          <p class="dest-card-desc">The magnificent new temple on Lord Ram's birthplace — inaugurated in 2024. The Sarayu Ghat aarti and Hanuman Garhi are unmissable.</p>
+          <div class="dest-card-footer"><span class="dest-explore">Explore <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- TRIP PLANNER -->
+<section class="section planner-section" id="trip-planner">
+  <div class="section-wrap planner-wrap">
+    <div class="planner-header sec-header reveal">
+      <span class="sec-eyebrow">✨ Smart Trip Planner</span>
+      <h2 class="sec-title">Find Your Perfect <span>Tour Package</span></h2>
+      <div class="sec-divider"></div>
+      <p class="sec-sub">Answer a few simple questions and we'll recommend the best package from our curated collection — tailored to your time, interests and travel style.</p>
+    </div>
+
+    <!-- Steps indicator -->
+    <div class="planner-steps" id="plannerSteps">
+      <div class="ps-step active" id="pstep-0"><div class="ps-dot">1</div><span>Duration</span></div>
+      <div class="ps-line" id="psline-0"></div>
+      <div class="ps-step" id="pstep-1"><div class="ps-dot">2</div><span>Destinations</span></div>
+      <div class="ps-line" id="psline-1"></div>
+      <div class="ps-step" id="pstep-2"><div class="ps-dot">3</div><span>Interests</span></div>
+      <div class="ps-line" id="psline-2"></div>
+      <div class="ps-step" id="pstep-3"><div class="ps-dot">4</div><span>Group</span></div>
+      <div class="ps-line" id="psline-3"></div>
+      <div class="ps-step" id="pstep-4"><div class="ps-dot">5</div><span>Results</span></div>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="planner-progress"><div class="planner-progress-fill" id="plannerFill" style="width:0%"></div></div>
+
+    <!-- Planner Card -->
+    <div class="planner-card" id="plannerCard">
+      <div id="plannerQArea"></div>
+    </div>
+
+    <!-- Nav Buttons -->
+    <div class="planner-nav" id="plannerNav">
+      <button class="pb-back" id="pbBack" onclick="plannerBack()" style="visibility:hidden">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Back
+      </button>
+      <span class="planner-nav-info" id="plannerNavInfo">Step 1 of 4</span>
+      <button class="pb-next" id="pbNext" onclick="plannerNext()">
+        Next <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<!-- TOUR PACKAGES -->
+<section class="section tours" id="tours">
+  <div class="section-wrap">
+    <div class="sec-header-row sec-header reveal">
+      <div>
+        <span class="sec-eyebrow">Curated Journeys</span>
+        <h2 class="sec-title">Tour <span>Packages</span></h2>
+        <div class="sec-divider"></div>
+        <p class="sec-sub">Click any package for the full itinerary, inclusions, and pricing details.</p>
+      </div>
+      <a class="see-all" onclick="openCustomTour()">Enquire for Custom Tour <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+    <div class="tour-grid">
+
+      <!-- 1 -->
+      <div class="tour-card reveal" onclick="openTour('subah-e-kashi')">
+        <div class="tour-card-img">
+          <img src="https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=700&auto=format&fit=crop&q=80" alt="Subah-e-Kashi">
+          <span class="tour-card-ribbon">Best Seller</span>
+        </div>
+        <div class="tour-card-body">
+          <div class="tour-card-days"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 1 Night · 2 Days</div>
+          <div class="tour-card-name">Subah-e-Kashi</div>
+          <p class="tour-card-desc">A short yet soulful escape — Kashi Vishwanath, Kal Bhairav, Sankat Mochan, Ganga Aarti &amp; Banarasi gali walk.</p>
+          <div class="tour-tags"><span class="tour-tag">Temple Darshan</span><span class="tour-tag">Ganga Aarti</span><span class="tour-tag">Banarasi Walk</span></div>
+          <div class="tour-card-footer">
+            <div><div class="tour-price-label">Starting from*</div><div class="tour-price">₹4,999 <sub>/ person</sub></div></div>
+            <button class="tour-btn" onclick="event.stopPropagation();openTour('subah-e-kashi')">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="tour-card reveal" style="transition-delay:.06s" onclick="openTour('shivnagari-kashi')">
+        <div class="tour-card-img">
+          <img src="https://images.unsplash.com/photo-1625736300986-d9e74ca92b9a?w=700&auto=format&fit=crop&q=80" alt="Shivnagari Kashi Yatra">
+          <span class="tour-card-ribbon">Popular</span>
+        </div>
+        <div class="tour-card-body">
+          <div class="tour-card-days"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2 Nights · 3 Days</div>
+          <div class="tour-card-name">Shivnagari Kashi Yatra</div>
+          <p class="tour-card-desc">Deeper spiritual journey — full temple circuit, sunrise boat ride on the Ganga &amp; Manikarnika Ghat walk.</p>
+          <div class="tour-tags"><span class="tour-tag">Temple Circuit</span><span class="tour-tag">Sunrise Boat</span><span class="tour-tag">Manikarnika</span></div>
+          <div class="tour-card-footer">
+            <div><div class="tour-price-label">Starting from*</div><div class="tour-price">₹8,999 <sub>/ person</sub></div></div>
+            <button class="tour-btn" onclick="event.stopPropagation();openTour('shivnagari-kashi')">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="tour-card reveal" style="transition-delay:.12s" onclick="openTour('rang-e-banaras')">
+        <div class="tour-card-img">
+          <img src="https://images.unsplash.com/photo-1609450104082-b9a47de3e793?w=700&auto=format&fit=crop&q=80" alt="Rang-e-Banaras">
+          <span class="tour-card-ribbon">Most Complete</span>
+        </div>
+        <div class="tour-card-body">
+          <div class="tour-card-days"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 3 Nights · 4 Days</div>
+          <div class="tour-card-name">Rang-e-Banaras</div>
+          <p class="tour-card-desc">Spirituality + heritage + food + Sarnath — the full immersive Banaras experience including silk weaving &amp; street food trail.</p>
+          <div class="tour-tags"><span class="tour-tag">Sarnath</span><span class="tour-tag">Heritage Walk</span><span class="tour-tag">Food Trail</span><span class="tour-tag">Silk Weaving</span></div>
+          <div class="tour-card-footer">
+            <div><div class="tour-price-label">Starting from*</div><div class="tour-price">₹14,999 <sub>/ person</sub></div></div>
+            <button class="tour-btn" onclick="event.stopPropagation();openTour('rang-e-banaras')">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="tour-card reveal" style="transition-delay:.18s" onclick="openTour('kashi-ayodhya-2n')">
+        <div class="tour-card-img">
+          <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?w=700&auto=format&fit=crop&q=80" alt="Kashi + Ayodhya">
+        </div>
+        <div class="tour-card-body">
+          <div class="tour-card-days"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2 Nights · 3 Days</div>
+          <div class="tour-card-name">Subah-e-Kashi + Ayodhya</div>
+          <p class="tour-card-desc">Mahadev's Kashi meets Shri Ram's Ayodhya — Kashi Vishwanath, Ganga Aarti, Ram Mandir &amp; Hanuman Garhi.</p>
+          <div class="tour-tags"><span class="tour-tag">Kashi</span><span class="tour-tag">Ram Mandir</span><span class="tour-tag">Hanuman Garhi</span></div>
+          <div class="tour-card-footer">
+            <div><div class="tour-price-label">Starting from*</div><div class="tour-price">₹9,999 <sub>/ person</sub></div></div>
+            <button class="tour-btn" onclick="event.stopPropagation();openTour('kashi-ayodhya-2n')">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="tour-card reveal" style="transition-delay:.24s" onclick="openTour('shivnagari-ayodhya')">
+        <div class="tour-card-img">
+          <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?w=700&auto=format&fit=crop&q=80" alt="Shivnagari + Ayodhya">
+          <span class="tour-card-ribbon">Spiritual Circuit</span>
+        </div>
+        <div class="tour-card-body">
+          <div class="tour-card-days"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 3 Nights · 4 Days</div>
+          <div class="tour-card-name">Shivnagari Kashi Yatra + Ayodhya</div>
+          <p class="tour-card-desc">Complete Kashi temple circuit with sunrise boat ride, then the full Ayodhya pilgrimage including Ram Mandir.</p>
+          <div class="tour-tags"><span class="tour-tag">Kashi Circuit</span><span class="tour-tag">Sunrise Boat</span><span class="tour-tag">Ram Mandir</span></div>
+          <div class="tour-card-footer">
+            <div><div class="tour-price-label">Starting from*</div><div class="tour-price">₹13,999 <sub>/ person</sub></div></div>
+            <button class="tour-btn" onclick="event.stopPropagation();openTour('shivnagari-ayodhya')">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="tour-card reveal" style="transition-delay:.30s" onclick="openTour('rang-ayodhya')">
+        <div class="tour-card-img">
+          <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?w=700&auto=format&fit=crop&q=80" alt="Rang-e-Banaras + Ayodhya">
+          <span class="tour-card-ribbon">Best Value</span>
+        </div>
+        <div class="tour-card-body">
+          <div class="tour-card-days"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 4 Nights · 5 Days</div>
+          <div class="tour-card-name">Rang-e-Banaras + Ayodhya</div>
+          <p class="tour-card-desc">Full Banaras immersion with heritage walks, Sarnath &amp; food trails, then the sacred Ayodhya pilgrimage.</p>
+          <div class="tour-tags"><span class="tour-tag">Sarnath</span><span class="tour-tag">Food Trail</span><span class="tour-tag">Ayodhya</span><span class="tour-tag">Heritage</span></div>
+          <div class="tour-card-footer">
+            <div><div class="tour-price-label">Starting from*</div><div class="tour-price">₹19,999 <sub>/ person</sub></div></div>
+            <button class="tour-btn" onclick="event.stopPropagation();openTour('rang-ayodhya')">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="tour-card reveal" style="transition-delay:.06s" onclick="openTour('kashi-prayagraj-2n')">
+        <div class="tour-card-img">
+          <img src="https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?w=700&auto=format&fit=crop&q=80" alt="Kashi + Prayagraj">
+        </div>
+        <div class="tour-card-body">
+          <div class="tour-card-days"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2 Nights · 3 Days</div>
+          <div class="tour-card-name">Subah-e-Kashi + Prayagraj</div>
+          <p class="tour-card-desc">Sacred ghats of Kashi with the divine Triveni Sangam — Bade Hanuman Ji Temple &amp; Akshayavat Darshan.</p>
+          <div class="tour-tags"><span class="tour-tag">Kashi</span><span class="tour-tag">Triveni Sangam</span><span class="tour-tag">Sangam Boat Ride</span></div>
+          <div class="tour-card-footer">
+            <div><div class="tour-price-label">Starting from*</div><div class="tour-price">₹9,999 <sub>/ person</sub></div></div>
+            <button class="tour-btn" onclick="event.stopPropagation();openTour('kashi-prayagraj-2n')">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="tour-card reveal" style="transition-delay:.12s" onclick="openTour('shivnagari-prayagraj')">
+        <div class="tour-card-img">
+          <img src="https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?w=700&auto=format&fit=crop&q=80" alt="Shivnagari + Prayagraj">
+          <span class="tour-card-ribbon">Devotee Choice</span>
+        </div>
+        <div class="tour-card-body">
+          <div class="tour-card-days"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 3 Nights · 4 Days</div>
+          <div class="tour-card-name">Shivnagari Kashi Yatra + Prayagraj</div>
+          <p class="tour-card-desc">Full Kashi temple circuit &amp; sunrise boat ride, then the holy Triveni Sangam with Sangam boat ride &amp; Akshayavat.</p>
+          <div class="tour-tags"><span class="tour-tag">Kashi Circuit</span><span class="tour-tag">Sangam Dip</span><span class="tour-tag">Sunrise Boat</span></div>
+          <div class="tour-card-footer">
+            <div><div class="tour-price-label">Starting from*</div><div class="tour-price">₹13,999 <sub>/ person</sub></div></div>
+            <button class="tour-btn" onclick="event.stopPropagation();openTour('shivnagari-prayagraj')">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="tour-card reveal" style="transition-delay:.18s" onclick="openTour('rang-prayagraj')">
+        <div class="tour-card-img">
+          <img src="https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?w=700&auto=format&fit=crop&q=80" alt="Rang-e-Banaras + Prayagraj">
+        </div>
+        <div class="tour-card-body">
+          <div class="tour-card-days"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 4 Nights · 5 Days</div>
+          <div class="tour-card-name">Rang-e-Banaras + Prayagraj</div>
+          <p class="tour-card-desc">Complete Banaras culture with heritage walks &amp; Sarnath, then the sacred Triveni Sangam &amp; Prayagraj spiritual ghats.</p>
+          <div class="tour-tags"><span class="tour-tag">Heritage</span><span class="tour-tag">Sarnath</span><span class="tour-tag">Triveni Sangam</span></div>
+          <div class="tour-card-footer">
+            <div><div class="tour-price-label">Starting from*</div><div class="tour-price">₹19,999 <sub>/ person</sub></div></div>
+            <button class="tour-btn" onclick="event.stopPropagation();openTour('rang-prayagraj')">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="tour-card reveal" style="transition-delay:.24s" onclick="openTour('kashi-vindhya-2n')">
+        <div class="tour-card-img">
+          <img src="https://images.unsplash.com/photo-1602940659805-770d1b3b9911?w=700&auto=format&fit=crop&q=80" alt="Kashi + Vindhyachal">
+        </div>
+        <div class="tour-card-body">
+          <div class="tour-card-days"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2 Nights · 3 Days</div>
+          <div class="tour-card-name">Subah-e-Kashi + Vindhyachal &amp; Chunar</div>
+          <p class="tour-card-desc">Kashi's spiritual soul with divine Maa Vindhyavasini, Kali Khoh, Ashtabhuja &amp; the grandeur of Chunar Fort.</p>
+          <div class="tour-tags"><span class="tour-tag">Vindhyavasini</span><span class="tour-tag">Kali Khoh</span><span class="tour-tag">Chunar Fort</span></div>
+          <div class="tour-card-footer">
+            <div><div class="tour-price-label">Starting from*</div><div class="tour-price">₹9,999 <sub>/ person</sub></div></div>
+            <button class="tour-btn" onclick="event.stopPropagation();openTour('kashi-vindhya-2n')">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="tour-card reveal" style="transition-delay:.30s" onclick="openTour('shivnagari-vindhya')">
+        <div class="tour-card-img">
+          <img src="https://images.unsplash.com/photo-1602940659805-770d1b3b9911?w=700&auto=format&fit=crop&q=80" alt="Shivnagari + Vindhyachal">
+          <span class="tour-card-ribbon">Heritage + Spiritual</span>
+        </div>
+        <div class="tour-card-body">
+          <div class="tour-card-days"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 3 Nights · 4 Days</div>
+          <div class="tour-card-name">Shivnagari Kashi Yatra + Vindhyachal &amp; Chunar</div>
+          <p class="tour-card-desc">Temples, mythology, history &amp; scenic Ganga views — complete Kashi circuit with Shakti Peetha &amp; Chunar Fort.</p>
+          <div class="tour-tags"><span class="tour-tag">Kashi Circuit</span><span class="tour-tag">Shakti Peetha</span><span class="tour-tag">Chunar Fort</span></div>
+          <div class="tour-card-footer">
+            <div><div class="tour-price-label">Starting from*</div><div class="tour-price">₹13,999 <sub>/ person</sub></div></div>
+            <button class="tour-btn" onclick="event.stopPropagation();openTour('shivnagari-vindhya')">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="tour-card reveal" style="transition-delay:.36s" onclick="openTour('rang-vindhya')">
+        <div class="tour-card-img">
+          <img src="https://images.unsplash.com/photo-1602940659805-770d1b3b9911?w=700&auto=format&fit=crop&q=80" alt="Rang-e-Banaras + Vindhyachal">
+          <span class="tour-card-ribbon">Ultimate Journey</span>
+        </div>
+        <div class="tour-card-body">
+          <div class="tour-card-days"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 4 Nights · 5 Days</div>
+          <div class="tour-card-name">Rang-e-Banaras + Vindhyachal &amp; Chunar</div>
+          <p class="tour-card-desc">The ultimate blend — full Banaras experience with Sarnath, Maa Vindhyavasini Shakti Peetha &amp; Chunar Fort heritage.</p>
+          <div class="tour-tags"><span class="tour-tag">Sarnath</span><span class="tour-tag">Vindhyavasini</span><span class="tour-tag">Chunar Fort</span><span class="tour-tag">Food Trail</span></div>
+          <div class="tour-card-footer">
+            <div><div class="tour-price-label">Starting from*</div><div class="tour-price">₹19,999 <sub>/ person</sub></div></div>
+            <button class="tour-btn" onclick="event.stopPropagation();openTour('rang-vindhya')">View Details</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p style="text-align:center;font-size:.75rem;color:var(--text-light);margin-top:1.5rem">* Prices are indicative &amp; subject to change. Special rates for families &amp; groups. <a onclick="goTo('trip-planner')" style="color:var(--saffron);cursor:pointer;font-weight:600">Use our Trip Planner ✨</a> to find your best match.</p>
+  </div>
+</section>
+
+<!-- GHATS -->
+<section class="section ghats-section" id="ghats-section">
+  <div class="section-wrap">
+    <div class="sec-header reveal">
+      <span class="sec-eyebrow">The Eternal Riverfront</span>
+      <h2 class="sec-title">Sacred <span>Ghats</span> of Varanasi</h2>
+      <div class="sec-divider"></div>
+      <p class="sec-sub">Varanasi's 84 ghats line the western bank of the Ganges. Here are the most revered.</p>
+    </div>
+    <div class="ghats-row reveal">
+      <div class="ghat-item" onclick="openGhat(0)">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <div class="ghat-num">01 · Main Ghat</div>
+        <div class="ghat-name">Dashashwamedh</div>
+        <div class="ghat-desc">The principal ghat, famed for the evening Ganga Aarti ceremony</div>
+      </div>
+      <div class="ghat-item" onclick="openGhat(1)">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <div class="ghat-num">02 · Cremation</div>
+        <div class="ghat-name">Manikarnika</div>
+        <div class="ghat-desc">Sacred cremation ghat — fires have burned here for thousands of years</div>
+      </div>
+      <div class="ghat-item" onclick="openGhat(2)">
+        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <div class="ghat-num">03 · Southern End</div>
+        <div class="ghat-name">Assi Ghat</div>
+        <div class="ghat-desc">Morning Subah-e-Banaras aarti; confluence of Assi and Ganga</div>
+      </div>
+      <div class="ghat-item" onclick="openGhat(3)">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <div class="ghat-num">04 · Ancient</div>
+        <div class="ghat-name">Harishchandra</div>
+        <div class="ghat-desc">Named after the truthful king; one of two cremation ghats</div>
+      </div>
+      <div class="ghat-item" onclick="openGhat(4)">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><line x1="12" y1="22" x2="12" y2="12"/></svg>
+        <div class="ghat-num">05 · Submerged</div>
+        <div class="ghat-name">Scindia Ghat</div>
+        <div class="ghat-desc">Famous for its partially submerged Shiva temple — a unique sight</div>
+      </div>
+      <div class="ghat-item" onclick="openGhat(5)">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+        <div class="ghat-num">06 · Five Rivers</div>
+        <div class="ghat-name">Panchganga</div>
+        <div class="ghat-desc">Confluence of five sacred rivers; Alamgir Mosque rises above</div>
+      </div>
+      <div class="ghat-item" onclick="openGhat(6)">
+        <svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div class="ghat-num">07 · Historic</div>
+        <div class="ghat-name">Man Mandir</div>
+        <div class="ghat-desc">Raja Man Singh's 1600 CE palace with an astronomical observatory</div>
+      </div>
+      <div class="ghat-item" onclick="openGhat(7)">
+        <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        <div class="ghat-num">08 · South Indian</div>
+        <div class="ghat-name">Kedar Ghat</div>
+        <div class="ghat-desc">Favourite of South Indian pilgrims; Kedara temple nearby</div>
+      </div>
+      <div class="ghat-item" onclick="openGhat(8)">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+        <div class="ghat-num">09 · Modern</div>
+        <div class="ghat-name">Namo Ghat</div>
+        <div class="ghat-desc">New development with yoga deck, amphitheatre and gardens</div>
+      </div>
+      <div class="ghat-item" onclick="openGhat(9)">
+        <svg viewBox="0 0 24 24"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/></svg>
+        <div class="ghat-num">10 · Pilgrimage</div>
+        <div class="ghat-name">Raj Ghat</div>
+        <div class="ghat-desc">Northern end ghat; quiet and spiritual in the early morning</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GANGA AARTI SPLIT -->
+<section class="section aarti-split" id="aarti-section">
+  <div class="aarti-grid">
+    <div class="aarti-img-wrap reveal">
+      <img src="https://images.unsplash.com/photo-1604871000636-074fa5117945?w=900&auto=format&fit=crop&q=85" alt="Ganga Aarti Varanasi">
+      <div class="aarti-img-label">Dashashwamedh Ghat · Varanasi</div>
+    </div>
+    <div class="aarti-text reveal" style="transition-delay:.2s">
+      <span class="sec-eyebrow">Nightly Ceremony</span>
+      <h2 class="sec-title">The <span>Ganga Aarti</span></h2>
+      <div class="sec-divider"></div>
+      <p>Every evening at Dashashwamedh Ghat, seven priests simultaneously perform the Ganga Aarti — a breathtaking ritual of fire, flowers, conch shells and Vedic chants offered to the sacred River Ganges.</p>
+      <p>Watching from a boat as the lamps reflect on the dark river is an experience unlike anything else in the world. The morning Subah-e-Banaras aarti at Assi Ghat offers a quieter, equally divine alternative.</p>
+      <table class="timings-table">
+        <thead><tr><th>Ceremony</th><th>Location</th><th>Time</th></tr></thead>
+        <tbody>
+          <tr><td>Morning Aarti</td><td>Assi Ghat</td><td>5:00 – 6:30 AM</td></tr>
+          <tr><td>Morning Aarti</td><td>Dashashwamedh</td><td>5:30 – 7:00 AM</td></tr>
+          <tr><td>Evening Aarti</td><td>Dashashwamedh</td><td>6:45 – 8:15 PM</td></tr>
+          <tr><td>Evening Aarti</td><td>Assi Ghat</td><td>7:00 – 8:00 PM</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section style="padding:4rem 2rem" class="why-us">
+  <div class="section-wrap">
+    <div class="why-grid reveal">
+      <div class="why-item">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div class="why-title">Local Experts</div>
+        <div class="why-desc">Born and raised in Varanasi, our guides know every temple, ghat and hidden corner of the city.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="why-title">12,000+ Pilgrims</div>
+        <div class="why-desc">Over a decade of trusted service — thousands of satisfied families from across India and abroad.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <div class="why-title">Safe & Hassle-Free</div>
+        <div class="why-desc">All accommodations, transport and darshan queues managed by us — you focus on the experience.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <div class="why-title">Best Price Promise</div>
+        <div class="why-desc">Competitive, transparent pricing with no hidden costs. We match or beat any comparable tour quote.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section gallery-section" id="gallery-section">
+  <div class="section-wrap">
+    <div class="sec-header reveal">
+      <span class="sec-eyebrow">Visual Journey</span>
+      <h2 class="sec-title">Gallery of <span>Kashi</span></h2>
+      <div class="sec-divider"></div>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gal-item" onclick="openPhoto('https://images.unsplash.com/photo-1602940659805-770d1b3b9911?w=1200&auto=format&fit=crop&q=85','Temple Architecture')" style="cursor:pointer"" onclick="openPhoto('https://images.unsplash.com/photo-1661956602868-6ae368943878?w=1200&auto=format&fit=crop&q=85','Sacred Light')" style="cursor:pointer"" onclick="openPhoto('https://images.unsplash.com/photo-1609450104082-b9a47de3e793?w=1200&auto=format&fit=crop&q=85','Dhamek Stupa, Sarnath')" style="cursor:pointer"" onclick="openPhoto('https://images.unsplash.com/photo-1604871000636-074fa5117945?w=1200&auto=format&fit=crop&q=85','Morning on the Ganges')" style="cursor:pointer"" onclick="openPhoto('https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=1200&auto=format&fit=crop&q=85','Varanasi Ghats at Dusk')" style="cursor:pointer" span-2"><img src="https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=900&auto=format&fit=crop&q=80" alt="Varanasi ghats"><div class="gal-label"><span>Varanasi Ghats at Dusk</span></div></div>
+      <div class="gal-item"><img src="https://images.unsplash.com/photo-1604871000636-074fa5117945?w=500&auto=format&fit=crop&q=80" alt="Ganges morning"><div class="gal-label"><span>Morning on the Ganges</span></div></div>
+      <div class="gal-item"><img src="https://images.unsplash.com/photo-1609450104082-b9a47de3e793?w=500&auto=format&fit=crop&q=80" alt="Sarnath stupa"><div class="gal-label"><span>Dhamek Stupa, Sarnath</span></div></div>
+      <div class="gal-item"><img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?w=500&auto=format&fit=crop&q=80" alt="Sacred light"><div class="gal-label"><span>Sacred Light</span></div></div>
+      <div class="gal-item"><img src="https://images.unsplash.com/photo-1602940659805-770d1b3b9911?w=500&auto=format&fit=crop&q=80" alt="Temple"><div class="gal-label"><span>Temple Architecture</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO REACH -->
+<section class="section reach-section" id="reach-section">
+  <div class="section-wrap">
+    <div class="sec-header reveal">
+      <span class="sec-eyebrow">Getting There</span>
+      <h2 class="sec-title">How to <span>Reach Varanasi</span></h2>
+      <div class="sec-divider"></div>
+    </div>
+    <div class="reach-grid reveal">
+      <div class="reach-card">
+        <svg viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+        <div class="reach-mode">By Air</div>
+        <p class="reach-info">Lal Bahadur Shastri Airport (VNS), Babatpur — 26 km from city. Direct flights from Delhi, Mumbai, Kolkata, Bengaluru and Chennai daily.</p>
+      </div>
+      <div class="reach-card">
+        <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><path d="M6 11h4"/><path d="M14 11h4"/></svg>
+        <div class="reach-mode">By Train</div>
+        <p class="reach-info">Varanasi Junction (BSB) is well-connected nationwide. Kashi Express, Shiv Ganga Express and Vande Bharat from Delhi, Mumbai and Kolkata.</p>
+      </div>
+      <div class="reach-card">
+        <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        <div class="reach-mode">By Road</div>
+        <p class="reach-info">NH-19 and NH-29 connect Varanasi. UPSRTC Volvo buses from Lucknow (286 km), Prayagraj (120 km) and Patna (230 km).</p>
+      </div>
+      <div class="reach-card">
+        <svg viewBox="0 0 24 24"><path d="M3 17l2-7 7-2 7 2 2 7"/><path d="M3 17a9 9 0 0 0 18 0"/><line x1="12" y1="8" x2="12" y2="3"/></svg>
+        <div class="reach-mode">By River</div>
+        <p class="reach-info">Seasonal boat services from Ramnagar. Private boats and tourist launches are available from all major ghats along the riverfront.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact-section" id="contact">
+  <div class="section-wrap contact-wrap">
+    <div class="contact-top reveal">
+      <span class="sec-eyebrow" style="color:var(--gold-light)">Plan Your Journey</span>
+      <h2 class="sec-title">Book Your <span>Sacred Tour</span></h2>
+      <div class="sec-divider" style="margin:.9rem auto;background:var(--gold)"></div>
+      <p class="sec-sub" style="color:rgba(255,255,255,.5)">Fill in your details and our tour expert will call you within 24 hours to plan your perfect pilgrimage.</p>
+    </div>
+    <div class="contact-info-row reveal">
+      <div class="contact-info-item">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.27 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+        <div class="ci-label">Call / WhatsApp</div>
+        <div class="ci-val">+91-542-XXX-XXXX</div>
+      </div>
+      <div class="contact-info-item">
+        <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <div class="ci-label">Email</div>
+        <div class="ci-val"><a href="mailto:info@kashiyatra.in">info@kashiyatra.in</a></div>
+      </div>
+      <div class="contact-info-item">
+        <svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div class="ci-label">Office</div>
+        <div class="ci-val">Near Dashashwamedh Ghat, Varanasi — 221001</div>
+      </div>
+    </div>
+    <div class="contact-form-wrap reveal">
+      <div class="form-row">
+        <div class="form-group"><label>Full Name *</label><input id="cf-name" type="text" placeholder="Your full name"></div>
+        <div class="form-group"><label>Mobile / WhatsApp *</label><input id="cf-phone" type="tel" placeholder="+91 XXXXX XXXXX"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Tour Package *</label>
+          <select id="cf-package">
+            <option value="">— Select a Package —</option>
+            <optgroup label="Varanasi Only">
+              <option value="Subah-e-Kashi (1N/2D)">Subah-e-Kashi (1N/2D) — ₹4,999</option>
+              <option value="Shivnagari Kashi Yatra (2N/3D)">Shivnagari Kashi Yatra (2N/3D) — ₹8,999</option>
+              <option value="Rang-e-Banaras (3N/4D)">Rang-e-Banaras (3N/4D) — ₹14,999</option>
+            </optgroup>
+            <optgroup label="Kashi + Ayodhya">
+              <option value="Subah-e-Kashi + Ayodhya (2N/3D)">Subah-e-Kashi + Ayodhya (2N/3D) — ₹9,999</option>
+              <option value="Shivnagari Kashi Yatra + Ayodhya (3N/4D)">Shivnagari Kashi Yatra + Ayodhya (3N/4D) — ₹13,999</option>
+              <option value="Rang-e-Banaras + Ayodhya (4N/5D)">Rang-e-Banaras + Ayodhya (4N/5D) — ₹19,999</option>
+            </optgroup>
+            <optgroup label="Kashi + Prayagraj">
+              <option value="Subah-e-Kashi + Prayagraj (2N/3D)">Subah-e-Kashi + Prayagraj (2N/3D) — ₹9,999</option>
+              <option value="Shivnagari Kashi Yatra + Prayagraj (3N/4D)">Shivnagari Kashi Yatra + Prayagraj (3N/4D) — ₹13,999</option>
+              <option value="Rang-e-Banaras + Prayagraj (4N/5D)">Rang-e-Banaras + Prayagraj (4N/5D) — ₹19,999</option>
+            </optgroup>
+            <optgroup label="Kashi + Vindhyachal &amp; Chunar Fort">
+              <option value="Subah-e-Kashi + Vindhyachal &amp; Chunar Fort (2N/3D)">Subah-e-Kashi + Vindhyachal &amp; Chunar (2N/3D) — ₹9,999</option>
+              <option value="Shivnagari Kashi Yatra + Vindhyachal &amp; Chunar Fort (3N/4D)">Shivnagari Kashi Yatra + Vindhyachal &amp; Chunar (3N/4D) — ₹13,999</option>
+              <option value="Rang-e-Banaras + Vindhyachal &amp; Chunar Fort (4N/5D)">Rang-e-Banaras + Vindhyachal &amp; Chunar (4N/5D) — ₹19,999</option>
+            </optgroup>
+            <option value="Custom Package">Custom / Other Package</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Travel Date</label><input id="cf-date" type="date"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Number of Travellers</label><input id="cf-people" type="number" placeholder="e.g. 4" min="1"></div>
+        <div class="form-group"><label>Email</label><input id="cf-email" type="email" placeholder="your@email.com"></div>
+      </div>
+      <div class="form-group" style="margin-bottom:1.4rem"><label>Special Requests</label><textarea id="cf-message" placeholder="Religious preferences, accessibility needs, dietary requirements..."></textarea></div>
+      <button class="form-submit" onclick="submitForm()">
+        <svg style="width:18px;height:18px;fill:currentColor;vertical-align:middle;margin-right:.4rem" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L0 24l6.335-1.507A11.934 11.934 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.876 9.876 0 0 1-5.031-1.375l-.361-.214-3.762.895.952-3.655-.236-.374A9.867 9.867 0 0 1 2.106 12C2.106 6.533 6.533 2.106 12 2.106c5.468 0 9.894 4.427 9.894 9.894 0 5.468-4.426 9.894-9.894 9.894z"/></svg>
+        Send via WhatsApp — Get Instant Reply
+      </button>
+      <p style="text-align:center;font-size:.78rem;color:rgba(255,255,255,.35);margin-top:.8rem">Your details will be sent directly to our WhatsApp. We respond within minutes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-logo">Kashi <span>Yatra</span></div>
+      <p class="footer-tagline">Dedicated to curating authentic spiritual experiences across Kashi, Mirzapur, Prayagraj and beyond. Trusted by pilgrims since 2010.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Destinations</h4>
+      <ul class="footer-links">
+        <li><a onclick="openDest('kashi')">Varanasi</a></li>
+        <li><a onclick="openDest('sarnath')">Sarnath</a></li>
+        <li><a onclick="openDest('vindhya')">Vindhyavasini</a></li>
+        <li><a onclick="openDest('prayagraj')">Prayagraj</a></li>
+        <li><a onclick="openDest('ayodhya')">Ayodhya</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Tour Packages</h4>
+      <ul class="footer-links">
+        <li><a onclick="openTour('kashi-darshan')">Kashi Darshan</a></li>
+        <li><a onclick="openTour('sarnath-tour')">Sarnath Tour</a></li>
+        <li><a onclick="openTour('vindhyachal')">Vindhyachal Yatra</a></li>
+        <li><a onclick="openTour('prayagraj-tour')">Sangam Tour</a></li>
+        <li><a onclick="openTour('grand-circuit')">Grand Circuit</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a onclick="goTo('ghats-section')">Sacred Ghats</a></li>
+        <li><a onclick="goTo('aarti-section')">Ganga Aarti</a></li>
+        <li><a onclick="goTo('reach-section')">How to Reach</a></li>
+        <li><a onclick="goTo('contact')">Book Now</a></li>
+        <li><a onclick="goTo('contact')">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Kashi Yatra Tours & Travels. All Rights Reserved. · Varanasi, UP 221001</span>
+    <span>Designed with care for pilgrims</span>
+  </div>
+</footer>
+
+<!-- SUCCESS MODAL -->
+<div id="successModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.7);backdrop-filter:blur(12px);align-items:center;justify-content:center;padding:1rem">
+  <div style="background:linear-gradient(160deg,#0D0500,#1A0A00);border:1px solid rgba(212,160,23,.3);border-radius:16px;max-width:480px;width:100%;text-align:center;padding:0;overflow:hidden;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.6);animation:successPop .5s cubic-bezier(.16,1,.3,1)">
+    <div style="height:4px;background:linear-gradient(90deg,#C8900A,#F5C842,#C8900A);background-size:200% auto;animation:shimmerGold 2s linear infinite"></div>
+    <div style="width:90px;height:90px;background:radial-gradient(circle,rgba(212,160,23,.2),transparent 70%);border:2px solid rgba(212,160,23,.4);border-radius:50%;margin:2.5rem auto 1.5rem;display:flex;align-items:center;justify-content:center">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#F5C842" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <div style="font-size:1.8rem;margin-bottom:.3rem">&#128591;</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:1.6rem;color:#fff;margin-bottom:.5rem;padding:0 2rem">Enquiry Received!</h2>
+    <p style="color:rgba(255,255,255,.6);font-size:.92rem;line-height:1.7;padding:0 2.5rem;margin-bottom:.5rem">Our team will reach you on WhatsApp within <strong style="color:#F5C842">30 minutes</strong> to discuss your sacred journey.</p>
+    <p style="font-family:'Playfair Display',serif;font-size:1.1rem;color:#E8A820;font-style:italic;margin-bottom:2rem">Har Har Mahadev</p>
+    <div id="successDetails" style="background:rgba(255,255,255,.04);border-top:1px solid rgba(212,160,23,.15);border-bottom:1px solid rgba(212,160,23,.15);padding:1.2rem 2rem;margin-bottom:1.8rem;text-align:left"></div>
+    <div style="display:flex;gap:.8rem;padding:0 2rem 2rem;flex-wrap:wrap">
+      <button id="waBtn" style="flex:1;background:#25D366;color:#fff;border:none;padding:.85rem 1rem;border-radius:8px;font-size:.82rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;min-width:140px">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L0 24l6.335-1.507A11.934 11.934 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.876 9.876 0 0 1-5.031-1.375l-.361-.214-3.762.895.952-3.655-.236-.374A9.867 9.867 0 0 1 2.106 12C2.106 6.533 6.533 2.106 12 2.106c5.468 0 9.894 4.427 9.894 9.894 0 5.468-4.426 9.894-9.894 9.894z"/></svg>
+        Open WhatsApp
+      </button>
+      <button onclick="closeSuccessModal()" style="flex:1;background:rgba(255,255,255,.07);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.15);padding:.85rem 1rem;border-radius:8px;font-size:.82rem;font-weight:600;cursor:pointer;min-width:140px">Close</button>
+    </div>
+  </div>
+</div>
+<style>
+@keyframes successPop{from{opacity:0;transform:scale(.88) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}
+@keyframes shimmerGold{0%{background-position:0}100%{background-position:200%}}
+</style>
+
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+// DATA
+const DEST={
+  kashi:{img:'https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=900&auto=format&fit=crop&q=85',title:'Kashi Vishwanath Temple',sub:'City Centre, Varanasi · One of the 12 Jyotirlingas',desc1:'The Kashi Vishwanath Temple is dedicated to Lord Shiva and is one of the twelve Jyotirlingas — the holiest of Shiva temples. The main deity is known as Vishweshwara, meaning "Ruler of The Universe." Varanasi is considered the abode of Shiva and dying here is believed to grant moksha (liberation).',desc2:'The current temple was built in 1780 CE by Maratha ruler Ahilya Bai Holkar. The gold-plated shikhara (spire) was donated by Maharaja Ranjit Singh. The recently inaugurated Kashi Vishwanath Corridor (2021) has transformed the complex into one of India\'s grandest temple precincts.',facts:[{v:'3500+',l:'Years Old'},{v:'72 ft',l:'Temple Height'},{v:'800 kg',l:'Gold on Spire'}],hl:['One of the 12 Jyotirlingas of Lord Shiva','New Kashi Vishwanath Corridor spans 5 lakh sq ft','Gold-plated shikhara donated by Maharaja Ranjit Singh','Dying in Varanasi grants moksha per Hindu belief','Spectacular during Mahashivratri and Shravan month'],info:[['Best Time','Oct – March; Mahashivratri'],['Entry','Free — ID required at security'],['Dress Code','Traditional attire required'],['Timings','3:00 AM – 11:00 PM daily']]},
+  'aarti-dest':{img:'https://images.unsplash.com/photo-1604871000636-074fa5117945?w=900&auto=format&fit=crop&q=85',title:'Ganga Aarti Ceremony',sub:'Dashashwamedh Ghat · Varanasi',desc1:'The Ganga Aarti at Dashashwamedh Ghat is one of the world\'s most spectacular religious ceremonies. Every evening, seven trained priests simultaneously perform the ritual using large brass lamps while chanting Vedic hymns, accompanied by conch shells, cymbals and bells.',desc2:'The ceremony has been performed daily for centuries — through festivals, monsoons and everything in between. Watching from a boat on the river at night, with the lamps reflecting on the dark water, is a deeply moving experience that stays with visitors for life.',facts:[{v:'Every Day',l:'No Exceptions'},{v:'7 Priests',l:'Simultaneous'},{v:'45 Min',l:'Duration'}],hl:['Held every evening at Dashashwamedh Ghat, rain or shine','Morning Subah-e-Banaras aarti at Assi Ghat at 5 AM','Thousands of flower diyas float on the river','Watching from a boat gives the most immersive experience','Photography allowed from the ghats and boats'],info:[['Evening Aarti','6:45 – 8:15 PM (Dashashwamedh)'],['Morning Aarti','5:00 – 6:30 AM (Assi Ghat)'],['Best View','From a boat on the river'],['Entry','Free to watch']]},
+  sarnath:{img:'https://images.unsplash.com/photo-1609450104082-b9a47de3e793?w=900&auto=format&fit=crop&q=85',title:'Sarnath — Dhamek Stupa',sub:'13 km from Varanasi · UNESCO Heritage',desc1:'Sarnath is one of the four main Buddhist pilgrimage sites in the world. It was here that Siddhartha Gautama, after attaining enlightenment in Bodh Gaya, delivered his first sermon — the Dhammacakkappavattana Sutta — to his five disciples, setting the Wheel of Dharma in motion.',desc2:'The Dhamek Stupa (5th–6th century CE) stands 43.6 metres tall and marks the exact spot of the first sermon. The Sarnath Archaeological Museum houses the famous Lion Capital of Ashoka — now the National Emblem of India — along with sculptures from the Mauryan and Gupta periods.',facts:[{v:'528 BC',l:'First Sermon'},{v:'43.6 m',l:'Stupa Height'},{v:'UNESCO',l:'Heritage Site'}],hl:['Dhamek Stupa — 5th century monument at the exact sermon site','Lion Capital of Ashoka at the Archaeological Museum','Mulagandha Kuti Vihar — modern temple with Buddha relics','Thai, Japanese, Tibetan and Chinese Buddhist temples','Deer Park where Buddha preached to five disciples'],info:[['Distance','13 km from Varanasi (30 min)'],['Museum Timings','10 AM – 5 PM (closed Fridays)'],['Entry Fee','₹40 Indians / ₹600 foreigners'],['Best Time','November – March']]},
+  vindhya:{img:'https://images.unsplash.com/photo-1602940659805-770d1b3b9911?w=900&auto=format&fit=crop&q=85',title:'Vindhyavasini Devi Temple',sub:'Vindhyachal, Mirzapur · 65 km · Shakti Peetha',desc1:'Vindhyavasini Devi is one of the most powerful and revered Shakti Peethas in India, situated on the banks of the Ganga at Vindhyachal in Mirzapur. The goddess Vindhyavasini — "she who dwells in the Vindhyas" — is a form of Goddess Durga.',desc2:'The holy Trikona (triangle) consists of three temples: Vindhyavasini Devi (main), Ashtabhuja Devi (2 km), and Kali Khoh (7 km). Completing this triangular circuit is considered highly auspicious. The temple reaches its peak during Navratri when over a million pilgrims visit.',facts:[{v:'2500+',l:'Years Old'},{v:'Navratri',l:'Peak Festival'},{v:'3 Temples',l:'Holy Triangle'}],hl:['One of India\'s 51 Shakti Peethas','Trikona Parikrama — circuit of 3 sacred temples','Views of the Ganges from the temple hillside','Navratri celebrations draw over 1 million devotees','Easily combined with Chunar Fort visit'],info:[['Distance','65 km from Varanasi (1.5 hrs)'],['Best Time','Navratri (Oct), March – May'],['Timings','5:00 AM – 10:00 PM'],['Nearest Station','Vindhyachal Railway Station (2 km)']]},
+  prayagraj:{img:'https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?w=900&auto=format&fit=crop&q=85',title:'Prayagraj Triveni Sangam',sub:'125 km from Varanasi · Confluence of Three Rivers',desc1:'Prayagraj is home to the Triveni Sangam — the confluence of Ganga, Yamuna and the mythical underground Saraswati. This is considered the most sacred bathing spot in Hinduism and is described in ancient Vedic texts as the "King of Pilgrimages."',desc2:'The Kumbh Mela held here every 12 years is the largest peaceful gathering of human beings on Earth — over 240 million pilgrims attended in 2019. The Allahabad Fort (Mughal, 16th century) and Anand Bhavan (Nehru family museum) are other highlights.',facts:[{v:'240 M+',l:'Kumbh Pilgrims'},{v:'3 Rivers',l:'Confluence'},{v:'Vedic',l:'Age Mention'}],hl:['Triveni Sangam — bathing here washes away sins per Hindu belief','Kumbh Mela — world\'s largest gathering every 12 years','Allahabad Fort — massive Mughal fort (1583 CE)','Anand Bhavan — Nehru family ancestral home, now a museum','Hanuman Mandir with rare reclining Hanuman idol'],info:[['Distance','125 km (2.5 hrs by road)'],['Best Time','Oct – March; Kumbh Mela years'],['Key Ghat','Sangam Ghat for holy dip'],['Nearest Airport','Allahabad Airport (12 km)']]},
+  ayodhya:{img:'https://images.unsplash.com/photo-1661956602868-6ae368943878?w=900&auto=format&fit=crop&q=85',title:'Ram Mandir, Ayodhya',sub:'200 km from Varanasi · Birthplace of Lord Rama',desc1:'Ayodhya is one of the seven sacred cities of Hinduism and the birthplace of Lord Rama. The newly inaugurated Shri Ram Janmabhoomi Mandir (2024) is a magnificent temple built in Nagara style using pink Rajasthani sandstone, standing on the exact spot believed to be Ram\'s birthplace.',desc2:'The Sarayu River aarti at Ram Ki Paidi is a daily spectacle. Ayodhya also contains Hanuman Garhi (hilltop Hanuman temple), Kanak Bhavan (golden palace temple) and Dashrath Mahal. The entire city has been redeveloped as a world-class pilgrimage destination.',facts:[{v:'2024',l:'Temple Inaugurated'},{v:'70 Acres',l:'Temple Complex'},{v:'161 ft',l:'Temple Height'}],hl:['Shri Ram Janmabhoomi Mandir — on Ram\'s birthplace','Hanuman Garhi — 76-step hilltop Hanuman temple','Sarayu Ghat aarti — evening fire ceremony on Sarayu River','Kanak Bhavan — golden palace temple with Ram-Sita idols','Dashrath Mahal — palace of King Dashrath with frescoes'],info:[['Distance','200 km from Varanasi (4 hrs)'],['Best Time','Oct – March; Ram Navami (Apr)'],['Temple Timings','7:00 AM – 11:00 PM'],['Nearest Airport','Maharishi Valmiki Airport, Ayodhya']]}
+};
+
+const TOURS={
+  'subah-e-kashi':{img:'https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=900&auto=format&fit=crop&q=85',name:'Subah-e-Kashi',days:'1 Night / 2 Days',price:'₹4,999',per:'per person*',desc:'A short yet soulful escape into the spiritual heart of Varanasi, designed for travelers who wish to experience the essence of Banaras in limited time.',itin:['Arrival → Hotel check-in → Kal Bhairav Temple → Assi Ghat exploration → Evening Ganga Aarti at Dashashwamedh Ghat → Banarasi gali walk → Local chai & Banarasi flavors','Kashi Vishwanath Temple Darshan → Sankat Mochan Temple → Banarasi breakfast → Pickup & drop to station / airport'],inc:['Hotel accommodation','Guided sightseeing','Pickup & drop assistance','Temple assistance','Ganga Aarti experience'],exc:['Train / flight tickets to Varanasi','All meals (unless specified)','Personal expenses','Camera / entry fees at temples']},
+
+  'shivnagari-kashi':{img:'https://images.unsplash.com/photo-1625736300986-d9e74ca92b9a?w=900&auto=format&fit=crop&q=85',name:'Shivnagari Kashi Yatra',days:'2 Nights / 3 Days',price:'₹8,999',per:'per person*',desc:'A deeper spiritual journey through the sacred temples, ghats, rituals and timeless traditions of Kashi — crafted for devotees and spiritual travelers.',itin:['Arrival → Hotel check-in → Sankat Mochan Temple → Durga Kund Temple → Evening Ganga Aarti by boat at Dashashwamedh Ghat','Pre-dawn Sunrise boat ride on Maa Ganga → Kashi Vishwanath Temple darshan → Kal Bhairav Temple → Tulsi Manas Mandir → Manikarnika Ghat spiritual walk → Traditional Banarasi food trail','Bharat Mata Temple → Free time for shopping (Banarasi silk, paan) → Drop at station / airport'],inc:['Hotel accommodation','Sunrise boat ride on Maa Ganga','Temple circuit experience','Guided local assistance','Pickup & drop support'],exc:['Train / flight tickets','All meals','Personal expenses','Entry/camera fees']},
+
+  'rang-e-banaras':{img:'https://images.unsplash.com/photo-1609450104082-b9a47de3e793?w=900&auto=format&fit=crop&q=85',name:'Rang-e-Banaras',days:'3 Nights / 4 Days',price:'₹14,999',per:'per person*',desc:'A complete immersive Banaras experience blending spirituality, culture, food, heritage, history and the timeless charm of Kashi — including a full Sarnath excursion.',itin:['Arrival → Hotel check-in → Assi Ghat & Dashashwamedh Ghat → Evening Ganga Aarti (boat) → Welcome Banarasi dinner','Sunrise boat ride → Kashi Vishwanath Temple → Kal Bhairav Temple → Sankat Mochan Temple → Old city heritage walk → Hidden Banarasi gali exploration → Banarasi paan experience','Authentic Banarasi street food trail → Local market exploration → Traditional silk weaving experience → Banarasi culture evening','Sarnath excursion → Dhamek Stupa → Buddhist monasteries → Sarnath Museum → Return Varanasi → Drop at station / airport'],inc:['Premium hotel accommodation','Heritage & cultural experiences','Sunrise boat ride on Ganga','Guided sightseeing assistance','Pickup & drop support'],exc:['Train / flight tickets','All meals (unless specified)','Museum entry fees','Personal expenses']},
+
+  'kashi-ayodhya-2n':{img:'https://images.unsplash.com/photo-1661956602868-6ae368943878?w=900&auto=format&fit=crop&q=85',name:'Subah-e-Kashi + Ayodhya',days:'2 Nights / 3 Days',price:'₹9,999',per:'per person*',desc:'Experience the divine connection of Mahadev\'s Kashi and the sacred birthplace of Shri Ram in one spiritually enriching journey.',itin:['Arrival Varanasi → Kashi Vishwanath Temple darshan → Kal Bhairav Temple → Evening Ganga Aarti at Assi Ghat → Hotel','Travel to Ayodhya (AC cab, ~4 hrs) → Ram Mandir Ayodhya darshan → Hanuman Garhi → Kanak Bhawan → Ram Ki Paidi → Saryu River atmosphere → Hotel Ayodhya','Nageshwarnath Temple → Morning Saryu Ghat walk → Departure from Ayodhya'],inc:['Hotel accommodation (1 Varanasi + 1 Ayodhya)','Temple visit support','Comfortable travel arrangements','Pickup & drop assistance'],exc:['Train / flight tickets','All meals','Personal expenses','Donations & prasad']},
+
+  'shivnagari-ayodhya':{img:'https://images.unsplash.com/photo-1661956602868-6ae368943878?w=900&auto=format&fit=crop&q=85',name:'Shivnagari Kashi Yatra + Ayodhya',days:'3 Nights / 4 Days',price:'₹13,999',per:'per person*',desc:'A complete spiritual circuit combining the sacred temples of Kashi with the divine serenity of Ayodhya.',itin:['Arrival Varanasi → Hotel check-in → Sankat Mochan Temple → Durga Kund → Evening Ganga Aarti (boat)','Sunrise boat ride on Ganga → Kashi Vishwanath Temple → Kal Bhairav → Manikarnika Ghat spiritual walk → Traditional Banarasi food','Travel to Ayodhya → Ram Mandir darshan → Hanuman Garhi → Kanak Bhawan → Ram Ki Paidi → Saryu Ghat Aarti → Hotel','Morning Nageshwarnath Temple → Return Varanasi → Drop at station / airport'],inc:['Hotel accommodation','Temple assistance','Spiritual sightseeing support','Travel assistance between cities'],exc:['Train / flight tickets','All meals','Personal expenses','Temple donations']},
+
+  'rang-ayodhya':{img:'https://images.unsplash.com/photo-1661956602868-6ae368943878?w=900&auto=format&fit=crop&q=85',name:'Rang-e-Banaras + Ayodhya',days:'4 Nights / 5 Days',price:'₹19,999',per:'per person*',desc:'An immersive journey through Banaras culture and Ayodhya spirituality designed for travelers seeking the complete spiritual essence of Uttar Pradesh.',itin:['Arrival Varanasi → Premium hotel → Assi Ghat → Evening Ganga Aarti boat ride','Sunrise boat ride → Kashi Vishwanath → Temple circuit → Heritage walks → Banarasi food trail','Silk weaving experience → Sarnath excursion (Dhamek Stupa, Museum, monasteries)','Travel to Ayodhya → Ram Mandir → Hanuman Garhi → Kanak Bhawan → Saryu Aarti','Nageshwarnath Temple → Saryu Ghat → Return journey / departure'],inc:['Premium hotel accommodation (3 Varanasi + 1 Ayodhya)','Guided experiences throughout','Travel arrangements','Pickup & drop support'],exc:['Train / flight tickets','All meals (unless specified)','Entry fees','Personal expenses']},
+
+  'kashi-prayagraj-2n':{img:'https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?w=900&auto=format&fit=crop&q=85',name:'Subah-e-Kashi + Prayagraj',days:'2 Nights / 3 Days',price:'₹9,999',per:'per person*',desc:'A peaceful spiritual journey connecting the sacred ghats of Kashi with the divine Triveni Sangam of Prayagraj.',itin:['Arrival Varanasi → Hotel check-in → Kashi Vishwanath Temple → Ganga Aarti at Dashashwamedh Ghat → Banarasi gali walk','Travel to Prayagraj → Prayagraj Triveni Sangam → Boat ride at Sangam → Bade Hanuman Ji Temple → Akshayavat Darshan → Hotel Prayagraj','Morning Sangam atmosphere → Departure from Prayagraj'],inc:['Hotel accommodation (1 Varanasi + 1 Prayagraj)','Sangam boat ride experience','Guided assistance','Comfortable travel support'],exc:['Train / flight tickets','All meals','Personal expenses','Entry fees']},
+
+  'shivnagari-prayagraj':{img:'https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?w=900&auto=format&fit=crop&q=85',name:'Shivnagari Kashi Yatra + Prayagraj',days:'3 Nights / 4 Days',price:'₹13,999',per:'per person*',desc:'A spiritually enriching journey through the sacred temples of Kashi and the holy confluence of Prayagraj.',itin:['Arrival Varanasi → Kashi Vishwanath Temple → Kal Bhairav Temple → Sankat Mochan → Ganga Aarti boat ride → Hotel','Sunrise boat ride on Maa Ganga → Durga Kund Temple → Tulsi Manas Mandir → Manikarnika Ghat walk → Banarasi food','Travel to Prayagraj → Triveni Sangam → Boat ride at Sangam → Bade Hanuman Temple → Akshayavat Darshan → Hotel','Morning Sangam Ghat walk → Departure from Prayagraj'],inc:['Hotel accommodation (2 Varanasi + 1 Prayagraj)','Temple & Sangam assistance','Comfortable travel arrangements'],exc:['Train / flight tickets','All meals','Personal expenses','Donations']},
+
+  'rang-prayagraj':{img:'https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?w=900&auto=format&fit=crop&q=85',name:'Rang-e-Banaras + Prayagraj',days:'4 Nights / 5 Days',price:'₹19,999',per:'per person*',desc:'A complete spiritual and cultural experience blending Banaras heritage with the sacred atmosphere of Prayagraj.',itin:['Arrival Varanasi → Premium hotel → Assi Ghat & Dashashwamedh Ghat → Evening Ganga Aarti boat ride','Sunrise boat ride → Kashi Vishwanath Temple circuit → Old city heritage walk → Banarasi food trail','Silk weaving village → Sarnath (Dhamek Stupa, Museum, Buddhist monasteries)','Travel to Prayagraj → Triveni Sangam → Sangam boat ride → Bade Hanuman Ji Temple','Prayagraj spiritual ghats → Departure from Prayagraj'],inc:['Premium accommodation','Guided experiences','Travel arrangements','Pickup & drop support'],exc:['Train / flight tickets','All meals','Museum entry fees','Personal expenses']},
+
+  'kashi-vindhya-2n':{img:'https://images.unsplash.com/photo-1602940659805-770d1b3b9911?w=900&auto=format&fit=crop&q=85',name:'Subah-e-Kashi + Vindhyachal & Chunar Fort',days:'2 Nights / 3 Days',price:'₹9,999',per:'per person*',desc:'A unique journey combining the spiritual soul of Banaras with the divine aura of Vindhyachal and the timeless grandeur of Chunar Fort.',itin:['Arrival Varanasi → Kashi Vishwanath Temple → Ganga Aarti at Dashashwamedh Ghat → Banarasi gali exploration → Hotel','Travel to Vindhyachal (65 km) → Maa Vindhyavasini Temple → Trikona Parikrama (Kali Khoh + Ashtabhuja Temple) → Travel to Chunar Fort → Fort exploration → Return Varanasi → Hotel','Morning free → Departure from Varanasi'],inc:['Hotel accommodation in Varanasi','Guided sightseeing at all sites','Comfortable travel support'],exc:['Train / flight tickets','All meals','Entry fees','Personal expenses']},
+
+  'shivnagari-vindhya':{img:'https://images.unsplash.com/photo-1602940659805-770d1b3b9911?w=900&auto=format&fit=crop&q=85',name:'Shivnagari Kashi Yatra + Vindhyachal & Chunar Fort',days:'3 Nights / 4 Days',price:'₹13,999',per:'per person*',desc:'A spiritual and heritage circuit crafted for travelers seeking temples, mythology, history, and scenic experiences together.',itin:['Arrival Varanasi → Kashi Vishwanath darshan → Kal Bhairav Temple → Ganga Aarti boat ride → Hotel','Sunrise boat ride → Sankat Mochan Temple → Durga Kund → Tulsi Manas Mandir → Manikarnika Ghat walk → Banarasi food','Travel to Vindhyachal → Maa Vindhyavasini Temple → Kali Khoh → Ashtabhuja Temple → Return to Varanasi → Hotel','Chunar Fort exploration → Ganga panoramic views → Return Varanasi → Drop at station / airport'],inc:['Hotel accommodation','Temple & heritage assistance','Travel arrangements'],exc:['Train / flight tickets','All meals','Entry fees','Personal expenses']},
+
+  'rang-vindhya':{img:'https://images.unsplash.com/photo-1602940659805-770d1b3b9911?w=900&auto=format&fit=crop&q=85',name:'Rang-e-Banaras + Vindhyachal & Chunar Fort',days:'4 Nights / 5 Days',price:'₹19,999',per:'per person*',desc:'The ultimate spiritual, cultural and heritage experience — Banaras in full colour, the Shakti Peetha of Vindhyachal, and the historic grandeur of Chunar Fort.',itin:['Arrival Varanasi → Premium hotel → Assi Ghat → Evening Ganga Aarti boat ride','Sunrise boat ride → Kashi Vishwanath Temple circuit → Old city heritage walk → Hidden gali exploration → Banarasi paan experience','Authentic Banarasi food trail → Silk weaving village → Sarnath (Dhamek Stupa, Museum, Buddhist monasteries)','Travel to Vindhyachal → Maa Vindhyavasini Temple → Kali Khoh Temple → Ashtabhuja Temple','Chunar Fort exploration → Ganga views → Return Varanasi → Drop at station / airport'],inc:['Premium hotel accommodation','Guided spiritual & heritage experiences','Comfortable travel support'],exc:['Train / flight tickets','All meals (unless specified)','Entry fees','Personal expenses']}
+};
+
+function openModal(imgSrc,title,sub,body,photoMode){
+  const hero=document.querySelector('.modal-hero');
+  const img=document.querySelector('.modal-hero img');
+  const mBody=document.getElementById('mBody');
+  // Reset photo-mode styling
+  hero.style.height='250px'; img.style.maxHeight=''; img.style.height='100%';
+  img.style.objectFit='cover'; img.style.background='';
+  mBody.style.display='block'; mBody.style.padding='';
+  if(photoMode){
+    hero.style.height='auto'; img.style.maxHeight='75vh'; img.style.height='auto';
+    img.style.objectFit='contain'; img.style.background='#0a0502';
+    mBody.style.display='none';
+  }
+  document.getElementById('mImg').src=imgSrc;
+  document.getElementById('mTitle').textContent=title;
+  document.getElementById('mSub').textContent=sub;
+  mBody.innerHTML=body;
+  document.getElementById('modalBg').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+// ── PHOTO LIGHTBOX ──
+function openPhoto(src,caption){
+  openModal(src,caption,'Kashi Yatra — Gallery','',true);
+}
+function closeModal(){
+  document.getElementById('modalBg').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.getElementById('modalBg').addEventListener('click',function(e){if(e.target===this)closeModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+
+function openDest(id){
+  const d=DEST[id];if(!d)return;
+  const facts=d.facts.map(f=>`<div class="modal-fact"><span class="modal-fact-val">${f.v}</span><span class="modal-fact-lbl">${f.l}</span></div>`).join('');
+  const hl=d.hl.map(h=>`<li>${h}</li>`).join('');
+  const info=d.info.map(([l,v])=>`<div class="modal-info-item"><div class="modal-info-label">${l}</div><div class="modal-info-val">${v}</div></div>`).join('');
+  openModal(d.img,d.title,d.sub,`
+    <p class="modal-text">${d.desc1}</p>
+    <p class="modal-text">${d.desc2}</p>
+    <div class="modal-facts">${facts}</div>
+    <div class="modal-divider"></div>
+    <div class="modal-section-title">Highlights & What to See</div>
+    <ul class="modal-hl-list">${hl}</ul>
+    <div class="modal-section-title">Visitor Information</div>
+    <div class="modal-info-grid">${info}</div>
+    <div style="margin-top:1.6rem"><button class="mpf-book-btn" onclick="closeModal();setTimeout(()=>goTo('contact'),250)">Plan a Visit — Enquire Now</button></div>
+  `);
+}
+
+function openTour(id){
+  const t=TOURS[id];if(!t)return;
+  const itin=t.itin.map(d=>`<li>${d}</li>`).join('');
+  const inc=t.inc.map(i=>`<div class="modal-incl-item inc">${i}</div>`).join('');
+  const exc=t.exc.map(i=>`<div class="modal-incl-item exc">${i}</div>`).join('');
+  openModal(t.img,t.name,`${t.days} · Starting from ${t.price} / person`,`
+    <p class="modal-text">${t.desc}</p>
+    <div class="modal-divider"></div>
+    <div class="modal-section-title">Day-by-Day Itinerary</div>
+    <ol class="modal-itinerary">${itin}</ol>
+    <div class="modal-divider"></div>
+    <div class="modal-section-title">What's Included</div>
+    <div class="modal-incl-grid">${inc}</div>
+    <div class="modal-section-title" style="margin-top:1rem">Not Included</div>
+    <div class="modal-incl-grid">${exc}</div>
+    <div class="modal-price-footer">
+      <div><div class="mpf-price-from">Starting Price</div><div class="mpf-price">${t.price} <sub>${t.per}</sub></div></div>
+      <button class="mpf-book-btn" onclick="closeModal();setTimeout(()=>goTo('contact'),250)">Book This Tour</button>
+    </div>
+  `);
+}
+
+function goTo(id){
+  const el=document.getElementById(id);
+  if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+// ── SMART SEARCH ──
+const TOUR_META = {
+  'kashi-darshan':   {dest:['varanasi','all'],       days:3, nights:2, price:6500,  name:'Kashi Darshan',        img:'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=400&auto=format&fit=crop&q=80', tag:'Best Seller'},
+  'sarnath-tour':    {dest:['varanasi','sarnath','all'], days:2, nights:1, price:4200,  name:'Sarnath Spiritual',    img:'https://images.unsplash.com/photo-1609450104082-b9a47de3e793?w=400&auto=format&fit=crop&q=80', tag:''},
+  'vindhyachal':     {dest:['vindhyachal','varanasi','all'], days:3, nights:2, price:7800,  name:'Vindhyachal Yatra',    img:'https://images.unsplash.com/photo-1602940659805-770d1b3b9911?w=400&auto=format&fit=crop&q=80', tag:'Popular'},
+  'prayagraj-tour':  {dest:['prayagraj','varanasi','all'],  days:4, nights:3, price:9500,  name:'Prayagraj Sangam',     img:'https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?w=400&auto=format&fit=crop&q=80', tag:''},
+  'ayodhya-tour':    {dest:['ayodhya','varanasi','all'],    days:5, nights:4, price:12000, name:'Ayodhya Ram Yatra',    img:'https://images.unsplash.com/photo-1661956602868-6ae368943878?w=400&auto=format&fit=crop&q=80', tag:''},
+  'grand-circuit':   {dest:['multi','varanasi','sarnath','vindhyachal','prayagraj','ayodhya','all'], days:7, nights:6, price:22500, name:'Grand Kashi Circuit', img:'https://images.unsplash.com/photo-1604871000636-074fa5117945?w=400&auto=format&fit=crop&q=80', tag:'Luxury'},
+};
+
+function updatePackageOptions(){
+  const dest = document.getElementById('srDest').value;
+  const pkgSel = document.getElementById('srPkg');
+  const prev = pkgSel.value;
+  // Reset options
+  pkgSel.innerHTML = '<option value="">Any Package</option>';
+  const labels = {
+    'kashi-darshan':'Kashi Darshan (2N/3D) — ₹6,500',
+    'sarnath-tour':'Sarnath Spiritual (1N/2D) — ₹4,200',
+    'vindhyachal':'Vindhyachal Yatra (2N/3D) — ₹7,800',
+    'prayagraj-tour':'Prayagraj Sangam (3N/4D) — ₹9,500',
+    'ayodhya-tour':'Ayodhya Ram Yatra (4N/5D) — ₹12,000',
+    'grand-circuit':'Grand Kashi Circuit (6N/7D) — ₹22,500',
+  };
+  Object.entries(TOUR_META).forEach(([id,t])=>{
+    if(dest==='all'||t.dest.includes(dest)){
+      const opt=document.createElement('option');
+      opt.value=id; opt.textContent=labels[id];
+      if(id===prev) opt.selected=true;
+      pkgSel.appendChild(opt);
+    }
+  });
+}
+
+function searchPackages(){
+  const dest   = document.getElementById('srDest').value;
+  const pkgId  = document.getElementById('srPkg').value;
+  const date   = document.getElementById('srDate').value;
+  const people = parseInt(document.getElementById('srTravellers').value)||1;
+
+  // If a specific package chosen → open its modal directly
+  if(pkgId){ openTour(pkgId); return; }
+
+  // Filter by destination
+  const results = Object.entries(TOUR_META).filter(([id,t])=>{
+    if(dest!=='all' && !t.dest.includes(dest)) return false;
+    return true;
+  });
+
+  if(results.length===0){ showToast('No packages found for that selection. Try a different destination.'); return; }
+
+  // Build result cards
+  const destNames={'all':'All Destinations','varanasi':'Varanasi (Kashi)','sarnath':'Sarnath','vindhyachal':'Vindhyachal / Mirzapur','prayagraj':'Prayagraj','ayodhya':'Ayodhya','multi':'Multi-Destination'};
+  const dateStr  = date ? ` · Travel: ${new Date(date).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'})}` : '';
+  const peopleStr= ` · ${document.getElementById('srTravellers').options[document.getElementById('srTravellers').selectedIndex].text}`;
+
+  document.getElementById('srTitle').textContent = `${results.length} Package${results.length>1?'s':''} Found`;
+  document.getElementById('srSub').textContent   = destNames[dest] + dateStr + peopleStr;
+
+  document.getElementById('srCards').innerHTML = results.map(([id,t])=>`
+    <div onclick="closeSearchResults();openTour('${id}')" style="border:1px solid #E8DDD0;border-radius:8px;overflow:hidden;cursor:pointer;transition:transform .25s,box-shadow .25s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.12)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="position:relative;height:130px;overflow:hidden">
+        <img src="${t.img}" alt="${t.name}" style="width:100%;height:100%;object-fit:cover;display:block">
+        ${t.tag?`<span style="position:absolute;top:.5rem;left:.5rem;background:#D4520A;color:#fff;font-size:.6rem;font-weight:700;padding:.18rem .55rem;border-radius:20px;letter-spacing:.08em;text-transform:uppercase">${t.tag}</span>`:''}
+      </div>
+      <div style="padding:.9rem 1rem">
+        <div style="font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#D4520A;margin-bottom:.3rem">${t.nights}N / ${t.days}D</div>
+        <div style="font-family:'Playfair Display',serif;font-size:.98rem;font-weight:700;color:#1A1208;margin-bottom:.5rem">${t.name}</div>
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:#7A1010">₹${t.price.toLocaleString('en-IN')}<span style="font-family:'Inter',sans-serif;font-size:.65rem;font-weight:400;color:#9B8B77">/person</span></div>
+          <span style="background:#D4520A;color:#fff;font-size:.7rem;font-weight:600;padding:.28rem .75rem;border-radius:4px">View</span>
+        </div>
+      </div>
+    </div>`).join('');
+
+  document.getElementById('searchResults').style.display='block';
+  document.body.style.overflow='hidden';
+}
+
+function closeSearchResults(){
+  document.getElementById('searchResults').style.display='none';
+  document.body.style.overflow='';
+}
+
+// ── CUSTOM TOUR MODAL ──
+function openCustomTour(){
+  openModal(
+    'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=900&auto=format&fit=crop&q=80',
+    'Custom Tour Enquiry',
+    'Build your own pilgrimage package',
+    `<p class="modal-text">Can't find a package that fits? We create fully customised pilgrimage itineraries for individuals, families and groups — designed around your preferred destinations, dates, budget and religious requirements.</p>
+    <div class="modal-section-title">What We Can Customise</div>
+    <ul class="modal-hl-list">
+      <li>Destinations & sequence of visits</li>
+      <li>Duration (1 day to 3+ weeks)</li>
+      <li>Accommodation level (budget to 5-star)</li>
+      <li>Group size (solo to 500+ pilgrims)</li>
+      <li>Special puja & rituals arranged</li>
+      <li>Transport type (AC car, coach, train)</li>
+      <li>Vegetarian & Jain meal options</li>
+      <li>VIP darshan bookings at key temples</li>
+    </ul>
+    <div class="modal-divider"></div>
+    <div class="modal-section-title">Popular Custom Routes</div>
+    <div class="modal-info-grid">
+      <div class="modal-info-item"><div class="modal-info-label">Family Pilgrimage</div><div class="modal-info-val">Varanasi + Ayodhya + Prayagraj in comfort</div></div>
+      <div class="modal-info-item"><div class="modal-info-label">Senior Citizen Tour</div><div class="modal-info-val">Slow-paced, accessible routes with medical support</div></div>
+      <div class="modal-info-item"><div class="modal-info-label">Group Yatra (50+)</div><div class="modal-info-val">Full logistics, AC coaches, group puja arrangements</div></div>
+      <div class="modal-info-item"><div class="modal-info-label">Navratri Special</div><div class="modal-info-val">Vindhyavasini + Kashi during the 9-day festival</div></div>
+    </div>
+    <div style="margin-top:1.6rem"><button class="mpf-book-btn" onclick="closeModal();setTimeout(()=>goTo('contact'),250)">Send Custom Enquiry</button></div>`
+  );
+}
+
+// ── GHAT INFO MODAL ──
+const GHATS_DATA = [
+  {name:'Dashashwamedh Ghat',tag:'Main Ghat',img:'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=900&auto=format&fit=crop&q=80',desc:'The principal and most famous ghat of Varanasi, created by Lord Brahma to welcome Lord Shiva. Seven priests perform the breathtaking Ganga Aarti here simultaneously every evening — a ceremony of fire, flowers, conch shells and Vedic chants that has never stopped for centuries.',highlights:['Nightly Ganga Aarti — best watched from a boat','Lord Brahma performed 10 horse sacrifices (Dasha Ashwamedha) here','One of the oldest continuously used ritual sites on Earth','Stalls of flowers, diyas and prasad nearby','Morning boat rides depart from here'],time:'Evening Aarti: 6:45 – 8:15 PM',entry:'Free'},
+  {name:'Manikarnika Ghat',tag:'Cremation Ghat',img:'https://images.unsplash.com/photo-1604871000636-074fa5117945?w=900&auto=format&fit=crop&q=80',desc:'The great cremation ghat of Varanasi — fires have burned here continuously for thousands of years without ever being extinguished. Hindus believe that Lord Shiva himself whispers the Taraka mantra (liberation mantra) in the ear of those cremated here, granting them immediate moksha.',highlights:['Sacred fire has burned uninterrupted for thousands of years','Over 200 cremations take place here every day','Associated with the story of Goddess Sati\'s earring (Manikarnika)','Photography strictly not permitted out of respect','Best observed respectfully from a distance on a boat'],time:'Open 24 hours — cremations ongoing',entry:'Free (photography prohibited)'},
+  {name:'Assi Ghat',tag:'Southern Boundary',img:'https://images.unsplash.com/photo-1609450104082-b9a47de3e793?w=900&auto=format&fit=crop&q=80',desc:'The southernmost of the main ghats, located at the ancient confluence of the Assi and Ganga rivers. Famous for the Subah-e-Banaras morning aarti at sunrise — an intimate, moving ceremony very different from the grand evening aarti at Dashashwamedh. A beloved gathering spot for locals, students and pilgrims.',highlights:['Subah-e-Banaras morning aarti at sunrise (5 AM)','Peepal tree under which pilgrims worship a Shivalinga','Yoga and meditation classes on the ghat every morning','Vibrant café culture and arts scene nearby','Starting point for the full ghat boat ride'],time:'Morning Aarti: 5:00 – 6:30 AM',entry:'Free'},
+  {name:'Harishchandra Ghat',tag:'Ancient Cremation',img:'https://images.unsplash.com/photo-1602940659805-770d1b3b9911?w=900&auto=format&fit=crop&q=80',desc:'One of two cremation ghats in Varanasi, named after the legendary and truthful King Harishchandra from the Ramayana. According to legend, the king worked here as a servant to fulfil a vow of truth. The ghat has an electric crematorium added in 1988, but traditional rituals continue alongside it.',highlights:['Named after the legendary truthful king of Hindu mythology','Traditional and electric cremation facilities side by side','Considered highly sacred for final rites','One of the quieter ghats — a place for deep reflection','Shmashan Kali temple on the ghat premises'],time:'Open 24 hours',entry:'Free'},
+  {name:'Scindia Ghat',tag:'Submerged Temple',img:'https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?w=900&auto=format&fit=crop&q=80',desc:'Home to one of the most unique sights in Varanasi — a Shiva temple that has partially sunk into the Ganges due to the immense weight of its construction by the Scindia Maratha family in the 19th century. The tilting temple is now a landmark, with pilgrims rowing up to worship the submerged deity.',highlights:['Partially submerged Shiva temple — a truly unique sight','Built by Scindia Maratha dynasty in the 19th century','Temple sank due to excess weight of construction','Pilgrims worship the submerged deity by boat','One of the most photogenic ghats in Varanasi'],time:'All day',entry:'Free'},
+  {name:'Panchganga Ghat',tag:'Five Rivers',img:'https://images.unsplash.com/photo-1661956602868-6ae368943878?w=900&auto=format&fit=crop&q=80',desc:'Believed to be the sacred confluence of five rivers: Ganga, Yamuna, Saraswati, Dhutapapa and Kirana. The dramatic Alamgir Mosque (Aurangzeb Mosque) built on the ruins of a Vishnu temple towers above the ghat, creating a striking juxtaposition of Hindu and Mughal architecture.',highlights:['Confluence of five sacred rivers (3 mythical)','Alamgir Mosque — built by Aurangzeb on a Vishnu temple site','One of the most dramatic backdrops of any Varanasi ghat','Bindu Madhav temple ruins nearby','Popular spot for pilgrims during Kartik Purnima'],time:'All day',entry:'Free'},
+  {name:'Man Mandir Ghat',tag:'Observatory',img:'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=900&auto=format&fit=crop&q=80',desc:'Built in 1600 CE by Raja Man Singh of Amber, this ghat features an outstanding example of Rajput palace architecture. Jai Singh II later installed one of India\'s famous Jantar Mantar observatories on the palace roof — making this the only ghat with a functioning astronomical observatory.',highlights:['Palace built in 1600 CE by Raja Man Singh of Jaipur','Jantar Mantar astronomical observatory on the roof','One of five Jantar Mantars built by Maharaja Jai Singh II','Exquisite Rajput-style oriel windows and balconies','Excellent panoramic views up and down the ghats'],time:'Observatory: 9 AM – 5 PM',entry:'₹25 for Observatory'},
+  {name:'Kedar Ghat',tag:'South Indian',img:'https://images.unsplash.com/photo-1609450104082-b9a47de3e793?w=900&auto=format&fit=crop&q=80',desc:'A favourite among South Indian and Nepali pilgrims, Kedar Ghat is one of the most picturesque in Varanasi. It is named after Kedarnath — one of the 12 Jyotirlingas — and features distinctive red and white striped steps. The Kedareshwar Shiva temple nearby is an important pilgrimage stop.',highlights:['Named after Kedarnath Jyotirlinga','Distinctive red-and-white striped stepped architecture','Kedareshwar Shiva temple just above the ghat','Particularly sacred for South Indian and Nepali Hindus','One of the quieter, more scenic ghats'],time:'All day; Temple: 5 AM – 10 PM',entry:'Free'},
+  {name:'Namo Ghat',tag:'Modern Ghat',img:'https://images.unsplash.com/photo-1602940659805-770d1b3b9911?w=900&auto=format&fit=crop&q=80',desc:'A recently developed modern ghat inaugurated in 2019 under the Namami Gange programme. It features a large yoga and meditation deck, an open-air amphitheatre for cultural events, landscaped gardens, food stalls and clean modern infrastructure — while maintaining the spiritual character of Varanasi\'s ghats.',highlights:['Large yoga and meditation deck with river views','Open-air amphitheatre for cultural programmes','Clean modern facilities including restrooms','Beautiful landscaped gardens along the riverfront','Hosts international yoga events and cultural festivals'],time:'Open all day',entry:'Free'},
+  {name:'Raj Ghat',tag:'Northern End',img:'https://images.unsplash.com/photo-1604871000636-074fa5117945?w=900&auto=format&fit=crop&q=80',desc:'Located at the northern end of the ghats near the road and rail bridge over the Ganges, Raj Ghat is one of the quieter and more peaceful spots along the riverfront. Archaeological excavations here have revealed continuous habitation dating back over 3,000 years — making it one of the oldest continuously inhabited sites in the world.',highlights:['Archaeological site with 3000+ years of continuous habitation','Quietest and most peaceful of the major ghats','Close to the road and rail bridge for easy access','Excellent photography spot for bridge and river views','Ruins of the ancient Raj Ghat fort nearby'],time:'All day',entry:'Free'},
+];
+
+function openGhat(idx){
+  const g = GHATS_DATA[idx]; if(!g) return;
+  const hl = g.highlights.map(h=>`<li>${h}</li>`).join('');
+  openModal(
+    g.img,
+    g.name,
+    g.tag + ' · Varanasi Ghats',
+    `<p class="modal-text">${g.desc}</p>
+    <div class="modal-divider"></div>
+    <div class="modal-section-title">Highlights</div>
+    <ul class="modal-hl-list">${hl}</ul>
+    <div class="modal-info-grid" style="margin-top:1.2rem">
+      <div class="modal-info-item"><div class="modal-info-label">Best Time / Timings</div><div class="modal-info-val">${g.time}</div></div>
+      <div class="modal-info-item"><div class="modal-info-label">Entry</div><div class="modal-info-val">${g.entry}</div></div>
+    </div>
+    <div style="margin-top:1.6rem;display:flex;gap:.8rem;flex-wrap:wrap">
+      <button class="mpf-book-btn" onclick="closeModal();setTimeout(()=>goTo('contact'),250)">Book a Ghat Tour</button>
+      <button class="mpf-book-btn" style="background:#1C0A00;border:1px solid rgba(212,82,10,.4)" onclick="closeModal();setTimeout(()=>openDest('aarti-dest'),200)">View Ganga Aarti Info</button>
+    </div>`
+  );
+}
+
+// ── OFFICE INFO ──
+function openOfficeInfo(){
+  openModal(
+    'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=900&auto=format&fit=crop&q=80',
+    'Our Office',
+    'Kashi Yatra Tours & Travels · Varanasi',
+    `<div class="modal-info-grid">
+      <div class="modal-info-item"><div class="modal-info-label">Address</div><div class="modal-info-val">Near Dashashwamedh Ghat, Varanasi — 221001, Uttar Pradesh, India</div></div>
+      <div class="modal-info-item"><div class="modal-info-label">Phone / WhatsApp</div><div class="modal-info-val">+91-542-XXX-XXXX</div></div>
+      <div class="modal-info-item"><div class="modal-info-label">Email</div><div class="modal-info-val">info@kashiyatra.in</div></div>
+      <div class="modal-info-item"><div class="modal-info-label">Office Hours</div><div class="modal-info-val">Mon – Sun: 8:00 AM – 8:00 PM</div></div>
+      <div class="modal-info-item"><div class="modal-info-label">Walk-ins</div><div class="modal-info-val">Welcome — no appointment needed</div></div>
+      <div class="modal-info-item"><div class="modal-info-label">Languages</div><div class="modal-info-val">Hindi, English, Bengali, Tamil</div></div>
+    </div>
+    <div style="margin-top:1.6rem"><button class="mpf-book-btn" onclick="closeModal();setTimeout(()=>goTo('contact'),250)">Send Us a Message</button></div>`
+  );
+}
+
+// ── TOAST ──
+function showToast(msg){
+  let t = document.getElementById('toastEl');
+  if(!t){ t=document.createElement('div'); t.id='toastEl'; t.style.cssText='position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:#1C0A00;color:#fff;padding:.8rem 1.6rem;border-radius:6px;font-size:.85rem;z-index:9999;box-shadow:0 4px 20px rgba(0,0,0,.3);transition:opacity .3s;border:1px solid rgba(212,82,10,.4)'; document.body.appendChild(t); }
+  t.textContent=msg; t.style.opacity='1';
+  clearTimeout(t._timer);
+  t._timer=setTimeout(()=>t.style.opacity='0',3000);
+}
+
+// ── YOUR WHATSAPP NUMBER — replace XXXXXXXXXX with your real number (with country code, no + or spaces) ──
+const WA_NUMBER = '918318893914';
+
+function submitForm(){
+  const name    = (document.getElementById('cf-name').value||'').trim();
+  const phone   = (document.getElementById('cf-phone').value||'').trim();
+  const pkg     = (document.getElementById('cf-package').value||'').trim();
+  const date    = (document.getElementById('cf-date').value||'').trim();
+  const people  = (document.getElementById('cf-people').value||'').trim();
+  const email   = (document.getElementById('cf-email').value||'').trim();
+  const message = (document.getElementById('cf-message').value||'').trim();
+
+  // Validation
+  if(!name){ shakeField('cf-name','Please enter your full name'); return; }
+  if(!phone || phone.replace(/\D/g,'').length < 8){ shakeField('cf-phone','Please enter a valid phone number'); return; }
+  if(!pkg){ shakeField('cf-package','Please select a tour package'); return; }
+
+  // Format date
+  const dateStr = date ? new Date(date).toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'}) : 'Flexible';
+
+  // Build WhatsApp message text
+  const waText = [
+    '\u{1F64F} *New Tour Enquiry \u2014 Kashi Yatra*',
+    '',
+    '\u{1F464} *Name:* ' + name,
+    '\u{1F4F1} *Phone:* ' + phone,
+    email ? '\u{1F4E7} *Email:* ' + email : '',
+    '',
+    '\u{1F3DB} *Package:* ' + pkg,
+    '\u{1F4C5} *Travel Date:* ' + dateStr,
+    '\u{1F465} *Travellers:* ' + (people || 'Not specified'),
+    message ? '' : null,
+    message ? '\u{1F4AC} *Special Requests:*' : null,
+    message ? message : null,
+    '',
+    '_Sent from kashiyatra.in_'
+  ].filter(l=>l!==null).join('\n');
+
+  const waURL = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(waText);
+
+  // Populate success modal summary
+  document.getElementById('successDetails').innerHTML =
+    '<div style="display:grid;grid-template-columns:auto 1fr;gap:.5rem .9rem;align-items:start">' +
+    row('Name', name) + row('Phone', phone) + row('Package', pkg) + row('Date', dateStr) +
+    (people ? row('Travellers', people + ' person' + (people>1?'s':'')) : '') +
+    '</div>';
+
+  // Wire WhatsApp button
+  document.getElementById('waBtn').onclick = function(){ window.open(waURL,'_blank'); };
+
+  // Show success modal
+  const sm = document.getElementById('successModal');
+  sm.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+
+  // Auto-open WhatsApp after short delay
+  setTimeout(function(){ window.open(waURL,'_blank'); }, 1400);
+}
+
+function row(label, val){
+  return '<div style="color:rgba(212,160,23,.7);font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:.1rem 0">' + label + '</div>' +
+         '<div style="color:rgba(255,255,255,.85);font-size:.87rem">' + val + '</div>';
+}
+
+function shakeField(id, msg){
+  const el = document.getElementById(id);
+  if(!el) return;
+  el.style.transition = 'border-color .2s, box-shadow .2s';
+  el.style.borderColor = '#E53E3E';
+  el.style.boxShadow = '0 0 0 3px rgba(229,62,62,.2)';
+  el.focus();
+  showToast('\u26A0\uFE0F ' + msg);
+  setTimeout(function(){ el.style.borderColor=''; el.style.boxShadow=''; }, 2500);
+}
+
+function closeSuccessModal(){
+  document.getElementById('successModal').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+// ── TRIP PLANNER ──────────────────────────────────────────────────────────────
+const PLANNER_PACKAGES = [
+  {
+    id:'subah-e-kashi',
+    name:'Subah-e-Kashi',
+    nights:1, days:2,
+    duration_label:'2 Days / 1 Night',
+    price:'₹4,999',
+    desc:'A short yet soulful escape into the spiritual heart of Varanasi designed for travelers who wish to experience the essence of Banaras in limited time.',
+    destinations:['varanasi'],
+    interests:['spiritual','ghats','food'],
+    img:'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=400&auto=format&fit=crop&q=80',
+    tags:['Kashi Vishwanath','Ganga Aarti','Banarasi Walk','Chai & Food'],
+    highlights:['Kashi Vishwanath Temple Darshan','Kal Bhairav Temple','Sankat Mochan Temple','Assi Ghat & Dashashwamedh Ghat','Evening Ganga Aarti','Banarasi gali walk'],
+    includes:['Hotel accommodation','Guided sightseeing','Pickup & drop assistance','Temple assistance','Ganga Aarti experience'],
+  },
+  {
+    id:'shivnagari-kashi',
+    name:'Shivnagari Kashi Yatra',
+    nights:2, days:3,
+    duration_label:'3 Days / 2 Nights',
+    price:'₹8,999',
+    desc:'A deeper spiritual journey through the sacred temples, ghats, rituals, and timeless traditions of Kashi crafted for devotees and spiritual travelers.',
+    destinations:['varanasi'],
+    interests:['spiritual','ghats','temples','boatride'],
+    img:'https://images.unsplash.com/photo-1604871000636-074fa5117945?w=400&auto=format&fit=crop&q=80',
+    tags:['Temple Circuit','Sunrise Boat Ride','Manikarnika Ghat','Ganga Aarti'],
+    highlights:['Kashi Vishwanath Temple','Kal Bhairav & Sankat Mochan Temples','Durga Kund & Tulsi Manas Mandir','Sunrise boat ride on Maa Ganga','Manikarnika Ghat spiritual walk','Evening Ganga Aarti'],
+    includes:['Hotel accommodation','Sunrise boat ride','Temple circuit experience','Guided local assistance','Pickup & drop support'],
+  },
+  {
+    id:'rang-e-banaras',
+    name:'Rang-e-Banaras',
+    nights:3, days:4,
+    duration_label:'4 Days / 3 Nights',
+    price:'₹14,999',
+    desc:'A complete immersive Banaras experience blending spirituality, culture, food, heritage, history, and the timeless charm of Kashi.',
+    destinations:['varanasi','sarnath'],
+    interests:['spiritual','ghats','temples','boatride','heritage','food','culture','history'],
+    img:'https://images.unsplash.com/photo-1609450104082-b9a47de3e793?w=400&auto=format&fit=crop&q=80',
+    tags:['Sarnath','Heritage Walk','Food Trail','Silk Weaving','Ganga Aarti'],
+    highlights:['Complete Kashi temple circuit','Sunrise boat ride','Old city heritage walk','Banarasi street food trail','Silk weaving experience','Sarnath & Dhamek Stupa'],
+    includes:['Premium hotel accommodation','Heritage & cultural experiences','Sunrise boat ride','Guided sightseeing','Pickup & drop support'],
+  },
+  {
+    id:'kashi-ayodhya-2n',
+    name:'Subah-e-Kashi + Ayodhya',
+    nights:2, days:3,
+    duration_label:'3 Days / 2 Nights',
+    price:'₹9,999',
+    desc:'Experience the divine connection of Mahadev\'s Kashi and the sacred birthplace of Shri Ram in one spiritually enriching journey.',
+    destinations:['varanasi','ayodhya'],
+    interests:['spiritual','temples','ghats'],
+    img:'https://images.unsplash.com/photo-1661956602868-6ae368943878?w=400&auto=format&fit=crop&q=80',
+    tags:['Kashi','Ram Mandir','Hanuman Garhi','Saryu Ghat'],
+    highlights:['Kashi Vishwanath Temple','Ganga Aarti','Ram Mandir Ayodhya','Hanuman Garhi','Kanak Bhawan','Ram Ki Paidi'],
+    includes:['Hotel accommodation','Temple visit support','Comfortable travel arrangements','Pickup & drop assistance'],
+  },
+  {
+    id:'shivnagari-ayodhya',
+    name:'Shivnagari Kashi Yatra + Ayodhya',
+    nights:3, days:4,
+    duration_label:'4 Days / 3 Nights',
+    price:'₹13,999',
+    desc:'A complete spiritual circuit combining the sacred temples of Kashi with the divine serenity of Ayodhya.',
+    destinations:['varanasi','ayodhya'],
+    interests:['spiritual','temples','ghats','boatride'],
+    img:'https://images.unsplash.com/photo-1661956602868-6ae368943878?w=400&auto=format&fit=crop&q=80',
+    tags:['Complete Kashi Circuit','Ram Mandir','Sunrise Boat Ride','Ayodhya Temples'],
+    highlights:['Complete Kashi temple circuit','Sunrise boat ride','Ganga Aarti','Manikarnika Ghat','Ram Mandir Ayodhya','Hanuman Garhi'],
+    includes:['Hotel accommodation','Temple assistance','Spiritual sightseeing support','Travel assistance'],
+  },
+  {
+    id:'rang-ayodhya',
+    name:'Rang-e-Banaras + Ayodhya',
+    nights:4, days:5,
+    duration_label:'5 Days / 4 Nights',
+    price:'₹19,999',
+    desc:'An immersive journey through Banaras culture and Ayodhya spirituality designed for travelers seeking the complete spiritual essence of Uttar Pradesh.',
+    destinations:['varanasi','sarnath','ayodhya'],
+    interests:['spiritual','heritage','food','culture','temples','boatride','history'],
+    img:'https://images.unsplash.com/photo-1661956602868-6ae368943878?w=400&auto=format&fit=crop&q=80',
+    tags:['Sarnath','Ayodhya','Heritage Walk','Food Trail','Ram Mandir'],
+    highlights:['Full Rang-e-Banaras experience','Sarnath excursion','Ram Mandir Ayodhya','Hanuman Garhi','Kanak Bhawan','Saryu River experience'],
+    includes:['Premium hotel accommodation','Guided experiences','Travel arrangements','Pickup & drop support'],
+  },
+  {
+    id:'kashi-prayagraj-2n',
+    name:'Subah-e-Kashi + Prayagraj',
+    nights:2, days:3,
+    duration_label:'3 Days / 2 Nights',
+    price:'₹9,999',
+    desc:'A peaceful spiritual journey connecting the sacred ghats of Kashi with the divine Triveni Sangam of Prayagraj.',
+    destinations:['varanasi','prayagraj'],
+    interests:['spiritual','ghats','temples','boatride'],
+    img:'https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?w=400&auto=format&fit=crop&q=80',
+    tags:['Kashi','Triveni Sangam','Sangam Boat Ride','Bade Hanuman Ji'],
+    highlights:['Kashi Vishwanath Temple','Ganga Aarti','Prayagraj Triveni Sangam','Boat ride at Sangam','Bade Hanuman Ji Temple','Akshayavat Darshan'],
+    includes:['Hotel accommodation','Sangam experience','Guided assistance','Comfortable travel support'],
+  },
+  {
+    id:'shivnagari-prayagraj',
+    name:'Shivnagari Kashi Yatra + Prayagraj',
+    nights:3, days:4,
+    duration_label:'4 Days / 3 Nights',
+    price:'₹13,999',
+    desc:'A spiritually enriching journey through the sacred temples of Kashi and the holy confluence of Prayagraj.',
+    destinations:['varanasi','prayagraj'],
+    interests:['spiritual','temples','ghats','boatride'],
+    img:'https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?w=400&auto=format&fit=crop&q=80',
+    tags:['Kashi Circuit','Triveni Sangam','Sangam Boat Ride','Sunrise Boat'],
+    highlights:['Complete Kashi temple circuit','Sunrise boat ride on Ganga','Ganga Aarti','Triveni Sangam experience','Bade Hanuman Temple','Akshayavat Darshan'],
+    includes:['Hotel accommodation','Temple & Sangam assistance','Comfortable travel arrangements'],
+  },
+  {
+    id:'rang-prayagraj',
+    name:'Rang-e-Banaras + Prayagraj',
+    nights:4, days:5,
+    duration_label:'5 Days / 4 Nights',
+    price:'₹19,999',
+    desc:'A complete spiritual and cultural experience blending Banaras heritage with the sacred atmosphere of Prayagraj.',
+    destinations:['varanasi','sarnath','prayagraj'],
+    interests:['spiritual','heritage','food','culture','temples','boatride','history'],
+    img:'https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?w=400&auto=format&fit=crop&q=80',
+    tags:['Sarnath','Prayagraj','Triveni Sangam','Heritage Walk','Food Trail'],
+    highlights:['Full Rang-e-Banaras experience','Heritage walks & food trails','Sarnath excursion','Triveni Sangam','Sangam boat ride','Prayagraj spiritual ghats'],
+    includes:['Premium accommodation','Guided experiences','Travel arrangements','Pickup & drop support'],
+  },
+  {
+    id:'kashi-vindhya-2n',
+    name:'Subah-e-Kashi + Vindhyachal & Chunar',
+    nights:2, days:3,
+    duration_label:'3 Days / 2 Nights',
+    price:'₹9,999',
+    desc:'A unique journey combining the spiritual soul of Banaras with the divine aura of Vindhyachal and the timeless grandeur of Chunar Fort.',
+    destinations:['varanasi','vindhyachal'],
+    interests:['spiritual','temples','heritage','history'],
+    img:'https://images.unsplash.com/photo-1602940659805-770d1b3b9911?w=400&auto=format&fit=crop&q=80',
+    tags:['Vindhyavasini Devi','Kali Khoh','Chunar Fort','Ganga Aarti'],
+    highlights:['Kashi Vishwanath Temple','Ganga Aarti','Maa Vindhyavasini Temple','Kali Khoh Temple','Ashtabhuja Temple','Chunar Fort exploration'],
+    includes:['Hotel accommodation','Guided sightseeing','Comfortable travel support'],
+  },
+  {
+    id:'shivnagari-vindhya',
+    name:'Shivnagari Kashi Yatra + Vindhyachal & Chunar',
+    nights:3, days:4,
+    duration_label:'4 Days / 3 Nights',
+    price:'₹13,999',
+    desc:'A spiritual and heritage circuit crafted for travelers seeking temples, mythology, history, and scenic experiences together.',
+    destinations:['varanasi','vindhyachal'],
+    interests:['spiritual','temples','heritage','history','boatride'],
+    img:'https://images.unsplash.com/photo-1602940659805-770d1b3b9911?w=400&auto=format&fit=crop&q=80',
+    tags:['Kashi Circuit','Vindhyavasini','Chunar Fort','Sunrise Boat Ride'],
+    highlights:['Complete Kashi temple circuit','Sunrise boat ride','Ganga Aarti','Maa Vindhyavasini Temple','Kali Khoh & Ashtabhuja Temples','Chunar Fort'],
+    includes:['Hotel accommodation','Temple & heritage assistance','Travel arrangements'],
+  },
+  {
+    id:'rang-vindhya',
+    name:'Rang-e-Banaras + Vindhyachal & Chunar',
+    nights:4, days:5,
+    duration_label:'5 Days / 4 Nights',
+    price:'₹19,999',
+    desc:'The ultimate spiritual, cultural, and heritage experience through Banaras, Vindhyachal, and the historic legacy of Chunar Fort.',
+    destinations:['varanasi','sarnath','vindhyachal'],
+    interests:['spiritual','heritage','food','culture','temples','boatride','history'],
+    img:'https://images.unsplash.com/photo-1602940659805-770d1b3b9911?w=400&auto=format&fit=crop&q=80',
+    tags:['Sarnath','Vindhyavasini','Chunar Fort','Heritage Walk','Food Trail'],
+    highlights:['Full Rang-e-Banaras experience','Heritage walks & food trails','Sarnath excursion','Maa Vindhyavasini Temple','Kali Khoh & Ashtabhuja Temples','Chunar Fort exploration'],
+    includes:['Premium hotel accommodation','Guided spiritual & heritage experiences','Comfortable travel support'],
+  },
+];
+
+// Planner state
+let plannerStep = 0;
+let plannerAnswers = { nights:null, destinations:[], interests:[], group:null };
+const TOTAL_STEPS = 4; // questions before results
+
+const PLANNER_QUESTIONS = [
+  {
+    key:'nights',
+    type:'single',
+    cols:2,
+    label:'Step 1 — Duration',
+    question:'How many nights are you planning to stay?',
+    hint:'This helps us shortlist packages that fit comfortably within your schedule.',
+    options:[
+      {icon:'🌙', title:'1 Night / 2 Days', desc:'Quick spiritual escape', value:1},
+      {icon:'🌙🌙', title:'2 Nights / 3 Days', desc:'Popular & well-paced', value:2},
+      {icon:'🌙🌙🌙', title:'3 Nights / 4 Days', desc:'Immersive experience', value:3},
+      {icon:'🌟', title:'4 Nights / 5 Days', desc:'Comprehensive journey', value:4},
+    ]
+  },
+  {
+    key:'destinations',
+    type:'multi',
+    cols:2,
+    label:'Step 2 — Destinations',
+    question:'Which places are you planning to visit?',
+    hint:'Select all that apply. Varanasi (Kashi) is the heart of every journey — you can add nearby sacred destinations.',
+    options:[
+      {icon:'🕌', title:'Varanasi / Kashi', desc:'Ghats, temples & Ganga Aarti', value:'varanasi'},
+      {icon:'☸️', title:'Sarnath', desc:'UNESCO Buddhist heritage site', value:'sarnath'},
+      {icon:'🏰', title:'Vindhyachal & Chunar Fort', desc:'Shakti Peetha & heritage fort', value:'vindhyachal'},
+      {icon:'🌊', title:'Prayagraj (Triveni Sangam)', desc:'Holy confluence of three rivers', value:'prayagraj'},
+      {icon:'🛕', title:'Ayodhya (Ram Mandir)', desc:'Birthplace of Shri Ram', value:'ayodhya'},
+    ]
+  },
+  {
+    key:'interests',
+    type:'multi',
+    cols:3,
+    label:'Step 3 — Travel Interests',
+    question:'What kind of experiences excite you?',
+    hint:'Pick everything you enjoy — we\'ll find the package that best matches your travel personality.',
+    options:[
+      {icon:'🙏', title:'Temple Darshan', desc:'Sacred shrines & devotion', value:'spiritual'},
+      {icon:'⛵', title:'Boat Ride', desc:'Sunrise boat on the Ganga', value:'boatride'},
+      {icon:'🔥', title:'Ganga Aarti', desc:'Evening fire ritual', value:'ghats'},
+      {icon:'🏛️', title:'Heritage Walks', desc:'Old city, galis & history', value:'heritage'},
+      {icon:'🍛', title:'Food Trail', desc:'Banarasi chai, paan & snacks', value:'food'},
+      {icon:'🎨', title:'Culture & Craft', desc:'Silk weaving, local art', value:'culture'},
+    ]
+  },
+  {
+    key:'group',
+    type:'single',
+    cols:2,
+    label:'Step 4 — Travel Group',
+    question:'Who are you travelling with?',
+    hint:'This helps us suggest the right accommodation and arrangements for your group.',
+    options:[
+      {icon:'🧍', title:'Solo Traveller', desc:'Just me', value:'solo'},
+      {icon:'👫', title:'Couple', desc:'2 persons', value:'couple'},
+      {icon:'👨‍👩‍👧‍👦', title:'Family', desc:'3–6 persons incl. children', value:'family'},
+      {icon:'👥', title:'Group / Friends', desc:'6+ persons', value:'group'},
+    ]
+  },
+];
+
+function renderPlannerStep(){
+  const area = document.getElementById('plannerQArea');
+  const back = document.getElementById('pbBack');
+  const next = document.getElementById('pbNext');
+  const navInfo = document.getElementById('plannerNavInfo');
+  const fill = document.getElementById('plannerFill');
+
+  // Update steps indicator
+  for(let i=0;i<TOTAL_STEPS;i++){
+    const st=document.getElementById('pstep-'+i);
+    const ln=document.getElementById('psline-'+i);
+    st.className='ps-step'+(i===plannerStep?' active':i<plannerStep?' done':'');
+    if(ln) ln.className='ps-line'+(i<plannerStep?' done':'');
+  }
+  // Results step indicator
+  const stRes=document.getElementById('pstep-4');
+  if(stRes) stRes.className='ps-step'+(plannerStep===TOTAL_STEPS?' active':'');
+
+  fill.style.width = Math.round((plannerStep/TOTAL_STEPS)*100)+'%';
+
+  back.style.visibility = plannerStep>0 ? 'visible' : 'hidden';
+  navInfo.textContent = plannerStep<TOTAL_STEPS ? 'Step '+(plannerStep+1)+' of '+TOTAL_STEPS : 'Your Recommendations';
+
+  if(plannerStep === TOTAL_STEPS){
+    next.style.display='none';
+    back.textContent=''; back.innerHTML='<svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2.5"><polyline points="15 18 9 12 15 6"/></svg> Retake Quiz';
+    renderPlannerResults(area);
+    return;
+  }
+
+  next.style.display='flex';
+  next.innerHTML='Next <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>';
+
+  const q = PLANNER_QUESTIONS[plannerStep];
+  const isMulti = q.type==='multi';
+  const currentVal = plannerAnswers[q.key];
+  let optsHtml = q.options.map(opt=>{
+    const sel = isMulti
+      ? (currentVal||[]).includes(opt.value)
+      : currentVal===opt.value;
+    return `<button class="pq-opt${isMulti?' multi':''}${sel?' selected':''}" onclick="plannerSelect('${q.key}','${opt.value}',${isMulti})">
+      <span class="pq-opt-icon">${opt.icon}</span>
+      <span class="pq-opt-text"><span class="pq-opt-title">${opt.title}</span><span class="pq-opt-desc">${opt.desc}</span></span>
+      <span class="pq-check">${sel?'✓':''}</span>
+    </button>`;
+  }).join('');
+
+  area.innerHTML=`
+    <div class="pq-label">${q.label}</div>
+    <div class="pq-question">${q.question}</div>
+    <p class="pq-hint">${q.hint}${isMulti?' <em>(Select all that apply)</em>':''}</p>
+    <div class="pq-options cols-${q.cols}">${optsHtml}</div>
+  `;
+  updateNextBtn();
+}
+
+function plannerSelect(key, value, isMulti){
+  if(isMulti){
+    let arr = plannerAnswers[key] || [];
+    if(arr.includes(value)) arr=arr.filter(v=>v!==value);
+    else arr=[...arr,value];
+    plannerAnswers[key]=arr;
+  } else {
+    plannerAnswers[key]=value;
+  }
+  renderPlannerStep();
+}
+
+function updateNextBtn(){
+  const next=document.getElementById('pbNext');
+  const q=PLANNER_QUESTIONS[plannerStep];
+  const val=plannerAnswers[q.key];
+  const hasAnswer = q.type==='multi' ? (val&&val.length>0) : val!==null;
+  next.disabled=!hasAnswer;
+}
+
+function plannerNext(){
+  const q=PLANNER_QUESTIONS[plannerStep];
+  const val=plannerAnswers[q.key];
+  const hasAnswer = q.type==='multi'?(val&&val.length>0):val!==null;
+  if(!hasAnswer){showToast('⚠️ Please make a selection to continue.');return;}
+  plannerStep++;
+  renderPlannerStep();
+}
+
+function plannerBack(){
+  if(plannerStep>0){
+    plannerStep--;
+    renderPlannerStep();
+  }
+}
+
+function scorePackage(pkg){
+  let score=0;
+  const nights=plannerAnswers.nights;
+  const dests=plannerAnswers.destinations||[];
+  const interests=plannerAnswers.interests||[];
+
+  // Nights score — exact match or closest
+  const diff=Math.abs(pkg.nights-nights);
+  if(diff===0) score+=40;
+  else if(diff===1) score+=25;
+  else if(diff===2) score+=10;
+  else score+=0;
+
+  // Destination match
+  const destMatch=dests.filter(d=>pkg.destinations.includes(d)).length;
+  const destTotal=Math.max(dests.length,1);
+  score += Math.round((destMatch/destTotal)*35);
+
+  // Interest match
+  const intMatch=interests.filter(i=>pkg.interests.includes(i)).length;
+  const intTotal=Math.max(interests.length,1);
+  score += Math.round((intMatch/intTotal)*25);
+
+  return score;
+}
+
+function renderPlannerResults(area){
+  const scored = PLANNER_PACKAGES
+    .map(p=>({...p,score:scorePackage(p)}))
+    .sort((a,b)=>b.score-a.score);
+
+  const top = scored.slice(0,3);
+  const nights=plannerAnswers.nights;
+  const dests=(plannerAnswers.destinations||[]).join(', ')||'Any';
+  const interests=(plannerAnswers.interests||[]).join(', ')||'General';
+  const group=plannerAnswers.group||'Any';
+
+  let summaryHtml=`<div class="pr-summary">
+    Based on your preferences: <strong>${nights} night${nights>1?'s':''}</strong> trip to <strong>${dests}</strong>,
+    interested in <strong>${interests}</strong>, travelling as <strong>${group}</strong>.
+    ${top[0].score<20?'<br>No exact match found — showing closest available options. <em>Contact us to build a custom itinerary!</em>':''}
+  </div>`;
+
+  let cardsHtml='';
+  if(top.length===0 || top[0].score<5){
+    cardsHtml=`<div class="pr-no-match">
+      <div class="nm-icon">🕉️</div>
+      <h3>Let's Plan Something Special</h3>
+      <p>Your preferences are unique and we'd love to craft a custom journey just for you. Our team will personalise every detail — temples, ghats, and beyond.</p>
+      <button class="pr-book-btn" onclick="goTo('contact')">Talk to Our Travel Expert</button>
+    </div>`;
+  } else {
+    cardsHtml=top.map((pkg,i)=>`
+      <div class="pr-card${i===0?' best':''}">
+        <div class="pr-card-top">
+          <div class="pr-card-img"><img src="${pkg.img}" alt="${pkg.name}" loading="lazy"></div>
+          <div class="pr-card-info">
+            <div class="pr-card-badges">
+              ${i===0?'<span class="pr-badge best">⭐ Best Match</span>':''}
+              ${i===1?'<span class="pr-badge good">Great Choice</span>':''}
+              <span class="pr-badge days">📅 ${pkg.duration_label}</span>
+            </div>
+            <div class="pr-card-name">${pkg.name}</div>
+            <p class="pr-card-desc">${pkg.desc}</p>
+            <div class="pr-card-tags">${pkg.tags.map(t=>`<span class="pr-card-tag">${t}</span>`).join('')}</div>
+            <div class="pr-card-footer">
+              <div>
+                <div class="pr-price-from">Starting from*</div>
+                <div class="pr-price">${pkg.price} <sub>/ person</sub></div>
+              </div>
+              <div class="pr-actions">
+                <button class="pr-details-btn" onclick="showPlannerDetail('${pkg.id}')">View Details</button>
+                <button class="pr-book-btn" onclick="prefillAndBook('${pkg.name}','${pkg.price}')">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  const tcHtml=`<p class="pr-tc"><strong>* Terms & Conditions — Pricing:</strong> All prices shown are indicative starting prices per person and are subject to change without prior notice. Final pricing depends on travel dates, group size, accommodation preferences, seasonal demand, and availability at the time of booking. Special rates are available for families, groups of 6 or more, and customised itineraries. Prices are exclusive of GST and any personal expenses unless otherwise stated. Kashi Yatra Tours & Travels reserves the right to revise pricing at any time. Please contact us for a confirmed, personalised quote before booking.</p>`;
+
+  area.innerHTML=`
+    <div class="planner-results">
+      <span class="pr-match-label">🎯 Your Recommended Packages</span>
+      ${summaryHtml}
+      ${cardsHtml}
+      ${tcHtml}
+      <div style="text-align:center;margin-top:1.4rem">
+        <button class="pb-back" style="visibility:visible" onclick="plannerReset()">✨ Retake the Quiz</button>
+        &nbsp;
+        <button class="pb-next" style="display:inline-flex" onclick="goTo('contact')">Enquire Now <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+      </div>
+    </div>`;
+}
+
+function showPlannerDetail(id){
+  const pkg=PLANNER_PACKAGES.find(p=>p.id===id);
+  if(!pkg)return;
+  const hl=pkg.highlights.map(h=>`<li>${h}</li>`).join('');
+  const inc=pkg.includes.map(i=>`<div class="modal-incl-item inc">${i}</div>`).join('');
+  openModal(
+    pkg.img,
+    pkg.name,
+    `${pkg.duration_label} · Starting from ${pkg.price} / person`,
+    `<p class="modal-text">${pkg.desc}</p>
+    <div class="modal-divider"></div>
+    <div class="modal-section-title">Highlights & Experiences</div>
+    <ul class="modal-hl-list">${hl}</ul>
+    <div class="modal-section-title" style="margin-top:1rem">What's Included</div>
+    <div class="modal-incl-grid">${inc}</div>
+    <div class="modal-price-footer">
+      <div>
+        <div class="mpf-price-from">Starting from*</div>
+        <div class="mpf-price">${pkg.price} <sub>/ person</sub></div>
+        <div style="font-size:.68rem;color:var(--text-light);margin-top:.3rem">*Prices subject to change. T&C apply.</div>
+      </div>
+      <button class="mpf-book-btn" onclick="closeModal();prefillAndBook('${pkg.name}','${pkg.price}')">Book This Package</button>
+    </div>`
+  );
+}
+
+function prefillAndBook(pkgName, price){
+  goTo('contact');
+  setTimeout(()=>{
+    const sel=document.getElementById('cf-package');
+    if(sel){
+      // Try to match by name fragment
+      for(let i=0;i<sel.options.length;i++){
+        if(sel.options[i].text.toLowerCase().includes(pkgName.toLowerCase().substring(0,8))){
+          sel.value=sel.options[i].value; break;
+        }
+      }
+    }
+    showToast('📋 Package pre-filled — complete your booking details below!');
+  },600);
+}
+
+function plannerReset(){
+  plannerStep=0;
+  plannerAnswers={nights:null,destinations:[],interests:[],group:null};
+  document.getElementById('pbBack').innerHTML='<svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2.5"><polyline points="15 18 9 12 15 6"/></svg> Back';
+  document.getElementById('pbNext').style.display='flex';
+  renderPlannerStep();
+}
+
+// Initialize planner
+renderPlannerStep();
+// ── END TRIP PLANNER ───────────────────────────────────────────────────────────
+
+// Scroll reveal
+const ro=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');ro.unobserve(e.target)}});
+},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+// Back to top
+const bt=document.getElementById('backTop');
+window.addEventListener('scroll',()=>{
+  const s=window.scrollY>500;bt.style.opacity=s?'1':'0';bt.style.pointerEvents=s?'auto':'none';
+},{passive:true});
+</script>
+</body>
+</html>
