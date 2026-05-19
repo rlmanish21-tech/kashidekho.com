@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Varanasi Tour Packages | Banaras Trails</title>
+<meta name="description" content="Curated Varanasi tour packages, spiritual journeys, Ganga Aarti experiences and cultural tours. Beyond Sightseeing, Experience Banaras.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sf:#C56A2D;--sf-d:#A0501A;--sf-l:#E07840;
+  --mn:#1F2A44;--mn-l:#2D3D60;
+  --gd:#D4AF37;--gd-l:#E8C84A;--gd-p:#F9F3DC;
+  --iv:#F8F4EC;--iv-d:#EFE7D6;--parch:#E8DCC8;
+  --ch:#2B2B2B;--mt:#6B5E4A;--lt:#9A8E7E;
+  --bd:#E2D9C8;--wh:#FFFFFF;
+  --sh-sm:0 2px 8px rgba(31,42,68,.08);
+  --sh-md:0 8px 32px rgba(31,42,68,.12);
+  --sh-lg:0 20px 60px rgba(31,42,68,.18);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Inter",sans-serif;color:var(--ch);background:var(--iv);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:"Playfair Display",serif;line-height:1.2}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit;cursor:pointer}
+button{cursor:pointer;font-family:"Inter",sans-serif}
+
+/* REVEAL */
+.rev{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.rev.vis{opacity:1;transform:none}
+.rev-l{opacity:0;transform:translateX(-28px);transition:opacity .7s ease,transform .7s ease}
+.rev-l.vis{opacity:1;transform:none}
+.rev-r{opacity:0;transform:translateX(28px);transition:opacity .7s ease,transform .7s ease}
+.rev-r.vis{opacity:1;transform:none}
+
+/* UTILS */
+.wrap{max-width:1200px;margin:0 auto;padding:0 2rem}
+.sec{padding:6rem 0}
+.eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.64rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--sf);margin-bottom:.9rem}
+.eyebrow::before,.eyebrow::after{content:"";width:22px;height:1px;background:var(--sf);opacity:.5}
+.sec-h{font-family:"Playfair Display",serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--mn);line-height:1.15;margin-bottom:.9rem}
+.sec-h em{font-style:italic;color:var(--sf)}
+.sec-sub{font-size:.93rem;color:var(--mt);line-height:1.75;max-width:560px}
+.divider{width:56px;height:3px;background:linear-gradient(to right,var(--sf),var(--gd));border-radius:2px;margin:1.1rem 0 1.8rem}
+.center{text-align:center}
+.center .sec-sub{margin:0 auto}
+.center .divider{margin-left:auto;margin-right:auto}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:.55rem;font-size:.84rem;font-weight:600;padding:.82rem 2rem;border-radius:3px;border:none;transition:all .28s cubic-bezier(.4,0,.2,1);letter-spacing:.04em;cursor:pointer;text-transform:uppercase;font-size:.75rem}
+.btn svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2.2;flex-shrink:0}
+.btn-prim{background:var(--sf);color:#fff;box-shadow:0 2px 0 var(--sf-d),0 8px 24px rgba(197,106,45,.28)}
+.btn-prim:hover{background:var(--sf-l);box-shadow:0 2px 0 var(--sf-d),0 12px 32px rgba(197,106,45,.4);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.45)}
+.btn-ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.7)}
+.btn-out{background:transparent;color:var(--mn);border:1.5px solid var(--mn)}
+.btn-out:hover{background:var(--mn);color:#fff}
+.btn-wa{background:#25D366;color:#fff;box-shadow:0 4px 16px rgba(37,211,102,.28)}
+.btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+
+/* WA FLOAT */
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:900;width:54px;height:54px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(37,211,102,.42);animation:wapulse 2.5s ease-in-out infinite;transition:transform .2s;text-decoration:none}
+.wa-float:hover{transform:scale(1.1)}
+.wa-float svg{width:26px;height:26px;fill:#fff}
+@keyframes wapulse{0%,100%{box-shadow:0 6px 24px rgba(37,211,102,.42)}50%{box-shadow:0 6px 32px rgba(37,211,102,.68),0 0 0 8px rgba(37,211,102,.1)}}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:800;height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;background:rgba(248,244,236,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(226,217,200,.5);transition:box-shadow .3s}
+#nav.sc{box-shadow:var(--sh-md)}
+.nav-logo{display:flex;align-items:center;gap:.7rem}
+.nav-lmark{width:36px;height:36px;background:var(--mn);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Playfair Display",serif;font-size:.95rem;font-weight:700;color:var(--gd);flex-shrink:0}
+.nav-ltext{font-family:"Playfair Display",serif;font-size:1.05rem;font-weight:700;color:var(--mn);line-height:1.1}
+.nav-ltext span{display:block;font-family:"Inter",sans-serif;font-size:.58rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--sf)}
+.nav-links{display:flex;align-items:center;gap:.3rem;list-style:none}
+.nav-links a{font-size:.78rem;font-weight:500;color:var(--mn);padding:.45rem .9rem;border-radius:4px;transition:color .2s;position:relative;letter-spacing:.01em}
+.nav-links a::after{content:"";position:absolute;bottom:0;left:.8rem;right:.8rem;height:2px;background:var(--sf);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav-links a:hover{color:var(--mn)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-wa-link{display:flex;align-items:center;gap:.4rem;font-size:.77rem;font-weight:600;color:#fff;background:#25D366;padding:.48rem 1.1rem;border-radius:4px;transition:all .2s}
+.nav-wa-link:hover{background:#1ebe5d}
+.nav-wa-link svg{width:13px;height:13px;fill:#fff}
+.nav-mob-btn{display:none;background:none;border:none;color:var(--mn);padding:.3rem}
+.nav-mob-btn svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2}
+.mob-menu{display:none;position:fixed;top:66px;left:0;right:0;background:var(--iv);border-bottom:1px solid var(--bd);padding:1rem 2rem 1.5rem;z-index:799;flex-direction:column;gap:.2rem}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:.9rem;font-weight:500;color:var(--mt);padding:.65rem 0;border-bottom:1px solid var(--bd)}
+.mob-menu a:last-child{border:none;color:#25D366;font-weight:600}
+
+/* MODAL */
+.modal-bg{position:fixed;inset:0;background:rgba(8,4,1,.78);backdrop-filter:blur(7px);z-index:1000;display:none;align-items:center;justify-content:center;padding:1.5rem}
+.modal-bg.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;overflow:hidden;max-width:640px;width:100%;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 32px 80px rgba(0,0,0,.4)}
+.modal-hero{height:240px;overflow:hidden;flex-shrink:0;position:relative}
+.modal-hero img{width:100%;height:100%;object-fit:cover}
+.modal-close{position:absolute;top:.8rem;right:.8rem;z-index:2;width:32px;height:32px;background:rgba(0,0,0,.45);border:none;border-radius:50%;color:#fff;font-size:.85rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.modal-close:hover{background:rgba(0,0,0,.7)}
+.modal-scroll{flex:1;overflow-y:auto;padding:1.8rem}
+.modal-title{font-family:"Playfair Display",serif;font-size:1.4rem;font-weight:700;color:var(--mn);margin-bottom:.3rem}
+.modal-sub{font-size:.82rem;color:var(--mt);margin-bottom:1.2rem}
+.modal-text{font-size:.86rem;color:var(--mt);line-height:1.75;margin-bottom:1rem}
+.modal-div{height:1px;background:var(--bd);margin:1.2rem 0}
+.modal-st{font-size:.63rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mn);margin:1.2rem 0 .8rem;display:flex;align-items:center;gap:.6rem}
+.modal-st::after{content:"";flex:1;height:1px;background:var(--bd)}
+.modal-hl{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.4rem .8rem;margin-bottom:1rem}
+.modal-hl li{font-size:.8rem;color:var(--mt);display:flex;align-items:flex-start;gap:.4rem}
+.modal-hl li::before{content:"✦";color:var(--gd);font-size:.5rem;margin-top:.25rem;flex-shrink:0}
+.modal-ig{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.modal-ii{font-size:.78rem;padding:.5rem .7rem;border-radius:5px;display:flex;align-items:flex-start;gap:.4rem}
+.modal-ii.inc{background:rgba(52,168,83,.06);color:#2E7D32;border:1px solid rgba(52,168,83,.2)}
+.modal-ii.exc{background:rgba(197,106,45,.05);color:var(--sf-d);border:1px solid rgba(197,106,45,.15)}
+.modal-ii::before{font-size:.75rem;flex-shrink:0}
+.modal-ii.inc::before{content:"✓"}
+.modal-ii.exc::before{content:"✕"}
+.modal-itin{list-style:none;counter-reset:itin;display:flex;flex-direction:column;gap:.65rem}
+.modal-itin li{font-size:.82rem;color:var(--mt);line-height:1.65;padding:.65rem 1rem .65rem 1.1rem;border-left:2px solid var(--gd);background:rgba(212,175,55,.04);border-radius:0 6px 6px 0;counter-increment:itin;position:relative}
+.modal-itin li::before{content:"Day " counter(itin);position:absolute;left:-1px;top:-.5rem;background:var(--gd);color:var(--mn);font-size:.53rem;font-weight:700;padding:.1rem .4rem;border-radius:2px;letter-spacing:.07em}
+.modal-pf{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-top:1.6rem;padding:1.2rem;background:var(--iv);border-radius:8px;border:1px solid var(--bd)}
+.mpf-lbl{font-size:.61rem;color:var(--lt);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem}
+.mpf-price{font-family:"Playfair Display",serif;font-size:1.55rem;font-weight:700;color:var(--mn)}
+.mpf-price sub{font-family:"Inter",sans-serif;font-size:.4em;font-weight:400;color:var(--lt)}
+.mpf-tc{font-size:.63rem;color:var(--lt);margin-top:.2rem}
+.mpf-acts{display:flex;gap:.55rem;flex-wrap:wrap}
+.mpf-book{background:var(--sf);color:#fff;border:none;padding:.68rem 1.5rem;border-radius:5px;font-size:.8rem;font-weight:700;cursor:pointer;transition:all .25s;box-shadow:0 4px 16px rgba(197,106,45,.28)}
+.mpf-book:hover{background:var(--sf-l);transform:translateY(-1px)}
+.mpf-wa{background:#25D366;color:#fff;border:none;padding:.68rem 1.3rem;border-radius:5px;font-size:.8rem;font-weight:700;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:.4rem;text-decoration:none}
+.mpf-wa:hover{background:#1ebe5d}
+
+/* TOAST */
+#toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:var(--mn);color:#fff;padding:.75rem 1.5rem;border-radius:6px;font-size:.84rem;z-index:9999;box-shadow:0 4px 20px rgba(0,0,0,.3);transition:opacity .3s;border:1px solid rgba(212,175,55,.25);opacity:0;pointer-events:none;white-space:nowrap}
+#toast.show{opacity:1}
+
+/* HERO */
+#hero{position:relative;height:100vh;min-height:640px;overflow:hidden;display:flex;align-items:center}
+.hero-bg{position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1564509027875-ba1c00cf09c1?w=1920&auto=format&fit=crop&q=90&ixlib=rb-4.0.3") center 35%/cover no-repeat;animation:hdrift 22s ease-in-out infinite alternate}
+@keyframes hdrift{from{transform:scale(1.04)}to{transform:scale(1.09) translateY(-1%)}}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(rgba(31,42,68,.68),rgba(31,42,68,.44))}
+.hero-ov::after{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.016'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E")}
+.hero-c{position:relative;z-index:2;max-width:780px;padding:0 2rem}
+.h-ey{display:inline-flex;align-items:center;gap:.6rem;font-size:.63rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gd-l);margin-bottom:1.3rem;opacity:0;animation:fup .8s .15s forwards}
+.h-ey::before,.h-ey::after{content:"";width:18px;height:1px;background:var(--gd);opacity:.7}
+.h-h1{font-family:"Playfair Display",serif;font-size:clamp(2.5rem,6vw,4.4rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:1.1rem;opacity:0;animation:fup .8s .35s forwards}
+.h-h1 em{font-style:italic;color:var(--gd-l)}
+.h-sub{font-size:.97rem;color:rgba(255,255,255,.7);line-height:1.78;margin-bottom:2.2rem;max-width:510px;opacity:0;animation:fup .8s .55s forwards}
+.h-ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem;opacity:0;animation:fup .8s .75s forwards}
+.h-trust{display:flex;flex-wrap:wrap;gap:1.6rem;opacity:0;animation:fup .8s .95s forwards}
+.typing-cursor{display:inline-block;width:2px;height:1em;background:rgba(255,255,255,.7);margin-left:1px;vertical-align:text-bottom;animation:blink .75s step-end infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.ti{display:flex;align-items:center;gap:.5rem;font-size:.77rem;color:rgba(255,255,255,.62);font-weight:500}
+.ti svg{width:14px;height:14px;stroke:var(--gd);fill:none;stroke-width:2.2;flex-shrink:0}
+@keyframes fup{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.h-scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:.45rem;cursor:pointer;opacity:.55;transition:opacity .2s}
+.h-scroll:hover{opacity:.9}
+.h-scroll span{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:#fff;font-weight:600}
+.scrl-dot{width:22px;height:34px;border:1.5px solid rgba(255,255,255,.38);border-radius:11px;display:flex;justify-content:center;padding-top:5px}
+.scrl-dot::after{content:"";width:3px;height:7px;background:#fff;border-radius:2px;animation:sbounce 1.6s ease-in-out infinite}
+@keyframes sbounce{0%,100%{transform:none;opacity:1}50%{transform:translateY(8px);opacity:.35}}
+
+/* FEATURED EXPERIENCES */
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.exp-card{background:#fff;border-radius:12px;overflow:hidden;border:1px solid var(--bd);transition:transform .3s,box-shadow .3s;cursor:pointer}
+.exp-card:hover{transform:translateY(-6px);box-shadow:var(--sh-lg)}
+.exp-card.feat{border-color:var(--gd);box-shadow:0 0 0 1px rgba(212,175,55,.35),var(--sh-sm)}
+.exp-img{position:relative;aspect-ratio:16/9;overflow:hidden}
+.exp-img img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .55s}
+.exp-card:hover .exp-img img{transform:scale(1.06)}
+.exp-rib{position:absolute;top:.75rem;left:.75rem;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.22rem .65rem;border-radius:3px}
+.rib-mn{background:var(--mn);color:var(--gd)}
+.rib-gd{background:var(--gd);color:var(--mn)}
+.rib-sf{background:var(--sf);color:#fff}
+.exp-body{padding:1.4rem}
+.exp-days{font-size:.63rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sf);margin-bottom:.42rem;display:flex;align-items:center;gap:.38rem}
+.exp-days svg{width:11px;height:11px;stroke:var(--sf);fill:none;stroke-width:2.5}
+.exp-name{font-family:"Playfair Display",serif;font-size:1.18rem;font-weight:700;color:var(--mn);margin-bottom:.38rem;line-height:1.2}
+.exp-desc{font-size:.79rem;color:var(--mt);line-height:1.6;margin-bottom:.9rem}
+.exp-hls{list-style:none;margin-bottom:1.1rem;display:flex;flex-direction:column;gap:.28rem}
+.exp-hls li{font-size:.75rem;color:var(--mt);display:flex;align-items:flex-start;gap:.45rem}
+.exp-hls li::before{content:"✦";color:var(--gd);font-size:.5rem;margin-top:.22rem;flex-shrink:0}
+.exp-foot{display:flex;align-items:center;justify-content:space-between;padding-top:1rem;border-top:1px solid var(--bd)}
+.exp-plbl{font-size:.6rem;color:var(--lt);text-transform:uppercase;letter-spacing:.05em}
+.exp-price{font-family:"Playfair Display",serif;font-size:1.28rem;font-weight:700;color:var(--mn)}
+.exp-price sub{font-family:"Inter",sans-serif;font-size:.4em;font-weight:400;color:var(--lt)}
+.exp-btn{background:var(--sf);color:#fff;border:none;padding:.48rem 1.1rem;border-radius:4px;font-size:.72rem;font-weight:700;letter-spacing:.02em;transition:all .2s}
+.exp-btn:hover{background:var(--sf-l);transform:translateY(-1px)}
+
+/* WHY */
+.why-sec{background:#fff;position:relative}
+.why-sec::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='32' fill='none' stroke='%23C56A2D' stroke-width='.4' stroke-opacity='.08'/%3E%3C/svg%3E");pointer-events:none}
+.why-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2rem;position:relative}
+.why-card{text-align:center;padding:2rem 1rem}
+.why-ic{width:58px;height:58px;background:rgba(197,106,45,.07);border:1px solid rgba(197,106,45,.18);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.1rem;font-size:1.45rem;transition:all .3s}
+.why-card:hover .why-ic{background:var(--sf);transform:scale(1.08)}
+.why-t{font-family:"Playfair Display",serif;font-size:.98rem;font-weight:700;color:var(--mn);margin-bottom:.45rem}
+.why-d{font-size:.77rem;color:var(--mt);line-height:1.65}
+
+/* EXTENSIONS */
+.ext-sec{background:var(--mn);position:relative;overflow:hidden}
+.ext-sec::before{content:"";position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1613445607898-f46e51645acf?w=1400&auto=format&fit=crop&q=55&ixlib=rb-4.0.3") center/cover;opacity:.09}
+.ext-wrap{position:relative;z-index:1}
+.ext-sec .sec-h{color:#fff}
+.ext-sec .sec-h em{color:var(--gd-l)}
+.ext-sec .sec-sub{color:rgba(255,255,255,.52)}
+.ext-sec .divider{background:linear-gradient(to right,var(--gd),var(--sf))}
+.ext-sec .eyebrow{color:rgba(212,175,55,.88)}
+.ext-sec .eyebrow::before,.ext-sec .eyebrow::after{background:var(--gd)}
+.ext-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.ext-card{border:1px solid rgba(255,255,255,.11);border-radius:12px;overflow:hidden;cursor:pointer;transition:all .3s;background:rgba(255,255,255,.04)}
+.ext-card:hover{border-color:rgba(212,175,55,.5);background:rgba(212,175,55,.06);transform:translateY(-5px);box-shadow:0 16px 48px rgba(0,0,0,.4)}
+.ext-img{aspect-ratio:4/3;overflow:hidden;position:relative}
+.ext-img img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .5s}
+.ext-card:hover .ext-img img{transform:scale(1.06)}
+.ext-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(31,42,68,.65),transparent 55%)}
+.ext-body{padding:1.4rem}
+.ext-route{display:flex;align-items:center;gap:.5rem;font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(212,175,55,.65);margin-bottom:.55rem}
+.ext-dot{width:5px;height:5px;background:var(--gd);border-radius:50%;flex-shrink:0}
+.ext-line{flex:1;height:1px;background:rgba(212,175,55,.22)}
+.ext-name{font-family:"Playfair Display",serif;font-size:1.12rem;font-weight:700;color:#fff;margin-bottom:.38rem}
+.ext-desc{font-size:.77rem;color:rgba(255,255,255,.42);line-height:1.6;margin-bottom:1rem}
+.ext-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:1.1rem}
+.ext-tag{font-size:.6rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;padding:.18rem .55rem;border-radius:20px;background:rgba(255,255,255,.07);color:rgba(255,255,255,.52);border:1px solid rgba(255,255,255,.1)}
+.ext-from{font-family:"Playfair Display",serif;font-size:1.1rem;font-weight:700;color:var(--gd-l)}
+.ext-from sub{font-family:"Inter",sans-serif;font-size:.4em;font-weight:400;color:rgba(255,255,255,.35)}
+
+/* PLANNER */
+.plan-sec{background:var(--iv);position:relative}
+.plan-sec::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Ccircle cx='40' cy='40' r='30' fill='none' stroke='%23C56A2D' stroke-width='.4' stroke-opacity='.1'/%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23D4AF37' stroke-width='.3' stroke-opacity='.08'/%3E%3C/svg%3E");pointer-events:none}
+.plan-inner{position:relative;z-index:1;max-width:780px;margin:0 auto}
+.pfill-bar{width:100%;height:4px;background:var(--bd);border-radius:2px;margin-bottom:1.8rem;overflow:hidden}
+.pfill-inner{height:100%;background:linear-gradient(to right,var(--sf),var(--gd));border-radius:2px;transition:width .5s cubic-bezier(.4,0,.2,1)}
+.psteps{display:flex;align-items:center;justify-content:center;gap:.3rem;margin-bottom:.65rem;flex-wrap:wrap}
+.pstep{width:28px;height:28px;border-radius:50%;border:2px solid var(--bd);display:flex;align-items:center;justify-content:center;font-size:.63rem;font-weight:700;color:var(--lt);background:#fff;transition:all .35s;flex-shrink:0}
+.pstep.act{border-color:var(--sf);background:var(--sf);color:#fff;box-shadow:0 0 0 4px rgba(197,106,45,.13)}
+.pstep.don{border-color:var(--gd);background:var(--gd);color:var(--mn)}
+.pline{flex:1;max-width:44px;height:2px;background:var(--bd);border-radius:1px;transition:background .4s}
+.pline.don{background:var(--gd)}
+.plbl{text-align:center;font-size:.68rem;color:var(--lt);margin-bottom:1.8rem;letter-spacing:.06em;text-transform:uppercase}
+.pcard{background:#fff;border:1px solid var(--bd);border-radius:14px;padding:2.5rem;box-shadow:var(--sh-md);min-height:270px}
+.pq-lbl{font-size:.59rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--sf);margin-bottom:.6rem}
+.pq-q{font-family:"Playfair Display",serif;font-size:1.42rem;font-weight:700;color:var(--mn);margin-bottom:.4rem;line-height:1.3}
+.pq-h{font-size:.79rem;color:var(--lt);margin-bottom:1.7rem;line-height:1.55;font-style:italic}
+.popts{display:grid;gap:.6rem}
+.popts.c2{grid-template-columns:1fr 1fr}
+.popts.c3{grid-template-columns:1fr 1fr 1fr}
+.popt{border:1.5px solid var(--bd);border-radius:8px;padding:.82rem 1.1rem;cursor:pointer;background:#fff;transition:all .2s;text-align:left;display:flex;align-items:center;gap:.75rem}
+.popt:hover{border-color:rgba(197,106,45,.42);background:rgba(197,106,45,.03)}
+.popt.sel{border-color:var(--sf);background:rgba(197,106,45,.06);box-shadow:0 0 0 2px rgba(197,106,45,.13)}
+.popt.selm{border-color:var(--gd);background:rgba(212,175,55,.06);box-shadow:0 0 0 2px rgba(212,175,55,.16)}
+.poi{font-size:1.35rem;width:32px;text-align:center;flex-shrink:0}
+.pot{flex:1}
+.pot-t{font-size:.86rem;font-weight:600;color:var(--mn);display:block}
+.pot-d{font-size:.72rem;color:var(--lt);margin-top:.14rem;display:block}
+.pchk{width:19px;height:19px;border-radius:50%;border:1.5px solid var(--bd);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.68rem;color:transparent;transition:all .2s}
+.popt.sel .pchk{border-color:var(--sf);background:var(--sf);color:#fff}
+.popt.selm .pchk{border-color:var(--gd);background:var(--gd);color:var(--mn)}
+.pnav{display:flex;justify-content:space-between;align-items:center;margin-top:1.8rem;flex-wrap:wrap;gap:.7rem}
+.pnav-info{font-size:.7rem;color:var(--lt);letter-spacing:.05em;text-transform:uppercase}
+.pback{background:transparent;border:1.5px solid var(--bd);color:var(--mt);padding:.68rem 1.5rem;border-radius:5px;font-size:.77rem;font-weight:600;transition:all .2s;display:flex;align-items:center;gap:.4rem}
+.pback:hover{border-color:var(--mn);color:var(--mn)}
+.pnext{background:var(--mn);color:#fff;border:none;padding:.68rem 1.9rem;border-radius:5px;font-size:.79rem;font-weight:700;letter-spacing:.03em;transition:all .25s;display:flex;align-items:center;gap:.5rem;box-shadow:0 4px 20px rgba(31,42,68,.22)}
+.pnext:hover{background:var(--mn-l);transform:translateY(-1px);box-shadow:0 6px 28px rgba(31,42,68,.32)}
+.pnext:disabled{background:var(--bd);color:var(--lt);cursor:not-allowed;box-shadow:none;transform:none}
+.pnext svg,.pback svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2.5}
+.ppriv{text-align:center;font-size:.68rem;color:var(--lt);margin-top:1.1rem;line-height:1.6}
+/* Planner results */
+.pres{animation:fup .4s ease}
+.pr-h3{font-family:"Playfair Display",serif;font-size:1.3rem;font-weight:700;color:var(--mn);margin-bottom:.35rem}
+.pr-sub{font-size:.79rem;color:var(--mt);margin-bottom:1.4rem;line-height:1.65}
+.prc{border:1.5px solid var(--bd);border-radius:10px;overflow:hidden;background:#fff;margin-bottom:.9rem;transition:all .3s;cursor:pointer}
+.prc:hover{box-shadow:var(--sh-md);border-color:rgba(197,106,45,.32);transform:translateY(-2px)}
+.prc.best{border-color:var(--gd);box-shadow:0 0 0 2px rgba(212,175,55,.18)}
+.prc-row{display:flex;align-items:stretch}
+.prc-img{width:118px;flex-shrink:0;overflow:hidden}
+.prc-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;display:block}
+.prc:hover .prc-img img{transform:scale(1.07)}
+.prc-info{flex:1;padding:1rem 1.2rem;min-width:0}
+.prc-bads{display:flex;gap:.35rem;margin-bottom:.48rem;flex-wrap:wrap}
+.prc-b{font-size:.57rem;font-weight:700;padding:.18rem .52rem;border-radius:20px;letter-spacing:.07em;text-transform:uppercase}
+.prc-b.best{background:linear-gradient(135deg,var(--gd),var(--gd-l));color:var(--mn)}
+.prc-b.good{background:rgba(197,106,45,.1);color:var(--sf);border:1px solid rgba(197,106,45,.2)}
+.prc-b.days{background:rgba(31,42,68,.07);color:var(--mn);border:1px solid rgba(31,42,68,.12)}
+.prc-name{font-family:"Playfair Display",serif;font-size:1.02rem;font-weight:700;color:var(--mn);margin-bottom:.25rem}
+.prc-desc{font-size:.75rem;color:var(--mt);line-height:1.52;margin-bottom:.6rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.prc-tags{display:flex;flex-wrap:wrap;gap:.28rem;margin-bottom:.6rem}
+.prc-tag{background:rgba(197,106,45,.07);color:var(--sf);font-size:.61rem;font-weight:600;padding:.14rem .48rem;border-radius:20px;border:1px solid rgba(197,106,45,.17)}
+.prc-foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.prc-plbl{font-size:.6rem;color:var(--lt);text-transform:uppercase;letter-spacing:.05em}
+.prc-p{font-family:"Playfair Display",serif;font-size:1.18rem;font-weight:700;color:var(--mn)}
+.prc-p sub{font-family:"Inter",sans-serif;font-size:.4em;font-weight:400;color:var(--lt)}
+.prc-acts{display:flex;gap:.45rem}
+.prc-det{background:transparent;color:var(--sf);border:1.5px solid rgba(197,106,45,.38);padding:.43rem .85rem;border-radius:4px;font-size:.69rem;font-weight:600;cursor:pointer;transition:all .2s}
+.prc-det:hover{border-color:var(--sf);background:rgba(197,106,45,.05)}
+.prc-bk{background:var(--sf);color:#fff;border:none;padding:.43rem 1rem;border-radius:4px;font-size:.69rem;font-weight:700;cursor:pointer;transition:all .2s}
+.prc-bk:hover{background:var(--sf-l)}
+.prc-wa{background:#25D366;color:#fff;border:none;padding:.43rem 1rem;border-radius:4px;font-size:.69rem;font-weight:700;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:.3rem;text-decoration:none}
+.prc-wa:hover{background:#1ebe5d}
+.pr-tc{font-size:.67rem;color:var(--lt);margin-top:1.1rem;line-height:1.68;padding:.75rem 1rem;background:rgba(197,106,45,.04);border-radius:6px;border:1px solid var(--bd)}
+
+/* ALL PACKAGES */
+
+
+/* GALLERY */
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:1rem}
+.gal-item{overflow:hidden;border-radius:8px;cursor:pointer;position:relative}
+.gal-item.tall{grid-row:span 2}
+.gal-item.wide{grid-column:span 2}
+.gal-item img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .5s;display:block}
+.gal-item:hover img{transform:scale(1.08)}
+.gal-ov{position:absolute;bottom:0;left:0;right:0;padding:.75rem;background:linear-gradient(transparent,rgba(31,42,68,.68));opacity:0;transition:opacity .3s;color:#fff;font-size:.73rem;font-weight:500}
+.gal-item:hover .gal-ov{opacity:1}
+
+/* CONTACT */
+.ct-sec{background:var(--mn);position:relative;overflow:hidden}
+.ct-sec::before{content:"";position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1613445607898-f46e51645acf?w=1400&auto=format&fit=crop&q=55&ixlib=rb-4.0.3") center/cover;opacity:.05}
+.ct-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.ct-sec .sec-h{color:#fff}
+.ct-sec .sec-h em{color:var(--gd-l)}
+.ct-sec .divider{background:linear-gradient(to right,var(--gd),var(--sf))}
+.ct-sec .eyebrow{color:rgba(212,175,55,.88)}
+.ct-sec .eyebrow::before,.ct-sec .eyebrow::after{background:var(--gd)}
+.ct-sec .sec-sub{color:rgba(255,255,255,.52)}
+.ct-chs{display:flex;flex-direction:column;gap:.9rem;margin-top:1.8rem}
+.ct-ch{display:flex;align-items:center;gap:1rem;padding:.9rem 1.1rem;border:1px solid rgba(255,255,255,.1);border-radius:8px;background:rgba(255,255,255,.04);transition:all .2s;text-decoration:none;cursor:pointer}
+.ct-ch:hover{border-color:rgba(212,175,55,.38);background:rgba(212,175,55,.06);transform:translateX(4px)}
+.ch-ic{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem}
+.ch-tx .ch-lbl{font-size:.63rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:.12rem}
+.ch-tx .ch-val{font-size:.86rem;font-weight:600;color:#fff}
+.ct-form{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:2rem;overflow:hidden}
+.cf-topbar{height:2px;background:linear-gradient(to right,var(--sf),var(--gd));margin:-2rem -2rem 2rem;border-radius:0}
+.cf-title{font-family:"Playfair Display",serif;font-size:1.18rem;font-weight:700;color:#fff;margin-bottom:.28rem}
+.cf-sub{font-size:.77rem;color:rgba(255,255,255,.42);margin-bottom:1.5rem;line-height:1.55}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-bottom:.9rem}
+.cf-grp{display:flex;flex-direction:column;gap:.35rem;margin-bottom:.9rem}
+.cf-lbl{font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.48)}
+.cf-inp,.cf-sel,.cf-ta{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:5px;padding:.68rem .95rem;font-size:.84rem;color:#fff;font-family:"Inter",sans-serif;width:100%;transition:border-color .2s;outline:none}
+.cf-inp::placeholder,.cf-ta::placeholder{color:rgba(255,255,255,.22)}
+.cf-inp:focus,.cf-sel:focus,.cf-ta:focus{border-color:rgba(212,175,55,.48)}
+.cf-sel{appearance:none;cursor:pointer}
+.cf-sel option{background:var(--mn);color:#fff}
+.cf-ta{resize:vertical;min-height:95px}
+.cf-sub-btn{width:100%;background:linear-gradient(135deg,var(--sf),var(--sf-d));color:#fff;border:none;padding:.88rem;border-radius:5px;font-size:.86rem;font-weight:700;cursor:pointer;transition:all .25s;letter-spacing:.03em;margin-top:.4rem;box-shadow:0 4px 20px rgba(197,106,45,.32)}
+.cf-sub-btn:hover{background:linear-gradient(135deg,var(--sf-l),var(--sf));transform:translateY(-1px);box-shadow:0 6px 28px rgba(197,106,45,.48)}
+.cf-tc-note{font-size:.66rem;color:rgba(255,255,255,.28);text-align:center;margin-top:.9rem;line-height:1.6}
+
+/* FOOTER */
+footer{background:#0F1623;color:rgba(255,255,255,.45);padding:4rem 0 2rem}
+.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.ft-tagline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:.98rem;color:rgba(255,255,255,.3);line-height:1.65;margin-top:.5rem;margin-bottom:1.1rem}
+.ft-cl{display:flex;align-items:center;gap:.45rem;font-size:.78rem;margin-bottom:.38rem}
+.ft-cl svg{width:12px;height:12px;stroke:var(--sf);fill:none;stroke-width:2;flex-shrink:0}
+.ft-col-t{font-size:.63rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--sf);margin-bottom:.9rem}
+.ft-links{list-style:none;display:flex;flex-direction:column;gap:.45rem}
+.ft-links a{font-size:.8rem;color:rgba(255,255,255,.42);transition:color .2s}
+.ft-links a:hover{color:var(--gd-l)}
+.ft-bot{border-top:1px solid rgba(255,255,255,.07);padding-top:1.4rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.ft-copy{font-size:.73rem;color:rgba(255,255,255,.22)}
+.ft-leg{display:flex;gap:1.4rem}
+.ft-leg a{font-size:.71rem;color:rgba(255,255,255,.22);transition:color .2s}
+.ft-leg a:hover{color:rgba(255,255,255,.45)}
+
+/* RESPONSIVE */
+.apkg-list{display:flex;flex-direction:column;gap:.45rem}
+.apkg-row{display:flex;align-items:center;gap:1rem;padding:.85rem 1rem;border:1px solid var(--bd);border-radius:8px;cursor:pointer;transition:all .2s;background:#fff}
+.apkg-row:hover{border-color:rgba(197,106,45,.4);background:rgba(197,106,45,.03);transform:translateX(3px)}
+.apkg-info{flex:1;min-width:0}
+.apkg-name{font-family:"Playfair Display",serif;font-size:.92rem;font-weight:700;color:var(--mn);margin-bottom:.15rem}
+.apkg-dest{font-size:.7rem;color:var(--lt)}
+.apkg-meta{display:flex;flex-direction:column;align-items:flex-end;gap:.18rem;flex-shrink:0}
+.apkg-days{font-size:.6rem;font-weight:600;color:var(--mt);text-transform:uppercase;letter-spacing:.07em}
+.apkg-price{font-family:"Playfair Display",serif;font-size:.95rem;font-weight:700;color:var(--mn)}
+.apkg-arr{color:var(--sf);font-size:1.2rem;font-weight:700;flex-shrink:0}
+.dest-card{background:#fff;border:1px solid var(--bd);border-radius:10px;overflow:hidden;cursor:pointer;transition:all .3s;display:flex;flex-direction:column}
+.dest-card:hover{transform:translateY(-5px);box-shadow:var(--sh-lg);border-color:rgba(197,106,45,.25)}
+.dest-img{position:relative;aspect-ratio:3/2;overflow:hidden;flex-shrink:0}
+.dest-img img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .55s}
+.dest-card:hover .dest-img img{transform:scale(1.06)}
+.dest-num{position:absolute;top:.75rem;left:.75rem;width:28px;height:28px;background:var(--mn);color:var(--gd);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.62rem;font-weight:700;font-family:"Playfair Display",serif}
+.dest-body{padding:1.3rem;flex:1;display:flex;flex-direction:column}
+.dest-name{font-family:"Playfair Display",serif;font-size:1.05rem;font-weight:700;color:var(--mn);margin-bottom:.5rem;line-height:1.2}
+.dest-desc{font-size:.78rem;color:var(--mt);line-height:1.65;flex:1;margin-bottom:.9rem}
+.dest-link{font-size:.72rem;font-weight:700;color:var(--sf);letter-spacing:.06em;text-transform:uppercase;margin-top:auto}
+@media(max-width:768px){.dest-row{grid-template-columns:1fr!important}}
+@media(max-width:1024px){
+  .exp-grid,.ext-grid,.pkg-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:repeat(3,1fr)}
+  .ft-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .wrap{padding:0 1.2rem}
+  .sec{padding:4rem 0}
+  .exp-grid,.ext-grid,.pkg-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:155px}
+  .ct-inner{grid-template-columns:1fr;gap:3rem}
+  .ft-grid{grid-template-columns:1fr}
+  .nav-links,.nav-wa-link{display:none}
+  .nav-mob-btn{display:flex}
+  .h-ctas{flex-direction:column;align-items:flex-start}
+  .cf-row{grid-template-columns:1fr}
+  .modal-hl{grid-template-columns:1fr}
+  .modal-ig{grid-template-columns:1fr}
+  .popts.c2,.popts.c3{grid-template-columns:1fr}
+  .prc-img{width:88px}
+  .pcard{padding:1.5rem}
+}
+@media(max-width:480px){
+  .gal-grid{grid-template-columns:1fr}
+  .gal-grid .tall,.gal-grid .wide{grid-row:span 1;grid-column:span 1}
+  .why-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<a class="wa-float" href="https://wa.me/918318893914" target="_blank" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<nav id="nav">
+  <a class="nav-logo" href="#hero">
+    <div class="nav-lmark">BT</div>
+    <div class="nav-ltext">Banaras Trails<span>Beyond Sightseeing</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#experiences">Experiences</a></li>
+    <li><a href="#extensions">Add-ons</a></li>
+    <li><a href="#planner">Plan Journey</a></li>
+    
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="nav-wa-link" href="https://wa.me/918318893914" target="_blank">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp Us
+  </a>
+  <button class="nav-mob-btn" onclick="toggleMob()" aria-label="Menu">
+    <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+<div class="mob-menu" id="mobMenu">
+  <a href="#experiences" onclick="toggleMob()">Experiences</a>
+  <a href="#extensions" onclick="toggleMob()">Journey Add-ons</a>
+  <a href="#planner" onclick="toggleMob()">Plan My Journey</a>
+  
+  <a href="#gallery" onclick="toggleMob()">Gallery</a>
+  <a href="#contact" onclick="toggleMob()">Contact</a>
+  <a href="https://wa.me/918318893914" target="_blank">&#x1F4AC; WhatsApp Us</a>
+</div>
+
+<div class="modal-bg" id="modalBg">
+  <div class="modal-box">
+    <div class="modal-hero" id="mHero"><img id="mImg" src="" alt=""><button class="modal-close" onclick="closeModal()">&#x2715;</button></div>
+    <div class="modal-scroll">
+      <h2 class="modal-title" id="mTitle"></h2>
+      <p class="modal-sub" id="mSub"></p>
+      <div id="mBody"></div>
+    </div>
+  </div>
+</div>
+
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="wrap"><div class="hero-c">
+    <div class="h-ey">Banaras Trails &middot; Varanasi</div>
+    <h1 class="h-h1">Beyond Sightseeing,<br><em>Experience Banaras</em></h1>
+    <p class="h-sub"><span id="typing-text"></span><span class="typing-cursor">|</span></p>
+    <div class="h-ctas">
+      <a class="btn btn-prim" href="#experiences"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>Explore Experiences</a>
+      <a class="btn btn-ghost" href="https://wa.me/918318893914" target="_blank">&#x1F4AC; WhatsApp Us</a>
+    </div>
+    <div class="h-trust">
+      <div class="ti"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Local Expertise</div>
+      <div class="ti"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>Personalized Journeys</div>
+      <div class="ti"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>Flexible Groups</div>
+      <div class="ti"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Cultural Experiences</div>
+    </div>
+  </div></div>
+  <div class="h-scroll" onclick="document.getElementById('experiences').scrollIntoView({behavior:'smooth'})">
+    <div class="scrl-dot"></div><span>Scroll</span>
+  </div>
+</section>
+
+<section class="sec" style="background:#fff" id="experiences">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:3.5rem">
+      <div class="eyebrow rev">Our Experiences</div>
+      <h2 class="sec-h rev">The Heart of<br><em>Every Journey</em></h2>
+      <div class="divider rev"></div>
+      <p class="sec-sub rev">Three core Banaras experiences, each crafted with depth. Start here &mdash; then extend to nearby sacred destinations.</p>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card rev" onclick="openTour('subah-e-kashi')">
+        <div class="exp-img"><img src="https://images.unsplash.com/photo-1564509027875-ba1c00cf09c1?w=700&auto=format&fit=crop&q=85&ixlib=rb-4.0.3" alt="Subah-e-Kashi Varanasi ghats sunrise tour"><div class="exp-rib rib-mn">2 Days</div></div>
+        <div class="exp-body">
+          <div class="exp-days"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>1 Night &middot; 2 Days</div>
+          <h3 class="exp-name">Subah-e-Kashi</h3>
+          <p class="exp-desc">A short yet soulful escape into the spiritual heart of Varanasi &mdash; the essence of Banaras in limited time.</p>
+          <ul class="exp-hls"><li>Kashi Vishwanath Temple darshan</li><li>Evening Ganga Aarti by boat</li><li>Banarasi gali walk &amp; street chai</li></ul>
+          <div class="exp-foot"><div><div class="exp-plbl">Starting from*</div><div class="exp-price">&#x20B9;4,999 <sub>/person</sub></div></div><button class="exp-btn" onclick="event.stopPropagation();openTour('subah-e-kashi')">View Details</button></div>
+        </div>
+      </div>
+      <div class="exp-card feat rev" style="transition-delay:.1s" onclick="openTour('shivnagari-kashi')">
+        <div class="exp-img"><img src="https://images.unsplash.com/photo-1706186568052-ce7990870b68?w=700&auto=format&fit=crop&q=85&ixlib=rb-4.0.3" alt="Shivnagari Kashi Yatra sunrise boat Ganga Varanasi"><div class="exp-rib rib-gd">Most Popular</div></div>
+        <div class="exp-body">
+          <div class="exp-days"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>2 Nights &middot; 3 Days</div>
+          <h3 class="exp-name">Shivnagari Kashi Yatra</h3>
+          <p class="exp-desc">A deeper spiritual journey through temples, ghats and rituals &mdash; for devotees who want the full Kashi experience.</p>
+          <ul class="exp-hls"><li>Complete Kashi temple circuit</li><li>Pre-dawn sunrise boat ride on the Ganga</li><li>Manikarnika Ghat spiritual walk</li></ul>
+          <div class="exp-foot"><div><div class="exp-plbl">Starting from*</div><div class="exp-price">&#x20B9;8,999 <sub>/person</sub></div></div><button class="exp-btn" onclick="event.stopPropagation();openTour('shivnagari-kashi')">View Details</button></div>
+        </div>
+      </div>
+      <div class="exp-card rev" style="transition-delay:.2s" onclick="openTour('rang-e-banaras')">
+        <div class="exp-img"><img src="https://images.unsplash.com/photo-1695193254618-eba627755db1?w=700&auto=format&fit=crop&q=85&ixlib=rb-4.0.3" alt="Rang-e-Banaras heritage walk old city Varanasi"><div class="exp-rib rib-sf">Most Complete</div></div>
+        <div class="exp-body">
+          <div class="exp-days"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>3 Nights &middot; 4 Days</div>
+          <h3 class="exp-name">Rang-e-Banaras</h3>
+          <p class="exp-desc">Spirituality, heritage, food trails, silk weaving and a full Sarnath excursion &mdash; the complete Banaras.</p>
+          <ul class="exp-hls"><li>Old city heritage walk &amp; Banarasi galis</li><li>Authentic street food trail</li><li>Sarnath &amp; Dhamek Stupa excursion</li></ul>
+          <div class="exp-foot"><div><div class="exp-plbl">Starting from*</div><div class="exp-price">&#x20B9;14,999 <sub>/person</sub></div></div><button class="exp-btn" onclick="event.stopPropagation();openTour('rang-e-banaras')">View Details</button></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:4rem">
+      <div class="center" style="margin-bottom:2rem">
+        <div class="eyebrow rev" style="justify-content:center">Sacred Places in Kashi</div>
+        <h3 class="sec-h rev" style="font-size:clamp(1.5rem,3vw,2.2rem)">The Soul of <em>Every Itinerary</em></h3>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem" class="dest-row">
+        <div class="dest-card rev" onclick="openDestModal('kv')">
+          <div class="dest-img"><img src="https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=600&auto=format&fit=crop&q=80&ixlib=rb-4.0.3" alt="Kashi Vishwanath Temple Varanasi"><div class="dest-num">01</div></div>
+          <div class="dest-body"><h4 class="dest-name">Kashi Vishwanath Temple</h4><p class="dest-desc">One of the twelve Jyotirlingas — the most sacred temple of Shiva. Gold-plated shikhara, rebuilt in 1780 by Maharani Ahilya Bai Holkar. Every pilgrimage begins here.</p><span class="dest-link">Explore &rsaquo;</span></div>
+        </div>
+        <div class="dest-card rev" style="transition-delay:.08s" onclick="openDestModal('aarti')">
+          <div class="dest-img"><img src="https://images.unsplash.com/photo-1613445607898-f46e51645acf?w=600&auto=format&fit=crop&q=80&ixlib=rb-4.0.3" alt="Ganga Aarti Dashashwamedh Ghat Varanasi"><div class="dest-num">02</div></div>
+          <div class="dest-body"><h4 class="dest-name">Dashashwamedh Ghat Aarti</h4><p class="dest-desc">Every evening, priests perform the Ganga Aarti with fire, flowers and chanting. A spectacle of devotion that transforms the river into living light.</p><span class="dest-link">Explore &rsaquo;</span></div>
+        </div>
+        <div class="dest-card rev" style="transition-delay:.16s" onclick="openDestModal('ghats')">
+          <div class="dest-img"><img src="https://images.unsplash.com/photo-1564509027875-ba1c00cf09c1?w=600&auto=format&fit=crop&q=80&ixlib=rb-4.0.3" alt="Varanasi Ghats sunrise boat ride Ganga"><div class="dest-num">03</div></div>
+          <div class="dest-body"><h4 class="dest-name">The 84 Ghats of Kashi</h4><p class="dest-desc">84 stone steps descend to the Ganga — each ghat with its own deity, story and ritual. A pre-dawn boat ride is among the most profound experiences in India.</p><span class="dest-link">Explore &rsaquo;</span></div>
+        </div>
+        <div class="dest-card rev" style="transition-delay:.24s" onclick="openDestModal('manikarnika')">
+          <div class="dest-img"><img src="https://images.unsplash.com/photo-1706186568052-ce7990870b68?w=600&auto=format&fit=crop&q=80&ixlib=rb-4.0.3" alt="Manikarnika Ghat Varanasi cremation ghat Ganga"><div class="dest-num">04</div></div>
+          <div class="dest-body"><h4 class="dest-name">Manikarnika Ghat</h4><p class="dest-desc">The eternal cremation ghat of Kashi — where a sacred flame has burned for over 3,500 years. Hindus believe dying here grants moksha, liberation from the cycle of rebirth.</p><span class="dest-link">Explore &rsaquo;</span></div>
+        </div>
+        <div class="dest-card rev" style="transition-delay:.32s" onclick="openDestModal('sarnath')">
+          <div class="dest-img"><img src="https://images.unsplash.com/photo-1609450104082-b9a47de3e793?w=600&auto=format&fit=crop&q=80&ixlib=rb-4.0.3" alt="Sarnath Dhamek Stupa Buddhist heritage Varanasi"><div class="dest-num">05</div></div>
+          <div class="dest-body"><h4 class="dest-name">Sarnath</h4><p class="dest-desc">Where the Buddha delivered his first sermon after enlightenment. The Dhamek Stupa, Ashoka Pillar and Sarnath Museum hold some of the most significant Buddhist artifacts in the world.</p><span class="dest-link">Explore &rsaquo;</span></div>
+        </div>
+        <div class="dest-card rev" style="transition-delay:.4s" onclick="openDestModal('banaras')">
+          <div class="dest-img"><img src="https://images.unsplash.com/photo-1695193254618-eba627755db1?w=600&auto=format&fit=crop&q=80&ixlib=rb-4.0.3" alt="Banarasi galis old city heritage walk Varanasi"><div class="dest-num">06</div></div>
+          <div class="dest-body"><h4 class="dest-name">The Old City & Banarasi Galis</h4><p class="dest-desc">Narrow lanes winding past silk weavers, paan shops, sweet sellers and ancient havelis. The old city is a living museum where 3,000 years of unbroken culture continues today.</p><span class="dest-link">Explore &rsaquo;</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec why-sec" id="why">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:3.5rem">
+      <div class="eyebrow rev">Why Choose Us</div>
+      <h2 class="sec-h rev">Not Just a Tour.<br><em>A Real Experience.</em></h2>
+      <div class="divider rev"></div>
+    </div>
+    <div class="why-grid">
+      <div class="why-card rev"><div class="why-ic">&#x1F3DB;</div><h4 class="why-t">Local Expertise</h4><p class="why-d">Born and raised in Banaras. We know every ghat, gali and temple by heart &mdash; and by story.</p></div>
+      <div class="why-card rev" style="transition-delay:.08s"><div class="why-ic">&#x1F3A8;</div><h4 class="why-t">Personalized Journeys</h4><p class="why-d">No generic itineraries. Every trip is shaped around your interests, pace and spiritual needs.</p></div>
+      <div class="why-card rev" style="transition-delay:.16s"><div class="why-ic">&#x1F549;</div><h4 class="why-t">Spiritual Experiences</h4><p class="why-d">Genuine connections with temples, rituals, priests and the living traditions of Kashi.</p></div>
+      <div class="why-card rev" style="transition-delay:.24s"><div class="why-ic">&#x1F6F5;</div><h4 class="why-t">Comfortable Support</h4><p class="why-d">From pickup to drop, accommodation to temple queues &mdash; we handle everything.</p></div>
+      <div class="why-card rev" style="transition-delay:.32s"><div class="why-ic">&#x1F465;</div><h4 class="why-t">Flexible Groups</h4><p class="why-d">Solo travellers, couples, families, large pilgrimages. We always adapt.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec ext-sec" id="extensions">
+  <div class="wrap ext-wrap">
+    <div class="center" style="margin-bottom:3.5rem">
+      <div class="eyebrow rev">Journey Add-ons</div>
+      <h2 class="sec-h rev">Banaras &amp; <em>Beyond</em></h2>
+      <div class="divider rev"></div>
+      <p class="sec-sub rev" style="color:rgba(255,255,255,.5)">Every core experience can be extended to nearby sacred destinations.</p>
+    </div>
+    <div class="ext-grid">
+      <div class="ext-card rev" onclick="openTour('rang-ayodhya')">
+        <div class="ext-img"><img src="https://images.unsplash.com/photo-1655885333110-22b955d35667?w=700&auto=format&fit=crop&q=85&ixlib=rb-4.0.3" alt="Ayodhya Ram Mandir tour from Varanasi Banaras Trails"></div>
+        <div class="ext-body">
+          <div class="ext-route"><div class="ext-dot"></div>Banaras<div class="ext-line"></div>Ayodhya</div>
+          <h3 class="ext-name">+ Ayodhya</h3>
+          <p class="ext-desc">Mahadev&#39;s Kashi to Shri Ram&#39;s Ayodhya. Ram Mandir, Hanuman Garhi, Ram Ki Paidi &amp; Saryu Aarti.</p>
+          <div class="ext-tags"><span class="ext-tag">Ram Mandir</span><span class="ext-tag">Hanuman Garhi</span><span class="ext-tag">Saryu Ghat</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between"><div class="ext-from">from &#x20B9;9,999 <sub>/person*</sub></div><span style="font-size:.68rem;color:rgba(212,175,55,.65);font-weight:600">2N/3D &rarr; 4N/5D &rsaquo;</span></div>
+        </div>
+      </div>
+      <div class="ext-card rev" style="transition-delay:.1s" onclick="openTour('rang-prayagraj')">
+        <div class="ext-img"><img src="https://images.unsplash.com/photo-1585484173186-5f2d4b4e0d34?w=700&auto=format&fit=crop&q=85&ixlib=rb-4.0.3" alt="Prayagraj Triveni Sangam tour from Varanasi"></div>
+        <div class="ext-body">
+          <div class="ext-route"><div class="ext-dot"></div>Banaras<div class="ext-line"></div>Prayagraj</div>
+          <h3 class="ext-name">+ Prayagraj</h3>
+          <p class="ext-desc">The sacred Triveni Sangam, Sangam boat ride, Bade Hanuman Ji and Akshayavat darshan.</p>
+          <div class="ext-tags"><span class="ext-tag">Triveni Sangam</span><span class="ext-tag">Sangam Boat</span><span class="ext-tag">Akshayavat</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between"><div class="ext-from">from &#x20B9;9,999 <sub>/person*</sub></div><span style="font-size:.68rem;color:rgba(212,175,55,.65);font-weight:600">2N/3D &rarr; 4N/5D &rsaquo;</span></div>
+        </div>
+      </div>
+      <div class="ext-card rev" style="transition-delay:.2s" onclick="openTour('rang-vindhya')">
+        <div class="ext-img"><img src="https://images.unsplash.com/photo-1571536802807-30451e3955d8?w=700&auto=format&fit=crop&q=85&ixlib=rb-4.0.3" alt="Vindhyachal Chunar Fort tour from Varanasi"></div>
+        <div class="ext-body">
+          <div class="ext-route"><div class="ext-dot"></div>Banaras<div class="ext-line"></div>Vindhyachal</div>
+          <h3 class="ext-name">+ Vindhyachal &amp; Chunar</h3>
+          <p class="ext-desc">Maa Vindhyavasini Shakti Peetha, Kali Khoh temple and the timeless grandeur of Chunar Fort.</p>
+          <div class="ext-tags"><span class="ext-tag">Shakti Peetha</span><span class="ext-tag">Kali Khoh</span><span class="ext-tag">Chunar Fort</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between"><div class="ext-from">from &#x20B9;9,999 <sub>/person*</sub></div><span style="font-size:.68rem;color:rgba(212,175,55,.65);font-weight:600">2N/3D &rarr; 4N/5D &rsaquo;</span></div>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:1.8rem;font-size:.76rem;color:rgba(255,255,255,.28)">Each extension available with all three core experiences. <a href="#all-packages" style="color:rgba(212,175,55,.65);font-weight:600">See all 12 packages &rsaquo;</a></p>
+  </div>
+</section>
+
+<section class="sec plan-sec" id="planner">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:3rem">
+      <div class="eyebrow rev">Plan My Journey</div>
+      <h2 class="sec-h rev">Find Your Perfect<br><em>Experience</em></h2>
+      <div class="divider rev"></div>
+      <p class="sec-sub rev">Answer 6 quick questions. We&#39;ll recommend the journey that fits you &mdash; and explain why.</p>
+    </div>
+    <div class="plan-inner">
+      <div class="pfill-bar"><div class="pfill-inner" id="pfill" style="width:0%"></div></div>
+      <div class="psteps" id="pstepsRow"></div>
+      <div class="plbl" id="plbl">Step 1 of 6</div>
+      <div class="pcard" id="pcard"></div>
+      <div class="pnav" id="pnav">
+        <button class="pback" id="pback" onclick="planBack()" style="visibility:hidden"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>Back</button>
+        <button class="pnext" id="pnext" onclick="planNext()" disabled>Continue <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+      </div>
+      <p class="ppriv">&#x1F512; Your preferences are used only to personalise recommendations. No personal data is collected.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="background:var(--iv);padding:3rem 0" id="all-packages">
+  <div class="wrap" style="text-align:center">
+    <div class="eyebrow rev">12 Curated Packages</div>
+    <h2 class="sec-h rev" style="margin-bottom:.8rem">Every Combination,<br><em>One Perfect Journey</em></h2>
+    <div class="divider rev" style="margin-left:auto;margin-right:auto"></div>
+    <p class="sec-sub rev" style="margin:0 auto 2rem;max-width:500px">3 core Banaras experiences &times; 4 destination options. Click to browse all 12 packages with full details, itineraries and pricing.</p>
+    <button class="btn btn-prim rev" onclick="openAllPackages()" style="margin:0 auto">Browse All 12 Packages &rarr;</button>
+    <p style="font-size:.7rem;color:var(--lt);margin-top:1rem">* All prices starting from, per person, subject to change</p>
+  </div>
+</section>
+
+<section class="sec" style="background:var(--iv)" id="gallery">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:3rem">
+      <div class="eyebrow rev">Gallery</div>
+      <h2 class="sec-h rev">Kashi Through<br><em>Our Eyes</em></h2>
+      <div class="divider rev"></div>
+    </div>
+    <div class="gal-grid rev">
+      <div class="gal-item tall" onclick="openPhoto('https://images.unsplash.com/photo-1564509027875-ba1c00cf09c1?w=1200&auto=format&fit=crop&q=90&ixlib=rb-4.0.3','Sunrise over the Ganges Ghats, Varanasi')"><img src="https://images.unsplash.com/photo-1564509027875-ba1c00cf09c1?w=600&auto=format&fit=crop&q=80&ixlib=rb-4.0.3" alt="Banaras ghat sunrise Varanasi"><div class="gal-ov">Varanasi Sunrise</div></div>
+      <div class="gal-item" onclick="openPhoto('https://images.unsplash.com/photo-1613445607898-f46e51645acf?w=1200&auto=format&fit=crop&q=90&ixlib=rb-4.0.3','Evening Ganga Aarti at Dashashwamedh Ghat')"><img src="https://images.unsplash.com/photo-1613445607898-f46e51645acf?w=500&auto=format&fit=crop&q=80&ixlib=rb-4.0.3" alt="Ganga Aarti Dashashwamedh Ghat varanasi"><div class="gal-ov">Ganga Aarti</div></div>
+      <div class="gal-item" onclick="openPhoto('https://images.unsplash.com/photo-1706186568052-ce7990870b68?w=1200&auto=format&fit=crop&q=90&ixlib=rb-4.0.3','Boats on the Ganges at dawn')"><img src="https://images.unsplash.com/photo-1706186568052-ce7990870b68?w=500&auto=format&fit=crop&q=80&ixlib=rb-4.0.3" alt="Boats on Ganga river Varanasi dawn"><div class="gal-ov">Boats at Dawn</div></div>
+      <div class="gal-item wide" onclick="openPhoto('https://images.unsplash.com/photo-1695193254618-eba627755db1?w=1200&auto=format&fit=crop&q=90&ixlib=rb-4.0.3','Old Banaras streets and galis')"><img src="https://images.unsplash.com/photo-1695193254618-eba627755db1?w=900&auto=format&fit=crop&q=80&ixlib=rb-4.0.3" alt="Old Varanasi gali streets Banaras heritage walk"><div class="gal-ov">Banarasi Galis</div></div>
+      <div class="gal-item" onclick="openPhoto('https://images.unsplash.com/photo-1609450104082-b9a47de3e793?w=1200&auto=format&fit=crop&q=90&ixlib=rb-4.0.3','Dhamek Stupa, Sarnath')"><img src="https://images.unsplash.com/photo-1609450104082-b9a47de3e793?w=500&auto=format&fit=crop&q=80&ixlib=rb-4.0.3" alt="Sarnath Dhamek Stupa Buddhist heritage"><div class="gal-ov">Sarnath Stupa</div></div>
+      <div class="gal-item" onclick="openPhoto('https://images.unsplash.com/photo-1655885333110-22b955d35667?w=1200&auto=format&fit=crop&q=90&ixlib=rb-4.0.3','Ram Mandir, Ayodhya')"><img src="https://images.unsplash.com/photo-1655885333110-22b955d35667?w=500&auto=format&fit=crop&q=80&ixlib=rb-4.0.3" alt="Ram Mandir Ayodhya"><div class="gal-ov">Ram Mandir, Ayodhya</div></div>
+      <div class="gal-item" onclick="openPhoto('https://images.unsplash.com/photo-1585484173186-5f2d4b4e0d34?w=1200&auto=format&fit=crop&q=90&ixlib=rb-4.0.3','Triveni Sangam, Prayagraj')"><img src="https://images.unsplash.com/photo-1585484173186-5f2d4b4e0d34?w=500&auto=format&fit=crop&q=80&ixlib=rb-4.0.3" alt="Triveni Sangam Prayagraj river confluence"><div class="gal-ov">Triveni Sangam</div></div>
+      <div class="gal-item" onclick="openPhoto('https://images.unsplash.com/photo-1549225480-ce72840aa6c8?w=1200&auto=format&fit=crop&q=90&ixlib=rb-4.0.3','Ayodhya')"><img src="https://images.unsplash.com/photo-1549225480-ce72840aa6c8?w=500&auto=format&fit=crop&q=80&ixlib=rb-4.0.3" alt="Ayodhya temple spiritual"><div class="gal-ov">Ayodhya</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec ct-sec" id="contact">
+  <div class="wrap">
+    <div class="ct-inner">
+      <div class="rev-l">
+        <div class="eyebrow">Begin Your Journey</div>
+        <h2 class="sec-h">Begin Your<br><em>Banaras Journey</em></h2>
+        <div class="divider"></div>
+        <p class="sec-sub">Your Banaras experience is one conversation away. WhatsApp for an instant response &mdash; we typically reply within a few hours.</p>
+        <div class="ct-chs">
+          <a class="ct-ch" href="https://wa.me/918318893914" target="_blank"><div class="ch-ic" style="background:#25D366">&#x1F4AC;</div><div class="ch-tx"><div class="ch-lbl">WhatsApp</div><div class="ch-val">+91 83188 93914</div></div></a>
+          <a class="ct-ch" href="tel:+918318893914"><div class="ch-ic" style="background:var(--sf)">&#x1F4DE;</div><div class="ch-tx"><div class="ch-lbl">Call Us</div><div class="ch-val">+91 83188 93914</div></div></a>
+          <a class="ct-ch" href="mailto:hello@banarastrails.com"><div class="ch-ic" style="background:var(--mn-l)">&#x2709;</div><div class="ch-tx"><div class="ch-lbl">Email</div><div class="ch-val">hello@banarastrails.com</div></div></a>
+          <div class="ct-ch"><div class="ch-ic" style="background:rgba(255,255,255,.08)">&#x1F4CD;</div><div class="ch-tx"><div class="ch-lbl">Office</div><div class="ch-val">Near Dashashwamedh Ghat, Varanasi</div></div></div>
+        </div>
+      </div>
+      <div class="rev-r">
+        <div class="ct-form">
+          <div class="cf-topbar"></div>
+          <div class="cf-title">Send an Enquiry</div>
+          <p class="cf-sub">Tell us about your trip and we&#39;ll craft a personalised recommendation for you.</p>
+          <div class="cf-row">
+            <div class="cf-grp"><label class="cf-lbl">Your Name</label><input class="cf-inp" type="text" id="cfName" placeholder="Full name"></div>
+            <div class="cf-grp"><label class="cf-lbl">Phone / WhatsApp</label><input class="cf-inp" type="tel" id="cfPhone" placeholder="+91 XXXXX XXXXX"></div>
+          </div>
+          <div class="cf-grp"><label class="cf-lbl">Package Interest</label>
+            <select class="cf-sel cf-inp" id="cfPkg">
+              <option value="">&#x2015; Select a package &#x2015;</option>
+              <optgroup label="Varanasi Only"><option>Subah-e-Kashi (1N/2D) &#x2014; &#x20B9;4,999</option><option>Shivnagari Kashi Yatra (2N/3D) &#x2014; &#x20B9;8,999</option><option>Rang-e-Banaras (3N/4D) &#x2014; &#x20B9;14,999</option></optgroup>
+              <optgroup label="+ Ayodhya"><option>Subah-e-Kashi + Ayodhya (2N/3D) &#x2014; &#x20B9;9,999</option><option>Shivnagari + Ayodhya (3N/4D) &#x2014; &#x20B9;13,999</option><option>Rang-e-Banaras + Ayodhya (4N/5D) &#x2014; &#x20B9;19,999</option></optgroup>
+              <optgroup label="+ Prayagraj"><option>Subah-e-Kashi + Prayagraj (2N/3D) &#x2014; &#x20B9;9,999</option><option>Shivnagari + Prayagraj (3N/4D) &#x2014; &#x20B9;13,999</option><option>Rang-e-Banaras + Prayagraj (4N/5D) &#x2014; &#x20B9;19,999</option></optgroup>
+              <optgroup label="+ Vindhyachal &amp; Chunar"><option>Subah-e-Kashi + Vindhyachal (2N/3D) &#x2014; &#x20B9;9,999</option><option>Shivnagari + Vindhyachal (3N/4D) &#x2014; &#x20B9;13,999</option><option>Rang-e-Banaras + Vindhyachal (4N/5D) &#x2014; &#x20B9;19,999</option></optgroup>
+              <option>Custom / Other Package</option>
+            </select>
+          </div>
+          <div class="cf-row">
+            <div class="cf-grp"><label class="cf-lbl">Travel Date</label><input class="cf-inp" type="date" id="cfDate"></div>
+            <div class="cf-grp"><label class="cf-lbl">Group Size</label><select class="cf-sel cf-inp" id="cfGroup"><option>1 Person (Solo)</option><option>2 Persons (Couple)</option><option>3&#x2013;5 Persons (Family)</option><option>6&#x2013;10 Persons (Group)</option><option>10+ Persons (Large Group)</option></select></div>
+          </div>
+          <div class="cf-grp"><label class="cf-lbl">Message</label><textarea class="cf-ta" id="cfMsg" placeholder="Any special requirements, dates, or questions..."></textarea></div>
+          <button class="cf-sub-btn" onclick="submitEnq()">Send Enquiry &#x2014; We&#39;ll Respond Within Hours</button>
+          <p class="cf-tc-note">* All prices are indicative and subject to change. Contact us for a confirmed quote before booking.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div>
+        <div class="nav-logo" style="margin-bottom:.8rem"><div class="nav-lmark">BT</div><div class="nav-ltext" style="--mn:#fff">Banaras Trails<span>Beyond Sightseeing</span></div></div>
+        <p class="ft-tagline">"Beyond Sightseeing,<br>Experience Banaras"</p>
+        <div class="ft-cl"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.22 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.66-.65a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>+91-XXX-XXX-XXXX</div>
+        <div class="ft-cl"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>hello@banarastrails.com</div>
+        <div class="ft-cl"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Near Dashashwamedh Ghat, Varanasi</div>
+      </div>
+      <div>
+        <div class="ft-col-t">Experiences</div>
+        <ul class="ft-links">
+          <li><a href="#" onclick="openTour('subah-e-kashi');return false">Subah-e-Kashi</a></li>
+          <li><a href="#" onclick="openTour('shivnagari-kashi');return false">Shivnagari Kashi Yatra</a></li>
+          <li><a href="#" onclick="openTour('rang-e-banaras');return false">Rang-e-Banaras</a></li>
+          <li><a href="#extensions">+ Ayodhya</a></li>
+          <li><a href="#extensions">+ Prayagraj</a></li>
+          <li><a href="#extensions">+ Vindhyachal &amp; Chunar</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="ft-col-t">Explore</div>
+        <ul class="ft-links">
+          <li><a href="#planner">Plan My Journey</a></li>
+          
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#why">Why Banaras Trails</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="ft-col-t">Contact</div>
+        <ul class="ft-links">
+          <li><a href="https://wa.me/91XXXXXXXXXX" target="_blank">WhatsApp</a></li>
+          <li><a href="tel:+91XXXXXXXXXX">Call Us</a></li>
+          <li><a href="mailto:hello@banarastrails.com">Email</a></li>
+          <li><a href="#contact">Enquiry Form</a></li>
+          <li><a href="#" style="color:rgba(255,255,255,.18)">Privacy Policy</a></li>
+          <li><a href="#" style="color:rgba(255,255,255,.18)">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <div class="ft-copy">&#169; 2025 Banaras Trails. Crafted with &#x2665; in Varanasi.</div>
+      <div class="ft-leg"><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<div id="toast"></div>
+<script>
+const TOURS={
+  'subah-e-kashi':{img:'https://images.unsplash.com/photo-1564509027875-ba1c00cf09c1?w=900&auto=format&fit=crop&q=85&ixlib=rb-4.0.3',name:'Subah-e-Kashi',days:'1 Night / 2 Days',price:'\u20b94,999',per:'per person*',desc:'A short yet soulful escape into the spiritual heart of Varanasi, designed for travelers who wish to experience the essence of Banaras in limited time.',itin:['Arrival \u2192 Hotel check-in \u2192 Kal Bhairav Temple \u2192 Assi Ghat \u2192 Evening Ganga Aarti at Dashashwamedh Ghat \u2192 Banarasi gali walk \u2192 Local chai & flavors','Kashi Vishwanath Temple Darshan \u2192 Sankat Mochan Temple \u2192 Banarasi breakfast \u2192 Drop at station / airport'],inc:['Hotel accommodation','Guided sightseeing','Pickup & drop assistance','Temple assistance','Ganga Aarti experience'],exc:['Train / flight tickets','All meals (unless specified)','Personal expenses','Camera / entry fees']},
+  'shivnagari-kashi':{img:'https://images.unsplash.com/photo-1706186568052-ce7990870b68?w=900&auto=format&fit=crop&q=85&ixlib=rb-4.0.3',name:'Shivnagari Kashi Yatra',days:'2 Nights / 3 Days',price:'\u20b98,999',per:'per person*',desc:'A deeper spiritual journey through the sacred temples, ghats, rituals and timeless traditions of Kashi \u2014 crafted for devotees and spiritual travelers.',itin:['Arrival \u2192 Hotel \u2192 Sankat Mochan \u2192 Durga Kund Temple \u2192 Evening Ganga Aarti by boat','Pre-dawn Sunrise boat ride on Maa Ganga \u2192 Kashi Vishwanath \u2192 Kal Bhairav \u2192 Tulsi Manas Mandir \u2192 Manikarnika Ghat walk \u2192 Banarasi food trail','Bharat Mata Temple \u2192 Shopping (Banarasi silk, paan) \u2192 Drop at station / airport'],inc:['Hotel accommodation','Sunrise boat ride on Maa Ganga','Temple circuit experience','Guided local assistance','Pickup & drop support'],exc:['Train / flight tickets','All meals','Personal expenses','Entry/camera fees']},
+  'rang-e-banaras':{img:'https://images.unsplash.com/photo-1695193254618-eba627755db1?w=900&auto=format&fit=crop&q=85&ixlib=rb-4.0.3',name:'Rang-e-Banaras',days:'3 Nights / 4 Days',price:'\u20b914,999',per:'per person*',desc:'A complete immersive Banaras experience blending spirituality, culture, food, heritage, history and the timeless charm of Kashi \u2014 including a full Sarnath excursion.',itin:['Arrival \u2192 Hotel \u2192 Assi Ghat & Dashashwamedh Ghat \u2192 Evening Ganga Aarti (boat) \u2192 Welcome Banarasi dinner','Sunrise boat ride \u2192 Kashi Vishwanath \u2192 Kal Bhairav \u2192 Sankat Mochan \u2192 Old city heritage walk \u2192 Banarasi paan experience','Banarasi street food trail \u2192 Local market \u2192 Silk weaving experience \u2192 Culture evening','Sarnath excursion \u2192 Dhamek Stupa \u2192 Buddhist monasteries \u2192 Sarnath Museum \u2192 Drop'],inc:['Premium hotel accommodation','Heritage & cultural experiences','Sunrise boat ride','Guided sightseeing','Pickup & drop support'],exc:['Train / flight tickets','All meals (unless specified)','Museum entry fees','Personal expenses']},
+  'kashi-ayodhya-2n':{img:'https://images.unsplash.com/photo-1655885333110-22b955d35667?w=900&auto=format&fit=crop&q=85&ixlib=rb-4.0.3',name:'Subah-e-Kashi + Ayodhya',days:'2 Nights / 3 Days',price:'\u20b99,999',per:'per person*',desc:"Experience the divine connection of Mahadev's Kashi and the sacred birthplace of Shri Ram.",itin:['Arrival Varanasi \u2192 Kashi Vishwanath \u2192 Kal Bhairav \u2192 Evening Ganga Aarti \u2192 Hotel','Travel to Ayodhya (AC cab ~4hrs) \u2192 Ram Mandir \u2192 Hanuman Garhi \u2192 Kanak Bhawan \u2192 Ram Ki Paidi \u2192 Saryu atmosphere \u2192 Hotel','Nageshwarnath Temple \u2192 Saryu Ghat walk \u2192 Departure'],inc:['Hotel (1 Varanasi + 1 Ayodhya)','Temple visit support','Comfortable travel','Pickup & drop'],exc:['Train / flight tickets','All meals','Personal expenses','Donations']},
+  'shivnagari-ayodhya':{img:'https://images.unsplash.com/photo-1655885333110-22b955d35667?w=900&auto=format&fit=crop&q=85&ixlib=rb-4.0.3',name:'Shivnagari Kashi Yatra + Ayodhya',days:'3 Nights / 4 Days',price:'\u20b913,999',per:'per person*',desc:'A complete spiritual circuit combining the sacred temples of Kashi with the divine serenity of Ayodhya.',itin:['Arrival Varanasi \u2192 Sankat Mochan \u2192 Durga Kund \u2192 Evening Ganga Aarti (boat)','Sunrise boat ride \u2192 Kashi Vishwanath \u2192 Kal Bhairav \u2192 Manikarnika Ghat \u2192 Banarasi food','Travel to Ayodhya \u2192 Ram Mandir \u2192 Hanuman Garhi \u2192 Kanak Bhawan \u2192 Ram Ki Paidi \u2192 Saryu Aarti','Nageshwarnath \u2192 Return Varanasi \u2192 Drop'],inc:['Hotel accommodation','Temple assistance','Travel support','Pickup & drop'],exc:['Train / flight tickets','All meals','Personal expenses','Donations']},
+  'rang-ayodhya':{img:'https://images.unsplash.com/photo-1655885333110-22b955d35667?w=900&auto=format&fit=crop&q=85&ixlib=rb-4.0.3',name:'Rang-e-Banaras + Ayodhya',days:'4 Nights / 5 Days',price:'\u20b919,999',per:'per person*',desc:'Immersive Banaras culture and Ayodhya spirituality \u2014 the complete spiritual essence of Uttar Pradesh.',itin:['Arrival Varanasi \u2192 Premium hotel \u2192 Assi Ghat \u2192 Ganga Aarti boat ride','Sunrise boat ride \u2192 Kashi Vishwanath circuit \u2192 Heritage walks \u2192 Banarasi food trail','Silk weaving village \u2192 Sarnath (Dhamek Stupa, Museum, monasteries)','Travel to Ayodhya \u2192 Ram Mandir \u2192 Hanuman Garhi \u2192 Kanak Bhawan \u2192 Saryu Aarti','Nageshwarnath \u2192 Saryu Ghat \u2192 Departure'],inc:['Premium hotel (3 Varanasi + 1 Ayodhya)','Guided experiences','Travel arrangements','Pickup & drop'],exc:['Train / flight tickets','All meals (unless specified)','Entry fees','Personal expenses']},
+  'kashi-prayagraj-2n':{img:'https://images.unsplash.com/photo-1585484173186-5f2d4b4e0d34?w=900&auto=format&fit=crop&q=85&ixlib=rb-4.0.3',name:'Subah-e-Kashi + Prayagraj',days:'2 Nights / 3 Days',price:'\u20b99,999',per:'per person*',desc:'A peaceful spiritual journey connecting the sacred ghats of Kashi with the divine Triveni Sangam of Prayagraj.',itin:['Arrival Varanasi \u2192 Kashi Vishwanath \u2192 Ganga Aarti at Dashashwamedh Ghat \u2192 Banarasi gali walk','Travel to Prayagraj \u2192 Triveni Sangam \u2192 Sangam boat ride \u2192 Bade Hanuman Ji \u2192 Akshayavat Darshan \u2192 Hotel','Morning Sangam atmosphere \u2192 Departure'],inc:['Hotel (1 Varanasi + 1 Prayagraj)','Sangam boat ride','Guided assistance','Comfortable travel'],exc:['Train / flight tickets','All meals','Personal expenses','Entry fees']},
+  'shivnagari-prayagraj':{img:'https://images.unsplash.com/photo-1585484173186-5f2d4b4e0d34?w=900&auto=format&fit=crop&q=85&ixlib=rb-4.0.3',name:'Shivnagari Kashi Yatra + Prayagraj',days:'3 Nights / 4 Days',price:'\u20b913,999',per:'per person*',desc:'A spiritually enriching journey through the sacred temples of Kashi and the holy confluence of Prayagraj.',itin:['Arrival Varanasi \u2192 Kashi Vishwanath \u2192 Kal Bhairav \u2192 Sankat Mochan \u2192 Ganga Aarti boat ride','Sunrise boat ride \u2192 Durga Kund \u2192 Tulsi Manas \u2192 Manikarnika Ghat \u2192 Banarasi food','Travel to Prayagraj \u2192 Triveni Sangam \u2192 Sangam boat ride \u2192 Bade Hanuman \u2192 Akshayavat','Morning Sangam Ghat walk \u2192 Departure'],inc:['Hotel (2 Varanasi + 1 Prayagraj)','Temple & Sangam assistance','Comfortable travel'],exc:['Train / flight tickets','All meals','Personal expenses','Donations']},
+  'rang-prayagraj':{img:'https://images.unsplash.com/photo-1585484173186-5f2d4b4e0d34?w=900&auto=format&fit=crop&q=85&ixlib=rb-4.0.3',name:'Rang-e-Banaras + Prayagraj',days:'4 Nights / 5 Days',price:'\u20b919,999',per:'per person*',desc:'Complete Banaras heritage with Sarnath, then the sacred atmosphere of Prayagraj.',itin:['Arrival Varanasi \u2192 Premium hotel \u2192 Assi Ghat \u2192 Ganga Aarti boat ride','Sunrise boat ride \u2192 Kashi Vishwanath circuit \u2192 Heritage walk \u2192 Banarasi food trail','Silk weaving \u2192 Sarnath (Dhamek Stupa, Museum, monasteries)','Travel to Prayagraj \u2192 Triveni Sangam \u2192 Sangam boat ride \u2192 Bade Hanuman','Prayagraj spiritual ghats \u2192 Departure'],inc:['Premium accommodation','Guided experiences','Travel arrangements','Pickup & drop'],exc:['Train / flight tickets','All meals','Museum fees','Personal expenses']},
+  'kashi-vindhya-2n':{img:'https://images.unsplash.com/photo-1571536802807-30451e3955d8?w=900&auto=format&fit=crop&q=85&ixlib=rb-4.0.3',name:'Subah-e-Kashi + Vindhyachal & Chunar',days:'2 Nights / 3 Days',price:'\u20b99,999',per:'per person*',desc:'A unique journey combining the spiritual soul of Banaras with the divine aura of Vindhyachal and the grandeur of Chunar Fort.',itin:['Arrival Varanasi \u2192 Kashi Vishwanath \u2192 Ganga Aarti \u2192 Banarasi gali walk','Travel to Vindhyachal \u2192 Maa Vindhyavasini \u2192 Kali Khoh + Ashtabhuja (Trikona Parikrama) \u2192 Chunar Fort \u2192 Return Varanasi','Morning \u2192 Departure from Varanasi'],inc:['Hotel accommodation','Guided sightseeing','Comfortable travel'],exc:['Train / flight tickets','All meals','Entry fees','Personal expenses']},
+  'shivnagari-vindhya':{img:'https://images.unsplash.com/photo-1571536802807-30451e3955d8?w=900&auto=format&fit=crop&q=85&ixlib=rb-4.0.3',name:'Shivnagari Kashi Yatra + Vindhyachal & Chunar',days:'3 Nights / 4 Days',price:'\u20b913,999',per:'per person*',desc:'A spiritual and heritage circuit through temples, mythology, history and scenic Ganga views.',itin:['Arrival Varanasi \u2192 Kashi Vishwanath \u2192 Kal Bhairav \u2192 Ganga Aarti boat ride','Sunrise boat ride \u2192 Sankat Mochan \u2192 Durga Kund \u2192 Manikarnika Ghat \u2192 Banarasi food','Travel to Vindhyachal \u2192 Maa Vindhyavasini \u2192 Kali Khoh \u2192 Ashtabhuja \u2192 Return Varanasi','Chunar Fort exploration \u2192 Ganga views \u2192 Drop'],inc:['Hotel accommodation','Temple & heritage assistance','Travel arrangements'],exc:['Train / flight tickets','All meals','Entry fees','Personal expenses']},
+  'rang-vindhya':{img:'https://images.unsplash.com/photo-1571536802807-30451e3950d8?w=900&auto=format&fit=crop&q=85&ixlib=rb-4.0.3',name:'Rang-e-Banaras + Vindhyachal & Chunar',days:'4 Nights / 5 Days',price:'\u20b919,999',per:'per person*',desc:'The ultimate blend \u2014 full Banaras immersion with Sarnath, the Shakti Peetha of Vindhyachal and the heritage of Chunar Fort.',itin:['Arrival Varanasi \u2192 Premium hotel \u2192 Assi Ghat \u2192 Ganga Aarti boat ride','Sunrise boat ride \u2192 Kashi Vishwanath circuit \u2192 Heritage walk \u2192 Banarasi paan & food','Silk weaving \u2192 Sarnath (Dhamek Stupa, Museum, monasteries)','Travel to Vindhyachal \u2192 Maa Vindhyavasini \u2192 Kali Khoh \u2192 Ashtabhuja','Chunar Fort \u2192 Ganga views \u2192 Drop'],inc:['Premium hotel accommodation','Guided spiritual & heritage experiences','Comfortable travel'],exc:['Train / flight tickets','All meals (unless specified)','Entry fees','Personal expenses']}
+};
+
+
+
+
+// PLANNER
+const Qs=[
+  {k:'group',t:'s',c:'c2',lbl:'Step 1 of 6 \u2014 Who\'s Travelling',q:'Who are you travelling with?',h:'Helps us suggest the right pace and arrangements.',opts:[{i:'\uD83E\uDDD0',t:'Solo Traveller',d:'Just me',v:'solo'},{i:'\uD83D\uDC6B',t:'Couple',d:'2 persons',v:'couple'},{i:'\uD83D\uDC68\u200D\uD83D\uDC69\u200D\uD83D\uDC67\u200D\uD83D\uDC66',t:'Family',d:'With children',v:'family'},{i:'\uD83E\uDD1D',t:'Friends',d:'Small group',v:'friends'},{i:'\uD83D\uDC65',t:'Group Tour',d:'6+ persons',v:'group'}]},
+  {k:'exp',t:'m',c:'c2',lbl:'Step 2 of 6 \u2014 Experience Type',q:'What kind of experience are you looking for?',h:'Select everything that resonates with you.',opts:[{i:'\uD83D\uDE4F',t:'Spiritual Journey',d:'Temples, rituals, divine connection',v:'spiritual'},{i:'\uD83C\uDFDB',t:'Culture & Heritage',d:'History, architecture, old city',v:'heritage'},{i:'\uD83C\uDF5B',t:'Food & Local Life',d:'Street food, chai, markets',v:'food'},{i:'\uD83C\uDFA8',t:'Art & Craft',d:'Silk weaving, Banarasi crafts',v:'culture'}]},
+  {k:'nights',t:'s',c:'c2',lbl:'Step 3 of 6 \u2014 Duration',q:'How much time do you have?',h:'We\'ll match packages within your timeframe.',opts:[{i:'\uD83C\uDF19',t:'2 Days',d:'1 night \u2014 quick escape',v:1},{i:'\uD83C\uDF19\uD83C\uDF19',t:'3 Days',d:'2 nights \u2014 well-paced',v:2},{i:'\u2728',t:'4\u20135 Days',d:'3\u20134 nights \u2014 immersive',v:3},{i:'\uD83C\uDF1F',t:'5+ Days',d:'4+ nights \u2014 comprehensive',v:4}]},
+  {k:'dests',t:'m',c:'c2',lbl:'Step 4 of 6 \u2014 Destinations',q:'Include nearby sacred destinations?',h:'Varanasi is always included. Select any additions.',opts:[{i:'\uD83D\uDD4C',t:'Only Banaras / Kashi',d:'Just Varanasi',v:'varanasi'},{i:'\uD83D\uDED5',t:'+ Ayodhya',d:'Ram Mandir & Saryu Ghat',v:'ayodhya'},{i:'\uD83C\uDF0A',t:'+ Prayagraj',d:'Triveni Sangam',v:'prayagraj'},{i:'\uD83C\uDFF0',t:'+ Vindhyachal & Chunar',d:'Shakti Peetha & heritage fort',v:'vindhyachal'}]},
+  {k:'budget',t:'s',c:'c3',lbl:'Step 5 of 6 \u2014 Budget',q:'What type of journey do you prefer?',h:'All options include comfortable accommodation and guided support.',opts:[{i:'\uD83C\uDF3F',t:'Budget Friendly',d:'Value for money',v:'budget'},{i:'\u2B50',t:'Standard Comfort',d:'Most popular choice',v:'standard'},{i:'\uD83D\uDC51',t:'Premium Experience',d:'Best-in-class',v:'premium'}]},
+  {k:'style',t:'m',c:'c2',lbl:'Step 6 of 6 \u2014 Travel Style',q:'Which travel style suits you best?',h:'Helps us fine-tune your recommendation.',opts:[{i:'\u262F\uFE0F',t:'Temple & Spiritual Focus',d:'Darshan, puja, rituals',v:'spiritual'},{i:'\uD83D\uDCF8',t:'Heritage & Photography',d:'Architecture, history, light',v:'heritage'},{i:'\uD83C\uDF72',t:'Food & Local Culture',d:'Street food, markets, galis',v:'food'},{i:'\uD83C\uDFAD',t:'Mixed Experience',d:'A bit of everything',v:'culture'}]}
+];
+const PPKGS=[
+  {id:'subah-e-kashi',n:1,ds:['varanasi'],st:['spiritual','ghats','food'],bg:['budget','standard'],gr:['solo','couple','family','friends'],tags:['Kashi Vishwanath','Ganga Aarti','Banarasi Gali'],img:'https://images.unsplash.com/photo-1564509027875-ba1c00cf09c1?w=400&auto=format&fit=crop&q=80&ixlib=rb-4.0.3'},
+  {id:'shivnagari-kashi',n:2,ds:['varanasi'],st:['spiritual','temples','ghats'],bg:['standard','premium'],gr:['solo','couple','family','friends'],tags:['Sunrise Boat','Temple Circuit','Manikarnika'],img:'https://images.unsplash.com/photo-1706186568052-ce7990870b68?w=400&auto=format&fit=crop&q=80&ixlib=rb-4.0.3'},
+  {id:'rang-e-banaras',n:3,ds:['varanasi','sarnath'],st:['spiritual','heritage','food','culture'],bg:['standard','premium'],gr:['solo','couple','family','friends'],tags:['Sarnath','Heritage Walk','Food Trail'],img:'https://images.unsplash.com/photo-1695193254618-eba627755db1?w=400&auto=format&fit=crop&q=80&ixlib=rb-4.0.3'},
+  {id:'kashi-ayodhya-2n',n:2,ds:['varanasi','ayodhya'],st:['spiritual','temples'],bg:['budget','standard'],gr:['solo','couple','family','friends','group'],tags:['Ram Mandir','Kashi','Hanuman Garhi'],img:'https://images.unsplash.com/photo-1655885333110-22b955d35667?w=400&auto=format&fit=crop&q=80&ixlib=rb-4.0.3'},
+  {id:'shivnagari-ayodhya',n:3,ds:['varanasi','ayodhya'],st:['spiritual','temples','ghats'],bg:['standard','premium'],gr:['solo','couple','family','friends','group'],tags:['Kashi Circuit','Ram Mandir','Sunrise Boat'],img:'https://images.unsplash.com/photo-1655885333110-22b955d35667?w=400&auto=format&fit=crop&q=80&ixlib=rb-4.0.3'},
+  {id:'rang-ayodhya',n:4,ds:['varanasi','sarnath','ayodhya'],st:['spiritual','heritage','food','culture'],bg:['premium'],gr:['solo','couple','family','friends','group'],tags:['Sarnath','Ayodhya','Heritage','Food'],img:'https://images.unsplash.com/photo-1655885333110-22b955d35667?w=400&auto=format&fit=crop&q=80&ixlib=rb-4.0.3'},
+  {id:'kashi-prayagraj-2n',n:2,ds:['varanasi','prayagraj'],st:['spiritual','ghats'],bg:['budget','standard'],gr:['solo','couple','family','friends','group'],tags:['Triveni Sangam','Kashi','Sangam Boat'],img:'https://images.unsplash.com/photo-1585484173186-5f2d4b4e0d34?w=400&auto=format&fit=crop&q=80&ixlib=rb-4.0.3'},
+  {id:'shivnagari-prayagraj',n:3,ds:['varanasi','prayagraj'],st:['spiritual','temples','ghats'],bg:['standard','premium'],gr:['solo','couple','family','friends','group'],tags:['Kashi Circuit','Sangam Dip','Sunrise Boat'],img:'https://images.unsplash.com/photo-1585484173186-5f2d4b4e0d34?w=400&auto=format&fit=crop&q=80&ixlib=rb-4.0.3'},
+  {id:'rang-prayagraj',n:4,ds:['varanasi','sarnath','prayagraj'],st:['spiritual','heritage','food','culture'],bg:['premium'],gr:['solo','couple','family','friends','group'],tags:['Sarnath','Prayagraj','Heritage','Food'],img:'https://images.unsplash.com/photo-1585484173186-5f2d4b4e0d34?w=400&auto=format&fit=crop&q=80&ixlib=rb-4.0.3'},
+  {id:'kashi-vindhya-2n',n:2,ds:['varanasi','vindhyachal'],st:['spiritual','heritage','temples'],bg:['budget','standard'],gr:['solo','couple','family','friends','group'],tags:['Vindhyavasini','Kali Khoh','Chunar Fort'],img:'https://images.unsplash.com/photo-1571536802807-30451e3955d8?w=400&auto=format&fit=crop&q=80&ixlib=rb-4.0.3'},
+  {id:'shivnagari-vindhya',n:3,ds:['varanasi','vindhyachal'],st:['spiritual','heritage','temples'],bg:['standard','premium'],gr:['solo','couple','family','friends','group'],tags:['Kashi Circuit','Shakti Peetha','Chunar Fort'],img:'https://images.unsplash.com/photo-1571536802807-30451e3955d8?w=400&auto=format&fit=crop&q=80&ixlib=rb-4.0.3'},
+  {id:'rang-vindhya',n:4,ds:['varanasi','sarnath','vindhyachal'],st:['spiritual','heritage','food','culture'],bg:['premium'],gr:['solo','couple','family','friends','group'],tags:['Sarnath','Vindhyavasini','Chunar Fort'],img:'https://images.unsplash.com/photo-1571536802807-30451e3950d8?w=400&auto=format&fit=crop&q=80&ixlib=rb-4.0.3'}
+];
+let pStep=0,pAns={group:null,exp:[],nights:null,dests:[],budget:null,style:[]};
+const TQ=6;
+function buildStepsRow(){
+  const row=document.getElementById('pstepsRow');
+  let h='';
+  for(let i=0;i<TQ;i++){
+    h+=`<div class="pstep" id="ps${i}">${i+1}</div>`;
+    if(i<TQ-1) h+=`<div class="pline" id="pl${i}"></div>`;
+  }
+  row.innerHTML=h;
+}
+buildStepsRow();
+function renderQ(){
+  const card=document.getElementById('pcard');
+  const back=document.getElementById('pback');
+  const nxt=document.getElementById('pnext');
+  const lbl=document.getElementById('plbl');
+  const fill=document.getElementById('pfill');
+  for(let i=0;i<TQ;i++){
+    const s=document.getElementById('ps'+i);
+    const l=document.getElementById('pl'+i);
+    if(s) s.className='pstep'+(i===pStep?' act':i<pStep?' don':'');
+    if(l) l.className='pline'+(i<pStep?' don':'');
+  }
+  fill.style.width=Math.round((pStep/TQ)*100)+'%';
+  back.style.visibility=pStep>0?'visible':'hidden';
+  if(pStep===TQ){
+    lbl.textContent='Your Recommendation';
+    nxt.style.display='none';
+    back.innerHTML='<svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2.5"><polyline points="15 18 9 12 15 6"/></svg> Start Over';
+    renderResult(card); return;
+  }
+  nxt.style.display='flex';
+  nxt.innerHTML='Continue <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>';
+  lbl.textContent='Step '+(pStep+1)+' of '+TQ;
+  const q=Qs[pStep];const isM=q.t==='m';const cur=pAns[q.k];
+  card.innerHTML=`<div class="pq-lbl">${q.lbl}</div><div class="pq-q">${q.q}</div><p class="pq-h">${q.h}${isM?' <em>(select all that apply)</em>':''}</p><div class="popts ${q.c}" id="popts-container">${q.opts.map((o,oi)=>{const sel=isM?(cur||[]).includes(o.v):cur===o.v;return`<button class="popt${sel?(isM?' selm':' sel'):''}" data-key="${q.k}" data-idx="${oi}" data-multi="${isM}"><span class="poi">${o.i}</span><span class="pot"><span class="pot-t">${o.t}</span><span class="pot-d">${o.d}</span></span><span class="pchk">${sel?'&#x2713;':''}</span></button>`;}).join('')}</div>`;
+  document.getElementById('popts-container').addEventListener('click',function(e){const btn=e.target.closest('button.popt');if(!btn)return;const k=btn.dataset.key;const idx=parseInt(btn.dataset.idx);const multi=btn.dataset.multi==='true';const q2=Qs[pStep];const v=q2.opts[idx].v;pSel(k,v,multi);});
+  updNxt();
+}
+function pSel(k,v,m){if(m){let a=pAns[k]||[];pAns[k]=a.includes(v)?a.filter(x=>x!==v):[...a,v];}else{pAns[k]=v;}renderQ();}
+function updNxt(){const q=Qs[pStep];const v=pAns[q.k];document.getElementById('pnext').disabled=q.t==='m'?!(v&&v.length):v===null||v===undefined;}
+function planNext(){const q=Qs[pStep];const v=pAns[q.k];const ok=q.t==='m'?(v&&v.length):v!==null&&v!==undefined;if(!ok){showToast('Please make a selection to continue.');return;}pStep++;renderQ();}
+function planBack(){if(pStep===TQ){pStep=0;pAns={group:null,exp:[],nights:null,dests:[],budget:null,style:[]};document.getElementById('pnext').style.display='flex';document.getElementById('pback').innerHTML='<svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2.5"><polyline points="15 18 9 12 15 6"/></svg> Back';}else{pStep=Math.max(0,pStep-1);}renderQ();}
+function scoreP(p){
+  let s=0;const nm={1:[1],2:[2],3:[3,4],4:[3,4,5]};const ta=(nm[pAns.nights]||[2]);
+  if(ta.includes(p.n))s+=35;else if(Math.abs(p.n-ta[0])===1)s+=18;
+  const dests=pAns.dests||[];const vOnly=dests.includes('varanasi')&&dests.length===1;
+  if(vOnly&&p.ds.length===1)s+=28;else if(!vOnly){const m=dests.filter(d=>p.ds.includes(d)).length;s+=Math.round((m/Math.max(dests.length,1))*28);}
+  if(pAns.budget&&p.bg.includes(pAns.budget))s+=14;
+  const comb=[...new Set([...(pAns.exp||[]),...(pAns.style||[])])];
+  if(comb.length){const m=comb.filter(e=>p.st.includes(e)).length;s+=Math.round((m/comb.length)*18);}
+  if(pAns.group&&p.gr.includes(pAns.group))s+=5;
+  return s;
+}
+function renderResult(card){
+  const sc=PPKGS.map(p=>({...p,score:scoreP(p)})).sort((a,b)=>b.score-a.score).slice(0,3);
+  const nm={1:'2 days',2:'3 days',3:'4–5 days',4:'5+ days'};
+  let h=`<div class="pres"><h3 class="pr-h3">Your Recommended Journeys</h3><p class="pr-sub">Based on your answers: <strong>${nm[pAns.nights]||'flexible'}</strong> trip with focus on <strong>${[...(pAns.exp||[]),...(pAns.style||[])].join(', ')||'spiritual'}</strong> experiences.</p><span style="font-size:.61rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--sf);display:block;margin-bottom:1rem">&#x1F3AF; Top Matches</span>`;
+  h+=sc.map((p,i)=>`<div class="prc${i===0?' best':''}" onclick="openTour('${p.id}')"><div class="prc-row"><div class="prc-img"><img src="${p.img}" alt="${TOURS[p.id]?TOURS[p.id].name:''}" loading="lazy"></div><div class="prc-info"><div class="prc-bads">${i===0?'<span class="prc-b best">&#x2B50; Best Match</span>':''}${i===1?'<span class="prc-b good">Great Choice</span>':''}<span class="prc-b days">&#x1F4C5; ${TOURS[p.id]?TOURS[p.id].days:''}</span></div><div class="prc-name">${TOURS[p.id]?TOURS[p.id].name:''}</div><p class="prc-desc">${TOURS[p.id]?TOURS[p.id].desc:''}</p><div class="prc-tags">${p.tags.map(t=>`<span class="prc-tag">${t}</span>`).join('')}</div><div class="prc-foot"><div><div class="prc-plbl">Starting from*</div><div class="prc-p">${TOURS[p.id]?TOURS[p.id].price:''}<sub>/person</sub></div></div><div class="prc-acts"><button class="prc-det" onclick="event.stopPropagation();openTour('${p.id}')">Details</button><button class="prc-bk" onclick="event.stopPropagation();document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book</button><a class="prc-wa" href="https://wa.me/918318893914?text=Hi! I am interested in ${encodeURIComponent(TOURS[p.id]?TOURS[p.id].name:'')}" target="_blank" onclick="event.stopPropagation()">&#x1F4AC; WhatsApp</a></div></div></div></div></div>`).join('');
+  h+=`<p class="pr-tc"><strong>Terms & Conditions:</strong> All prices are indicative starting prices per person, subject to change without prior notice. Final pricing depends on travel dates, group size, accommodation preferences and availability. Special rates available for families and groups of 6+. Prices exclusive of GST and personal expenses. Contact us for a confirmed quote before booking.</p>`;
+  h+=`<div style="text-align:center;margin-top:1.4rem;display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap"><button class="btn btn-out" style="font-size:.77rem" onclick="planBack()">&#x21A9; Retake Quiz</button><button class="btn btn-prim" style="font-size:.77rem" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Enquire Now &#x2192;</button></div></div>`;
+  card.innerHTML=h;
+}
+renderQ();
+
+// MODAL
+function openModal(img,title,sub,body){
+  document.getElementById('mImg').src=img;
+  document.getElementById('mTitle').textContent=title;
+  document.getElementById('mSub').textContent=sub;
+  document.getElementById('mBody').innerHTML=body;
+  const hero=document.getElementById('mHero');
+  hero.style.height='240px';
+  document.getElementById('mImg').style.cssText='';
+  document.getElementById('mBody').style.display='block';
+  document.getElementById('modalBg').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){document.getElementById('modalBg').classList.remove('open');document.body.style.overflow='';}
+document.getElementById('modalBg').addEventListener('click',function(e){if(e.target===this)closeModal();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+function openTour(id){
+  const t=TOURS[id];if(!t)return;
+  const itin=t.itin.map(d=>`<li>${d}</li>`).join('');
+  const inc=t.inc.map(i=>`<div class="modal-ii inc">${i}</div>`).join('');
+  const exc=t.exc.map(i=>`<div class="modal-ii exc">${i}</div>`).join('');
+  openModal(t.img,t.name,`${t.days} · Starting from ${t.price}/person`,`<p class="modal-text">${t.desc}</p><div class="modal-div"></div><div class="modal-st">Day-by-Day Itinerary</div><ol class="modal-itin">${itin}</ol><div class="modal-div"></div><div class="modal-st">What’s Included</div><div class="modal-ig">${inc}</div><div class="modal-st" style="margin-top:1rem">Not Included</div><div class="modal-ig">${exc}</div><div class="modal-pf"><div><div class="mpf-lbl">Starting Price</div><div class="mpf-price">${t.price} <sub>${t.per}</sub></div><div class="mpf-tc">*Subject to change. Contact us for confirmed quote.</div></div><div class="mpf-acts"><button class="mpf-book" onclick="closeModal();setTimeout(()=>document.getElementById('contact').scrollIntoView({behavior:'smooth'}),250)">Book This Tour</button><a class="mpf-wa" href="https://wa.me/918318893914?text=Hi! Interested in ${encodeURIComponent(t.name)}" target="_blank">&#x1F4AC; WhatsApp</a></div></div>`);
+}
+function openPhoto(src,cap){
+  openModal(src,cap,'Banaras Trails — Gallery','');
+  const hero=document.getElementById('mHero');
+  hero.style.height='auto';
+  document.getElementById('mImg').style.cssText='width:100%;max-height:75vh;object-fit:contain;background:#111';
+  document.getElementById('mBody').style.display='none';
+}
+function submitEnq(){
+  const name=document.getElementById('cfName').value.trim();
+  const phone=document.getElementById('cfPhone').value.trim();
+  if(!name||!phone){showToast('Please enter your name and phone number.');return;}
+  const pkg=document.getElementById('cfPkg').value;
+  const msg=document.getElementById('cfMsg').value.trim();
+  window.open(`https://wa.me/918318893914?text=${encodeURIComponent('Hi Banaras Trails!\n\nName: '+name+'\nPhone: '+phone+'\nPackage: '+(pkg||'Not selected')+'\nMessage: '+(msg||'General enquiry'))}`, '_blank');
+  showToast('\u2713 Redirecting to WhatsApp \u2014 we\'ll respond shortly!');
+}
+function toggleMob(){document.getElementById('mobMenu').classList.toggle('open');}
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sc',window.scrollY>55));
+const ro=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');ro.unobserve(e.target);}});},{threshold:.07,rootMargin:'0px 0px -35px 0px'});
+document.querySelectorAll('.rev,.rev-l,.rev-r').forEach(el=>ro.observe(el));const DEST_MODALS={
+  kv:{img:'https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=900&auto=format&fit=crop&q=85&ixlib=rb-4.0.3',name:'Kashi Vishwanath Temple',sub:'The Jyotirlinga of Shiva · Heart of Kashi',body:'<p class="modal-text">One of the twelve Jyotirlingas — the most sacred temple of Shiva. Gold-plated shikhara built in 1780 by Maharani Ahilya Bai Holkar. The 2021 Corridor now connects it directly to the Ganga ghats.</p><div class="modal-div"></div><div class="modal-st">What to Experience</div><ul class="modal-hl"><li>Mangala Aarti at 4 AM — the most sacred darshan</li><li>Shringar and Bhog Aarti through the day</li><li>Walk through the Vishwanath Corridor to the Ganga</li><li>Kal Bhairav Temple — guardian of Kashi</li></ul>'},
+  aarti:{img:'https://images.unsplash.com/photo-1613445607898-f46e51645acf?w=900&auto=format&fit=crop&q=85&ixlib=rb-4.0.3',name:'Dashashwamedh Ghat & Ganga Aarti',sub:'The Great Evening Ritual · Every Night at Sunset',body:'<p class="modal-text">Every evening at Dashashwamedh Ghat, priests perform the Ganga Aarti with synchronized fire rituals, Vedic chanting, incense and flowers. Watching from a boat on the Ganga is one of the most transformative experiences in India.</p><div class="modal-div"></div><div class="modal-st">What to Experience</div><ul class="modal-hl"><li>Evening Ganga Aarti by boat — most immersive view</li><li>Morning Subah-e-Banaras walk along the ghats</li><li>Ritualistic puja with oil lamps by priests</li><li>Flower offering (pushpanjali) to the Ganga</li></ul>'},
+  ghats:{img:'https://images.unsplash.com/photo-1564509027875-ba1c00cf09c1?w=900&auto=format&fit=crop&q=85&ixlib=rb-4.0.3',name:'The 84 Ghats of Varanasi',sub:'Stone Steps to the Sacred · Ganga Waterfront',body:'<p class="modal-text">84 stone ghats descend to the Ganga, each with its own deity, story and ritual. A pre-dawn boat ride shows sadhus meditating, priests performing puja, pilgrims bathing, and at Manikarnika — the eternal cremation flame that has burned for 3,500 years.</p><div class="modal-div"></div><div class="modal-st">Key Ghats to Visit</div><ul class="modal-hl"><li>Assi Ghat — morning yoga and ritual bathing</li><li>Dashashwamedh Ghat — evening Aarti ceremony</li><li>Manikarnika Ghat — the eternal cremation ghat</li><li>Panchganga Ghat — five rivers confluence</li></ul>'},
+  manikarnika:{img:'https://images.unsplash.com/photo-1706186568052-ce7990870b68?w=900&auto=format&fit=crop&q=85&ixlib=rb-4.0.3',name:'Manikarnika Ghat',sub:'The Eternal Cremation Ghat · Liberation in Kashi',body:'<p class="modal-text">Manikarnika is the most sacred cremation ghat in Hinduism. A sacred flame that is believed to have burned here continuously for over 3,500 years lights every funeral pyre. It is said that Lord Shiva himself whispers the Taraka mantra into the ear of those who die in Kashi, granting them moksha — liberation from the cycle of rebirth.</p><p class="modal-text">Witnessing the ghat from a boat at dusk, with dozens of pyres burning against the ancient stone steps, is one of the most profoundly moving experiences a traveler can have in India. Photography is not permitted, and silence is observed out of respect.</p><div class="modal-div"></div><div class="modal-st">What to Know</div><ul class="modal-hl"><li>Cremations occur 24 hours a day, every day of the year</li><li>The Dom community has tended the sacred flame for generations</li><li>Best experienced from a boat on the Ganga at dusk</li><li>Silence and respectful observation are required</li></ul>'},
+  sarnath:{img:'https://images.unsplash.com/photo-1609450104082-b9a47de3e793?w=900&auto=format&fit=crop&q=85&ixlib=rb-4.0.3',name:'Sarnath',sub:'Where the Buddha First Taught · 10 km from Varanasi',body:'<p class="modal-text">Sarnath is where Siddhartha Gautama delivered his first sermon after attaining enlightenment at Bodh Gaya — setting the Wheel of Dharma in motion. It is one of the four most sacred pilgrimage sites in Buddhism and is visited by pilgrims from across the world.</p><p class="modal-text">The Dhamek Stupa (built 500 CE) marks the exact spot of the first sermon. The Sarnath Museum houses the original Lion Capital of Ashoka — now India’s national emblem — along with some of the finest Buddhist sculptures in existence.</p><div class="modal-div"></div><div class="modal-st">What to Visit</div><ul class="modal-hl"><li>Dhamek Stupa — marking the site of the first sermon</li><li>Sarnath Museum — Lion Capital of Ashoka</li><li>Mulagandha Kuti Vihar — modern Buddhist temple</li><li>Thai, Japanese and Tibetan monasteries nearby</li></ul>'},
+  banaras:{img:'https://images.unsplash.com/photo-1695193254618-eba627755db1?w=900&auto=format&fit=crop&q=85&ixlib=rb-4.0.3',name:'The Old City & Banarasi Galis',sub:'3,000 Years of Living Culture · Unbroken Tradition',body:'<p class="modal-text">The old city of Varanasi — also called Kashi — is one of the oldest continuously inhabited cities on earth. Its narrow lanes, or galis, are a world unto themselves: silk weavers at ancient looms, paan sellers with decades of craft, sweet shops making jalebis since before independence, and havelis whose walls have witnessed centuries of history.</p><p class="modal-text">A guided heritage walk through these galis reveals Varanasi not as a tourist destination but as a living civilization. The textures, sounds, smells and conversations in these lanes cannot be found anywhere else on earth.</p><div class="modal-div"></div><div class="modal-st">What to Experience</div><ul class="modal-hl"><li>Traditional Banarasi silk weaving demonstrations</li><li>Street food trail — kachori, jalebi, lassi, paan</li><li>Ancient havelis and hidden temples</li><li>Local chai shops and conversations with residents</li></ul>'}
+};
+function openDestModal(id){var d=DEST_MODALS[id];if(d)openModal(d.img,d.name,d.sub,d.body);}
+function openAllPackages(){
+  var rows=[
+    {id:'subah-e-kashi',days:'1N/2D',price:'₹4,999',dest:'Varanasi only'},
+    {id:'shivnagari-kashi',days:'2N/3D',price:'₹8,999',dest:'Varanasi only'},
+    {id:'rang-e-banaras',days:'3N/4D',price:'₹14,999',dest:'Varanasi + Sarnath'},
+    {id:'kashi-ayodhya-2n',days:'2N/3D',price:'₹9,999',dest:'Varanasi + Ayodhya'},
+    {id:'shivnagari-ayodhya',days:'3N/4D',price:'₹13,999',dest:'Varanasi + Ayodhya'},
+    {id:'rang-ayodhya',days:'4N/5D',price:'₹19,999',dest:'Varanasi + Sarnath + Ayodhya'},
+    {id:'kashi-prayagraj-2n',days:'2N/3D',price:'₹9,999',dest:'Varanasi + Prayagraj'},
+    {id:'shivnagari-prayagraj',days:'3N/4D',price:'₹13,999',dest:'Varanasi + Prayagraj'},
+    {id:'rang-prayagraj',days:'4N/5D',price:'₹19,999',dest:'Varanasi + Sarnath + Prayagraj'},
+    {id:'kashi-vindhya-2n',days:'2N/3D',price:'₹9,999',dest:'Varanasi + Vindhyachal'},
+    {id:'shivnagari-vindhya',days:'3N/4D',price:'₹13,999',dest:'Varanasi + Vindhyachal'},
+    {id:'rang-vindhya',days:'4N/5D',price:'₹19,999',dest:'Varanasi + Sarnath + Vindhyachal'}
+  ];
+  var html2=rows.map(function(r){
+    return '<div class="apkg-row" onclick="closeModal();var id=\''+r.id+'\';setTimeout(function(){openTour(id)},120)">'+
+      '<div class="apkg-info"><div class="apkg-name">'+(TOURS[r.id]?TOURS[r.id].name:r.id)+'</div>'+
+      '<div class="apkg-dest">'+r.dest+'</div></div>'+
+      '<div class="apkg-meta"><span class="apkg-days">'+r.days+'</span><span class="apkg-price">'+r.price+'</span></div>'+
+      '<span class="apkg-arr">&rsaquo;</span></div>';
+  }).join('');
+  openModal(
+    'https://images.unsplash.com/photo-1564509027875-ba1c00cf09c1?w=900&auto=format&fit=crop&q=70&ixlib=rb-4.0.3',
+    'All 12 Packages',
+    'Browse all combinations — click any to see full details',
+    '<p style="font-size:.8rem;color:var(--mt);margin-bottom:1.2rem;line-height:1.65">3 core experiences × 4 destination options. Click any package to see full details, itinerary and pricing.</p><div class="apkg-list">'+html2+'</div><p style="font-size:.68rem;color:var(--lt);margin-top:1rem;text-align:center">* All prices per person, starting from, subject to change.</p>'
+  );
+}
+
+var _typingPhrases=['Spiritual tours & heritage experiences in Varanasi.','Sunrise boat rides on the sacred Ganga.','Temple circuits, ghats & Banarasi culture.','Curated journeys through the timeless city of Kashi.'];
+var _ti=0,_ci=0,_del=false;
+function _runTyping(){var el=document.getElementById('typing-text');if(!el)return;var phrase=_typingPhrases[_ti];if(!_del){el.textContent=phrase.slice(0,_ci+1);_ci++;if(_ci===phrase.length){_del=true;setTimeout(_runTyping,2200);return;}}else{el.textContent=phrase.slice(0,_ci-1);_ci--;if(_ci===0){_del=false;_ti=(_ti+1)%_typingPhrases.length;}}setTimeout(_runTyping,_del?28:38);}
+setTimeout(_runTyping,1200);
+
+function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3200);}
+</script>
+</body>
+</html>
