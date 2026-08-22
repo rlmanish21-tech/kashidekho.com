@@ -1,2 +1,0 @@
-# kashidekho.com
-Tourism Website
