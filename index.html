@@ -133,7 +133,8 @@ button{cursor:pointer;font-family:"Inter",sans-serif}
 
 /* HERO */
 #hero{position:relative;height:100vh;min-height:640px;overflow:hidden;display:flex;align-items:center}
-.hero-bg{position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1564509027875-ba1c00cf09c1?w=1920&auto=format&fit=crop&q=90&ixlib=rb-4.0.3") center 35%/cover no-repeat;animation:hdrift 22s ease-in-out infinite alternate}
+.hero-bg{position:absolute;inset:0;overflow:hidden;background:#1f2a44}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;transform:scale(1.04);animation:hdrift 22s ease-in-out infinite alternate}
 @keyframes hdrift{from{transform:scale(1.04)}to{transform:scale(1.09) translateY(-1%)}}
 .hero-ov{position:absolute;inset:0;background:linear-gradient(rgba(31,42,68,.68),rgba(31,42,68,.44))}
 .hero-ov::after{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.016'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E")}
@@ -408,118 +409,11 @@ footer{background:#0F1623;color:rgba(255,255,255,.45);padding:4rem 0 2rem}
   .gal-grid .tall,.gal-grid .wide{grid-row:span 1;grid-column:span 1}
   .why-grid{grid-template-columns:1fr}
 }
-
-/* ===== KASHI DEKHO VISUAL REVAMP ===== */
-:root{
-  --gold-glow:rgba(212,175,55,.32);
-  --orange-glow:rgba(197,106,45,.22);
-}
-body{background:#f7f3eb}
-::selection{background:var(--sf);color:#fff}
-
-/* Better image rendering + graceful fallback */
-.exp-img,.modal-hero,.dest-img,.gal-img,.hero-bg{background:#182238}
-.exp-img img,.dest-img img,.gal-img img{transition:transform .8s cubic-bezier(.2,.65,.2,1),filter .4s ease}
-.exp-card:hover .exp-img img,.dest-card:hover .dest-img img{transform:scale(1.06)}
-img.img-fallback{object-fit:cover;filter:saturate(.9) contrast(1.02)}
-
-/* Hero refinement — preserve existing hero image */
-.hero-bg{filter:saturate(1.08) contrast(1.03)}
-.hero-ov{background:
-  radial-gradient(circle at 72% 45%,rgba(212,175,55,.10),transparent 28%),
-  linear-gradient(90deg,rgba(8,16,32,.88) 0%,rgba(12,22,41,.70) 43%,rgba(8,16,32,.42) 100%)}
-.hero-c{max-width:800px}
-.h-h1{text-shadow:0 8px 32px rgba(0,0,0,.35)}
-.h-ey{color:#f0c95b}
-
-/* Floating visual particles */
-.hero-particles{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
-.hero-particles i{position:absolute;width:4px;height:4px;border-radius:50%;background:var(--gd);opacity:.35;box-shadow:0 0 12px var(--gold-glow);animation:floatParticle 9s ease-in-out infinite}
-.hero-particles i:nth-child(1){left:12%;top:30%;animation-delay:-2s}
-.hero-particles i:nth-child(2){left:28%;top:18%;width:3px;height:3px;animation-delay:-5s}
-.hero-particles i:nth-child(3){left:63%;top:25%;animation-delay:-1s}
-.hero-particles i:nth-child(4){left:84%;top:38%;width:3px;height:3px;animation-delay:-7s}
-.hero-particles i:nth-child(5){left:48%;top:72%;animation-delay:-4s}
-@keyframes floatParticle{0%,100%{transform:translate3d(0,0,0);opacity:.15}50%{transform:translate3d(18px,-28px,0);opacity:.55}}
-
-/* Hero video button */
-.hero-video-btn{display:inline-flex;align-items:center;gap:.65rem;margin-left:.65rem}
-.play-ring{width:30px;height:30px;border:1px solid rgba(255,255,255,.75);border-radius:50%;display:grid;place-items:center}
-.play-ring::after{content:"";margin-left:2px;border-left:8px solid #fff;border-top:5px solid transparent;border-bottom:5px solid transparent}
-
-/* Trust strip */
-.h-trust{position:relative}
-.h-trust .ti{transition:transform .25s ease,color .25s ease}
-.h-trust .ti:hover{transform:translateY(-3px);color:#fff}
-
-/* Package cards */
-.exp-grid{perspective:1200px}
-.exp-card{transform-style:preserve-3d;will-change:transform;transition:transform .18s ease,box-shadow .3s ease}
-.exp-card::after{content:"";position:absolute;inset:0;border-radius:12px;pointer-events:none;border:1px solid transparent;transition:border-color .3s,box-shadow .3s}
-.exp-card:hover::after{border-color:rgba(212,175,55,.45);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
-.exp-img{position:relative}
-.exp-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,15,29,.45),transparent 45%);pointer-events:none}
-
-/* Better enquiry package picker */
-.cf-pick-wrap{position:relative}
-.cf-pick{width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.82rem 1rem;background:#fff;border:1px solid var(--bd);border-radius:5px;color:var(--mn);font:500 .82rem "Inter",sans-serif;cursor:pointer;text-align:left;transition:border-color .2s,box-shadow .2s}
-.cf-pick:hover,.cf-pick.open{border-color:var(--sf);box-shadow:0 0 0 3px rgba(197,106,45,.08)}
-.cf-pick-arrow{width:8px;height:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);transition:transform .2s}
-.cf-pick.open .cf-pick-arrow{transform:rotate(225deg);margin-top:5px}
-.cf-options{position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:100;background:#fff;border:1px solid var(--bd);border-radius:8px;box-shadow:0 18px 45px rgba(31,42,68,.20);padding:.35rem;max-height:280px;overflow:auto;display:none}
-.cf-options.open{display:block;animation:dropIn .18s ease}
-.cf-option-group{padding:.55rem .7rem .25rem;color:var(--sf);font-size:.58rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
-.cf-option{display:flex;align-items:center;justify-content:space-between;gap:.8rem;padding:.62rem .7rem;border-radius:5px;color:var(--mn);font-size:.78rem;cursor:pointer;transition:background .18s,color .18s}
-.cf-option:hover{background:var(--iv);color:var(--sf)}
-.cf-option b{font-size:.72rem;color:var(--mt);font-weight:600}
-.cf-option.selected{background:rgba(197,106,45,.09);color:var(--sf);font-weight:700}
-@keyframes dropIn{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
-#cfPkg{display:none!important}
-
-/* Video section */
-.kashi-video-sec{padding:5rem 0;background:#fff}
-.kashi-video-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:3.5rem;align-items:center}
-.kashi-video-card{position:relative;border-radius:16px;overflow:hidden;min-height:390px;background:#111c31;box-shadow:var(--sh-lg);cursor:pointer}
-.kashi-video-card img{width:100%;height:100%;min-height:390px;object-fit:cover;transition:transform 1s ease;filter:saturate(1.05)}
-.kashi-video-card:hover img{transform:scale(1.04)}
-.kashi-video-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,15,29,.65),rgba(7,15,29,.08));display:flex;align-items:center;justify-content:center}
-.kashi-play{width:82px;height:82px;border-radius:50%;border:1px solid rgba(255,255,255,.85);background:rgba(15,25,42,.42);backdrop-filter:blur(8px);display:grid;place-items:center;box-shadow:0 0 0 12px rgba(255,255,255,.06),0 0 40px rgba(212,175,55,.25);transition:transform .3s,background .3s}
-.kashi-play::after{content:"";margin-left:5px;border-left:17px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent}
-.kashi-video-card:hover .kashi-play{transform:scale(1.08);background:rgba(197,106,45,.8)}
-.kashi-video-label{position:absolute;left:1.4rem;bottom:1.25rem;color:#fff;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
-.kashi-video-copy .eyebrow{margin-bottom:.8rem}
-.kashi-video-points{display:grid;gap:.8rem;margin-top:1.6rem}
-.kashi-video-point{display:flex;gap:.8rem;align-items:flex-start}
-.kashi-video-point .ico{width:34px;height:34px;flex:0 0 34px;border-radius:50%;display:grid;place-items:center;background:var(--gd-p);color:var(--sf);font-size:.75rem}
-.kashi-video-point strong{display:block;font-size:.82rem;color:var(--mn);margin-bottom:.15rem}
-.kashi-video-point span{font-size:.75rem;color:var(--mt);line-height:1.5}
-
-/* Video modal */
-.video-modal .modal-box{max-width:920px;background:#0a1221}
-.video-frame{aspect-ratio:16/9;width:100%;background:#000}
-.video-frame iframe{width:100%;height:100%;border:0}
-.video-modal .modal-close{top:.7rem;right:.7rem}
-
-/* Counters */
-.stat-num{display:inline-block}
-.stat-num.counted{animation:countPop .5s ease}
-@keyframes countPop{0%{transform:scale(.8);opacity:.3}100%{transform:none;opacity:1}}
-
-/* Mobile */
-@media(max-width:800px){
-  .kashi-video-grid{grid-template-columns:1fr;gap:2rem}
-  .kashi-video-card,.kashi-video-card img{min-height:280px}
-  .hero-video-btn{margin-left:0;margin-top:.6rem}
-}
-@media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition-duration:.01ms!important}
-}
-
 </style>
 </head>
 <body>
 
-<a class="wa-float" href="https://wa.me/918318893914" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+<a class="wa-float" href="https://wa.me/918318893914" target="_blank" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
@@ -536,7 +430,7 @@ img.img-fallback{object-fit:cover;filter:saturate(.9) contrast(1.02)}
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a class="nav-wa-link" href="https://wa.me/918318893914" target="_blank" rel="noopener">
+  <a class="nav-wa-link" href="https://wa.me/918318893914" target="_blank">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     WhatsApp Us
   </a>
@@ -551,7 +445,7 @@ img.img-fallback{object-fit:cover;filter:saturate(.9) contrast(1.02)}
   
   <a href="#gallery" onclick="toggleMob()">Gallery</a>
   <a href="#contact" onclick="toggleMob()">Contact</a>
-  <a href="https://wa.me/918318893914" target="_blank" rel="noopener">&#x1F4AC; WhatsApp Us</a>
+  <a href="https://wa.me/918318893914" target="_blank">&#x1F4AC; WhatsApp Us</a>
 </div>
 
 <div class="modal-bg" id="modalBg">
@@ -566,16 +460,26 @@ img.img-fallback{object-fit:cover;filter:saturate(.9) contrast(1.02)}
 </div>
 
 <section id="hero">
-  <div class="hero-bg"></div>
+  <div class="hero-bg">
+    <video class="hero-video"
+           autoplay
+           muted
+           loop
+           playsinline
+           preload="metadata"
+           poster="https://images.unsplash.com/photo-1564509027875-ba1c00cf09c1?w=1920&auto=format&fit=crop&q=90&ixlib=rb-4.0.3"
+           aria-hidden="true">
+      <source src="kashi-hero.mp4" type="video/mp4">
+    </video>
+  </div>
   <div class="hero-ov"></div>
-  <div class="hero-particles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
   <div class="wrap"><div class="hero-c">
     <div class="h-ey">Kashi Dekho &middot; Varanasi</div>
     <h1 class="h-h1">Beyond Sightseeing,<br><em>Experience Banaras</em></h1>
     <p class="h-sub"><span id="typing-text"></span><span class="typing-cursor">|</span></p>
     <div class="h-ctas">
       <a class="btn btn-prim" href="#experiences"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>Explore Experiences</a>
-      <button class="btn btn-ghost hero-video-btn" type="button" onclick="openKashiVideo()"><span class="play-ring"></span>Watch Kashi</button>
+      <a class="btn btn-ghost" href="https://wa.me/918318893914" target="_blank">&#x1F4AC; WhatsApp Us</a>
     </div>
     <div class="h-trust">
       <div class="ti"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Local Expertise</div>
@@ -586,30 +490,6 @@ img.img-fallback{object-fit:cover;filter:saturate(.9) contrast(1.02)}
   </div></div>
   <div class="h-scroll" onclick="document.getElementById('experiences').scrollIntoView({behavior:'smooth'})">
     <div class="scrl-dot"></div><span>Scroll</span>
-  </div>
-</section>
-
-<section class="kashi-video-sec" id="watch-kashi">
-  <div class="wrap">
-    <div class="kashi-video-grid">
-      <div class="kashi-video-card rev-l" onclick="openKashiVideo()" role="button" tabindex="0" aria-label="Watch Kashi video">
-        <img src="https://images.unsplash.com/photo-1564509027875-ba1c00cf09c1?w=1200&auto=format&fit=crop&q=88&ixlib=rb-4.0.3" alt="Varanasi Ganga ghats at evening">
-        <div class="kashi-video-overlay"><span class="kashi-play"></span></div>
-        <div class="kashi-video-label">Watch Kashi · 4K Experience</div>
-      </div>
-      <div class="kashi-video-copy rev-r">
-        <div class="eyebrow">See Kashi Before You Arrive</div>
-        <h2 class="sec-h">Feel the <em>rhythm</em> of Banaras.</h2>
-        <div class="divider"></div>
-        <p class="sec-sub">From the first light over the Ganga to the evening flames of the Aarti, Kashi is best understood through moments — not checklists.</p>
-        <div class="kashi-video-points">
-          <div class="kashi-video-point"><div class="ico">✦</div><div><strong>Ganga at sunrise</strong><span>Quiet boat rides, ancient ghats and the first light of Kashi.</span></div></div>
-          <div class="kashi-video-point"><div class="ico">◉</div><div><strong>Living traditions</strong><span>Temple rituals, music, food and everyday Banarasi life.</span></div></div>
-          <div class="kashi-video-point"><div class="ico">✧</div><div><strong>Curated by locals</strong><span>Experiences designed around what you actually want to see and feel.</span></div></div>
-        </div>
-        <button class="btn btn-prim" type="button" onclick="openKashiVideo()" style="margin-top:1.5rem">Watch the Film <span>→</span></button>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -812,7 +692,7 @@ img.img-fallback{object-fit:cover;filter:saturate(.9) contrast(1.02)}
         <div class="divider"></div>
         <p class="sec-sub">Your Banaras experience is one conversation away. WhatsApp for an instant response &mdash; we typically reply within a few hours.</p>
         <div class="ct-chs">
-          <a class="ct-ch" href="https://wa.me/918318893914" target="_blank" rel="noopener"><div class="ch-ic" style="background:#25D366">&#x1F4AC;</div><div class="ch-tx"><div class="ch-lbl">WhatsApp</div><div class="ch-val"><span data-contact="phone">+91 83188 93914</span></div></div></a>
+          <a class="ct-ch" href="https://wa.me/918318893914" target="_blank"><div class="ch-ic" style="background:#25D366">&#x1F4AC;</div><div class="ch-tx"><div class="ch-lbl">WhatsApp</div><div class="ch-val"><span data-contact="phone">+91 83188 93914</span></div></div></a>
           <a class="ct-ch" href="https://wa.me/918318893914"><div class="ch-ic" style="background:var(--sf)">&#x1F4DE;</div><div class="ch-tx"><div class="ch-lbl">Call Us</div><div class="ch-val"><span data-contact="phone">+91 83188 93914</span></div></div></a>
           <a class="ct-ch" href="mailto:help@kashidekho.com"><div class="ch-ic" style="background:var(--mn-l)">&#x2709;</div><div class="ch-tx"><div class="ch-lbl">Email</div><div class="ch-val"><span data-contact="email">help@kashidekho.com</span></div></div></a>
           <div class="ct-ch"><div class="ch-ic" style="background:rgba(255,255,255,.08)">&#x1F4CD;</div><div class="ch-tx"><div class="ch-lbl">Office</div><div class="ch-val">Near Dashashwamedh Ghat, Varanasi</div></div></div>
@@ -828,47 +708,31 @@ img.img-fallback{object-fit:cover;filter:saturate(.9) contrast(1.02)}
             <div class="cf-grp"><label class="cf-lbl">Phone / WhatsApp</label><input class="cf-inp" type="tel" id="cfPhone" placeholder="+91 XXXXX XXXXX"></div>
           </div>
           <div class="cf-grp"><label class="cf-lbl">Package Interest</label>
-  <div class="cf-pick-wrap">
-    <button type="button" class="cf-pick" id="cfPick" aria-haspopup="listbox" aria-expanded="false">
-      <span id="cfPickText">— Select a package —</span><span class="cf-pick-arrow"></span>
-    </button>
-    <div class="cf-options" id="cfOptions" role="listbox">
-      <div class="cf-option-group">Varanasi Only</div>
-      <div class="cf-option" data-value="subah-e-kashi">Subah-e-Kashi <b>₹4,999</b></div>
-      <div class="cf-option" data-value="shivnagari-kashi">Shivnagari Kashi Yatra <b>₹8,999</b></div>
-      <div class="cf-option" data-value="rang-e-banaras">Rang-e-Banaras <b>₹14,999</b></div>
-      <div class="cf-option-group">+ Ayodhya</div>
-      <div class="cf-option" data-value="kashi-ayodhya-2n">Subah-e-Kashi + Ayodhya <b>₹9,999</b></div>
-      <div class="cf-option" data-value="shivnagari-ayodhya">Shivnagari + Ayodhya <b>₹13,999</b></div>
-      <div class="cf-option" data-value="rang-ayodhya">Rang-e-Banaras + Ayodhya <b>₹19,999</b></div>
-      <div class="cf-option-group">+ Prayagraj</div>
-      <div class="cf-option" data-value="kashi-prayagraj-2n">Subah-e-Kashi + Prayagraj <b>₹9,999</b></div>
-      <div class="cf-option" data-value="shivnagari-prayagraj">Shivnagari + Prayagraj <b>₹13,999</b></div>
-      <div class="cf-option" data-value="rang-prayagraj">Rang-e-Banaras + Prayagraj <b>₹19,999</b></div>
-      <div class="cf-option-group">+ Vindhyachal</div>
-      <div class="cf-option" data-value="kashi-vindhya-2n">Subah-e-Kashi + Vindhyachal <b>₹9,999</b></div>
-      <div class="cf-option" data-value="shivnagari-vindhya">Shivnagari + Vindhyachal <b>₹13,999</b></div>
-      <div class="cf-option" data-value="rang-vindhya">Rang-e-Banaras + Vindhyachal <b>₹19,999</b></div>
-      <div class="cf-option" data-value="custom">Custom / Other Package <b>Quote</b></div>
-    </div>
-    <select class="cf-sel cf-inp" id="cfPkg" aria-hidden="true">
-      <option value="">— Select a package —</option>
-      <option value="subah-e-kashi">Subah-e-Kashi</option>
-      <option value="shivnagari-kashi">Shivnagari Kashi Yatra</option>
-      <option value="rang-e-banaras">Rang-e-Banaras</option>
-      <option value="kashi-ayodhya-2n">Subah-e-Kashi + Ayodhya</option>
-      <option value="shivnagari-ayodhya">Shivnagari + Ayodhya</option>
-      <option value="rang-ayodhya">Rang-e-Banaras + Ayodhya</option>
-      <option value="kashi-prayagraj-2n">Subah-e-Kashi + Prayagraj</option>
-      <option value="shivnagari-prayagraj">Shivnagari + Prayagraj</option>
-      <option value="rang-prayagraj">Rang-e-Banaras + Prayagraj</option>
-      <option value="kashi-vindhya-2n">Subah-e-Kashi + Vindhyachal</option>
-      <option value="shivnagari-vindhya">Shivnagari + Vindhyachal</option>
-      <option value="rang-vindhya">Rang-e-Banaras + Vindhyachal</option>
-      <option value="custom">Custom / Other Package</option>
-    </select>
-  </div>
-</div>
+            <select class="cf-sel cf-inp" id="cfPkg">
+  <option value="">— Select a package —</option>
+  <optgroup label="Varanasi Only">
+    <option value="subah-e-kashi">Subah-e-Kashi</option>
+    <option value="shivnagari-kashi">Shivnagari Kashi Yatra</option>
+    <option value="rang-e-banaras">Rang-e-Banaras</option>
+  </optgroup>
+  <optgroup label="+ Ayodhya">
+    <option value="kashi-ayodhya-2n">Subah-e-Kashi + Ayodhya</option>
+    <option value="shivnagari-ayodhya">Shivnagari + Ayodhya</option>
+    <option value="rang-ayodhya">Rang-e-Banaras + Ayodhya</option>
+  </optgroup>
+  <optgroup label="+ Prayagraj">
+    <option value="kashi-prayagraj-2n">Subah-e-Kashi + Prayagraj</option>
+    <option value="shivnagari-prayagraj">Shivnagari + Prayagraj</option>
+    <option value="rang-prayagraj">Rang-e-Banaras + Prayagraj</option>
+  </optgroup>
+  <optgroup label="+ Vindhyachal & Chunar">
+    <option value="kashi-vindhya-2n">Subah-e-Kashi + Vindhyachal</option>
+    <option value="shivnagari-vindhya">Shivnagari + Vindhyachal</option>
+    <option value="rang-vindhya">Rang-e-Banaras + Vindhyachal</option>
+  </optgroup>
+  <option value="custom">Custom / Other Package</option>
+</select>
+          </div>
           <div class="cf-row">
             <div class="cf-grp"><label class="cf-lbl">Travel Date</label><input class="cf-inp" type="date" id="cfDate"></div>
             <div class="cf-grp"><label class="cf-lbl">Group Size</label><select class="cf-sel cf-inp" id="cfGroup"><option>1 Person (Solo)</option><option>2 Persons (Couple)</option><option>3&#x2013;5 Persons (Family)</option><option>6&#x2013;10 Persons (Group)</option><option>10+ Persons (Large Group)</option></select></div>
@@ -915,7 +779,7 @@ img.img-fallback{object-fit:cover;filter:saturate(.9) contrast(1.02)}
       <div>
         <div class="ft-col-t">Contact</div>
         <ul class="ft-links">
-          <li><a href="https://wa.me/918318893914" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://wa.me/918318893914" target="_blank">WhatsApp</a></li>
           <li><a href="tel:+918318893914">Call Us</a></li>
           <li><a href="mailto:help@kashidekho.com">Email</a></li>
           <li><a href="#contact">Enquiry Form</a></li>
@@ -930,15 +794,6 @@ img.img-fallback{object-fit:cover;filter:saturate(.9) contrast(1.02)}
     </div>
   </div>
 </footer>
-
-<div class="modal-bg video-modal" id="videoModal" onclick="if(event.target===this)closeKashiVideo()">
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeKashiVideo()" aria-label="Close video">✕</button>
-    <div class="video-frame">
-      <iframe id="kashiVideoFrame" src="https://www.youtube.com/embed/v6vhzmhKfM4?rel=0&modestbranding=1" title="Kashi Ganga Aarti cinematic video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-  </div>
-</div>
 
 <div id="toast"></div>
 <script>
@@ -1294,135 +1149,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 <script>
-/* ===== VISUAL INTERACTIONS ===== */
-function openKashiVideo(){
-  const m=document.getElementById('videoModal');
-  if(!m) return;
-  m.classList.add('open');
-  document.body.style.overflow='hidden';
-}
-function closeKashiVideo(){
-  const m=document.getElementById('videoModal');
-  const f=document.getElementById('kashiVideoFrame');
-  if(m) m.classList.remove('open');
-  if(f){
-    const src=f.src;
-    f.src='';
-    f.src=src;
-  }
-  document.body.style.overflow='';
-}
-
-document.addEventListener('DOMContentLoaded',()=>{
-  /* Custom package picker */
-  const native=document.getElementById('cfPkg');
-  const pick=document.getElementById('cfPick');
-  const text=document.getElementById('cfPickText');
-  const opts=document.getElementById('cfOptions');
-
-  function syncPicker(){
-    if(!native||!text) return;
-    const selected=native.options[native.selectedIndex];
-    text.textContent=selected && selected.value ? selected.textContent : '— Select a package —';
-    document.querySelectorAll('.cf-option').forEach(o=>{
-      o.classList.toggle('selected',o.dataset.value===native.value);
-    });
-  }
-  if(pick&&opts&&native){
-    pick.addEventListener('click',e=>{
-      e.stopPropagation();
-      const open=opts.classList.toggle('open');
-      pick.classList.toggle('open',open);
-      pick.setAttribute('aria-expanded',String(open));
-    });
-    opts.querySelectorAll('.cf-option').forEach(option=>{
-      option.addEventListener('click',()=>{
-        native.value=option.dataset.value;
-        syncPicker();
-        opts.classList.remove('open');
-        pick.classList.remove('open');
-        pick.setAttribute('aria-expanded','false');
-      });
-    });
-    document.addEventListener('click',()=>{
-      opts.classList.remove('open');
-      pick.classList.remove('open');
-      pick.setAttribute('aria-expanded','false');
-    });
-    syncPicker();
-  }
-
-  /* Make all package images resilient if an external image fails */
-  const fallback='https://images.unsplash.com/photo-1564509027875-ba1c00cf09c1?w=1200&auto=format&fit=crop&q=80&ixlib=rb-4.0.3';
-  document.querySelectorAll('img').forEach(img=>{
-    img.loading='lazy';
-    img.decoding='async';
-    img.addEventListener('error',()=>{
-      if(img.dataset.fallbackDone) return;
-      img.dataset.fallbackDone='1';
-      img.src=fallback;
-      img.classList.add('img-fallback');
-    });
-  });
-
-  /* Subtle 3D card interaction on desktop */
-  if(window.matchMedia('(pointer:fine)').matches){
-    document.querySelectorAll('.exp-card').forEach(card=>{
-      card.addEventListener('pointermove',e=>{
-        const r=card.getBoundingClientRect();
-        const x=(e.clientX-r.left)/r.width-.5;
-        const y=(e.clientY-r.top)/r.height-.5;
-        card.style.transform=`perspective(900px) rotateX(${(-y*3).toFixed(2)}deg) rotateY(${(x*4).toFixed(2)}deg) translateY(-3px)`;
-      });
-      card.addEventListener('pointerleave',()=>card.style.transform='');
-    });
-
-    const hero=document.querySelector('.hero-bg');
-    document.getElementById('hero')?.addEventListener('pointermove',e=>{
-      if(!hero) return;
-      const x=(e.clientX/window.innerWidth-.5)*6;
-      const y=(e.clientY/window.innerHeight-.5)*3;
-      hero.style.transform=`scale(1.07) translate3d(${-x}px,${-y}px,0)`;
-    });
-    document.getElementById('hero')?.addEventListener('pointerleave',()=>{
-      if(hero) hero.style.transform='';
-    });
-  }
-
-  /* Keyboard support for video card */
-  document.querySelector('.kashi-video-card')?.addEventListener('keydown',e=>{
-    if(e.key==='Enter'||e.key===' '){e.preventDefault();openKashiVideo();}
-  });
-
-  document.addEventListener('keydown',e=>{
-    if(e.key==='Escape') closeKashiVideo();
+document.addEventListener('DOMContentLoaded', () => {
+  const heroVideo = document.querySelector('.hero-video');
+  if (!heroVideo) return;
+  heroVideo.addEventListener('error', () => {
+    heroVideo.style.display = 'none';
+    const bg = heroVideo.parentElement;
+    bg.style.background =
+      'url("https://images.unsplash.com/photo-1564509027875-ba1c00cf09c1?w=1920&auto=format&fit=crop&q=90&ixlib=rb-4.0.3") center 35%/cover no-repeat';
   });
 });
 </script>
 
-<script>
-document.addEventListener('DOMContentLoaded',()=>{
-  const map = {
-    'subah-e-kashi':'Subah-e-Kashi',
-    'shivnagari-kashi':'Shivnagari Kashi Yatra',
-    'rang-e-banaras':'Rang-e-Banaras',
-    'kashi-ayodhya-2n':'Subah-e-Kashi + Ayodhya',
-    'shivnagari-ayodhya':'Shivnagari + Ayodhya',
-    'rang-ayodhya':'Rang-e-Banaras + Ayodhya',
-    'kashi-prayagraj-2n':'Subah-e-Kashi + Prayagraj',
-    'shivnagari-prayagraj':'Shivnagari + Prayagraj',
-    'rang-prayagraj':'Rang-e-Banaras + Prayagraj',
-    'kashi-vindhya-2n':'Subah-e-Kashi + Vindhyachal',
-    'shivnagari-vindhya':'Shivnagari + Vindhyachal',
-    'rang-vindhya':'Rang-e-Banaras + Vindhyachal'
-  };
-  document.querySelectorAll('.cf-option[data-value]').forEach(o=>{
-    const id=o.dataset.value;
-    if(map[id] && TOUR_RATES[id]){
-      o.innerHTML = `${map[id]} <b>${money(TOUR_RATES[id])}</b>`;
-    }
-  });
-});
-</script>
 </body>
 </html>
