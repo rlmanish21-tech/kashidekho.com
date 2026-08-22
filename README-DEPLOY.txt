@@ -1,19 +1,8 @@
-KASHI DEKHO SEO REVAMP
+KASHI DEKHO SEO REVAMP - FIXED
 
-Deploy the entire folder contents to Vercel and keep the folder structure.
+FIX INCLUDED:
+- Tour Packages button now uses a normal link instead of JavaScript modal dependency.
+- Vercel routes explicitly map every SEO package URL to its index.html.
+- Existing SEO pages, sitemap and robots.txt retained.
 
-New indexable URLs:
-- /varanasi-tour-packages/
-- /kashi-yatra/
-- /subah-e-kashi/
-- /shivnagari-kashi-yatra/
-- /rang-e-banaras/
-- /varanasi-ayodhya-tour/
-- /varanasi-prayagraj-tour/
-- /varanasi-vindhyachal-tour/
-
-The old catch-all Vercel rewrite has been removed so these directory index pages can be served separately.
-
-Current destination images are retained. Replace them with original Kashi Dekho photography when available; no fake traveller testimonials have been created.
-
-After deployment, submit /sitemap.xml in Google Search Console.
+Deploy the entire folder contents. Do not upload only index.html.
