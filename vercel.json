@@ -1,9 +1,44 @@
 {
   "version": 2,
-  "builds": [
+  "routes": [
     {
-      "src": "**/*.html",
-      "use": "@vercel/static"
+      "src": "/varanasi-tour-packages/?$",
+      "dest": "/varanasi-tour-packages/index.html"
+    },
+    {
+      "src": "/kashi-yatra/?$",
+      "dest": "/kashi-yatra/index.html"
+    },
+    {
+      "src": "/subah-e-kashi/?$",
+      "dest": "/subah-e-kashi/index.html"
+    },
+    {
+      "src": "/shivnagari-kashi-yatra/?$",
+      "dest": "/shivnagari-kashi-yatra/index.html"
+    },
+    {
+      "src": "/rang-e-banaras/?$",
+      "dest": "/rang-e-banaras/index.html"
+    },
+    {
+      "src": "/varanasi-ayodhya-tour/?$",
+      "dest": "/varanasi-ayodhya-tour/index.html"
+    },
+    {
+      "src": "/varanasi-prayagraj-tour/?$",
+      "dest": "/varanasi-prayagraj-tour/index.html"
+    },
+    {
+      "src": "/varanasi-vindhyachal-tour/?$",
+      "dest": "/varanasi-vindhyachal-tour/index.html"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
