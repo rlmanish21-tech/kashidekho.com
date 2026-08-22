@@ -778,21 +778,10 @@ const SITE_CONFIG = {
   brand: 'Kashi Dekho',
   tagline: 'Experience Kashi. Not Just Sightseeing.',
   whatsapp: '918318893914',
-  phone: '<span data-contact="phone">+91 83188 93914</span>',
-  email: '<span data-contact="email">hello@banarastrails.com</span>',
+  phone: '+91 83188 93914',
+  email: 'hello@banarastrails.com',
   office: 'Near Dashashwamedh Ghat, Varanasi',
-  currency: '₹'
-};
-
-const SITE_CONFIG = {
-  brand: {
-    name: 'Kashi Dekho',
-    tagline: 'Experience Kashi. Not Just Sightseeing.',
-    whatsapp: '918318893914',
-    phoneDisplay: '+91 83188 93914',
-    email: 'help@kashidekho.com'
-  },
-
+  currency: '₹',
   rates: {
     'subah-e-kashi': 4999,
     'shivnagari-kashi': 8999,
@@ -807,25 +796,21 @@ const SITE_CONFIG = {
     'shivnagari-vindhya': 13999,
     'rang-vindhya': 19999
   },
-
   addons: [
     { id: 'airport-pickup', name: 'Airport Pickup', price: 1000, type: 'flat' },
-    { id: 'railway-pickup', name: 'Railway Station Pickup', price: 500, type: 'flat' },
+    { id: 'railway-pickup', name: 'Railway Station Pickup', price: 700, type: 'flat' },
     { id: 'private-boat', name: 'Private Boat Ride', price: 1500, type: 'flat' },
-    { id: 'local-guide', name: 'Local Guide', price: 1000, type: 'flat' }
+    { id: 'local-guide', name: 'Local Guide', price: 1000, type: 'flat' },
+    { id: 'extra-night', name: 'Extra Night', price: 2500, type: 'flat' }
   ]
 };
 
 const TOUR_RATES = SITE_CONFIG.rates;
-const money = value => `₹${Number(value || 0).toLocaleString('en-IN')}`;
-const waLink = message =>
-  `https://wa.me/${SITE_CONFIG.brand.whatsapp}?text=${encodeURIComponent(message)}`;
-
+const money = value => `${SITE_CONFIG.currency}${Number(value || 0).toLocaleString('en-IN')}`;
+const waLink = (message = '') => `https://wa.me/${SITE_CONFIG.whatsapp}${message ? '?text=' + encodeURIComponent(message) : ''}`;
 const getTourRate = id => TOUR_RATES[id] || 0;
-
 const packageWhatsAppMessage = (tourName, price) =>
   `Hi Kashi Dekho, I'm interested in the ${tourName} package (${money(price)}/person). Please share the itinerary, inclusions and best available quote.`;
-
 
 const ADDON_RATES = {
   'airport-pickup': 1000,
@@ -835,8 +820,6 @@ const ADDON_RATES = {
   'extra-night': 2500
 };
 
-function money(value){ return SITE_CONFIG.currency + Number(value).toLocaleString('en-IN'); }
-function waLink(message=''){ return `https://wa.me/${SITE_CONFIG.whatsapp}${message ? '?text=' + encodeURIComponent(message) : ''}`; }
 </script>
 <script>
 // Apply centralized editable data to the page.
