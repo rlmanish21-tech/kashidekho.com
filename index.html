@@ -133,8 +133,7 @@ button{cursor:pointer;font-family:"Inter",sans-serif}
 
 /* HERO */
 #hero{position:relative;height:100vh;min-height:640px;overflow:hidden;display:flex;align-items:center}
-.hero-bg{position:absolute;inset:0;overflow:hidden;background:#1f2a44}
-.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;transform:scale(1.04);animation:hdrift 22s ease-in-out infinite alternate}
+.hero-bg{position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1564509027875-ba1c00cf09c1?w=1920&auto=format&fit=crop&q=90&ixlib=rb-4.0.3") center 35%/cover no-repeat;animation:hdrift 22s ease-in-out infinite alternate}
 @keyframes hdrift{from{transform:scale(1.04)}to{transform:scale(1.09) translateY(-1%)}}
 .hero-ov{position:absolute;inset:0;background:linear-gradient(rgba(31,42,68,.68),rgba(31,42,68,.44))}
 .hero-ov::after{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.016'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E")}
@@ -380,6 +379,15 @@ footer{background:#0F1623;color:rgba(255,255,255,.45);padding:4rem 0 2rem}
 .dest-name{font-family:"Playfair Display",serif;font-size:1.05rem;font-weight:700;color:var(--mn);margin-bottom:.5rem;line-height:1.2}
 .dest-desc{font-size:.78rem;color:var(--mt);line-height:1.65;flex:1;margin-bottom:.9rem}
 .dest-link{font-size:.72rem;font-weight:700;color:var(--sf);letter-spacing:.06em;text-transform:uppercase;margin-top:auto}
+
+@media(max-width:900px){
+  .package-overview{grid-template-columns:1fr;gap:2rem}
+  .ct-inner{grid-template-columns:1fr;gap:2.2rem}
+  .pcard{grid-template-columns:1fr;row-gap:1rem}
+  .pq-lbl,.pq-q,.pq-h,.popts{grid-column:1;grid-row:auto}
+  .pq-h{max-width:none}
+}
+
 @media(max-width:768px){.dest-row{grid-template-columns:1fr!important}}
 @media(max-width:1024px){
   .exp-grid,.ext-grid,.pkg-grid{grid-template-columns:1fr 1fr}
@@ -409,6 +417,94 @@ footer{background:#0F1623;color:rgba(255,255,255,.45);padding:4rem 0 2rem}
   .gal-grid .tall,.gal-grid .wide{grid-row:span 1;grid-column:span 1}
   .why-grid{grid-template-columns:1fr}
 }
+
+/* PLANNER REFINEMENT */
+.plan-inner{max-width:1040px}
+.pcard{
+  display:grid;
+  grid-template-columns:minmax(250px,.72fr) minmax(0,1.28fr);
+  column-gap:2.5rem;
+  align-items:center;
+  min-height:250px;
+  padding:2.1rem 2.3rem;
+}
+.pq-lbl,.pq-q,.pq-h{grid-column:1}
+.pq-lbl{align-self:end}
+.pq-q{font-size:1.55rem}
+.pq-h{align-self:start;margin-bottom:0;max-width:310px}
+.popts{grid-column:2;grid-row:1 / span 3;align-self:center}
+.pnav{max-width:1040px;margin-left:auto;margin-right:auto}
+.ppriv{max-width:1040px;margin-left:auto;margin-right:auto}
+
+/* More balanced package overview */
+#all-packages{padding:4.5rem 0}
+.package-overview{
+  display:grid;
+  grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);
+  gap:3rem;
+  align-items:center;
+  text-align:left;
+}
+.package-overview .overview-copy .sec-sub{margin:0 0 1.4rem;max-width:540px}
+.package-map{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:.8rem;
+}
+.package-tile{
+  display:flex;
+  align-items:center;
+  gap:.85rem;
+  padding:1rem 1.05rem;
+  background:#fff;
+  border:1px solid var(--bd);
+  border-radius:10px;
+  box-shadow:0 5px 18px rgba(31,42,68,.06);
+  transition:transform .2s,border-color .2s,box-shadow .2s;
+}
+.package-tile:hover{
+  transform:translateY(-3px);
+  border-color:rgba(197,106,45,.4);
+  box-shadow:0 10px 26px rgba(31,42,68,.1);
+}
+.package-tile .pt-icon{
+  width:38px;height:38px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(197,106,45,.09);color:var(--sf);
+  font-size:1rem;flex-shrink:0;
+}
+.package-tile strong{display:block;color:var(--mn);font-size:.82rem;margin-bottom:.15rem}
+.package-tile span{display:block;color:var(--lt);font-size:.68rem;line-height:1.4}
+.package-overview .eyebrow{margin-bottom:.65rem}
+.package-overview .sec-h{margin-bottom:.65rem}
+.package-overview .divider{margin:1rem 0 1.2rem}
+.package-overview .package-cta{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.package-note{font-size:.68rem;color:var(--lt)}
+
+/* Contact / enquiry card refinement */
+.ct-inner{grid-template-columns:minmax(0,.9fr) minmax(430px,1.1fr);gap:3.2rem;align-items:stretch}
+.ct-form{padding:1.65rem;box-shadow:0 18px 50px rgba(0,0,0,.16)}
+.cf-topbar{margin:-1.65rem -1.65rem 1.6rem}
+.cf-title{font-size:1.35rem}
+.cf-sub{margin-bottom:1.15rem}
+.cf-row{gap:.75rem;margin-bottom:.75rem}
+.cf-grp{margin-bottom:.75rem}
+.cf-inp,.cf-sel,.cf-ta{padding:.7rem .85rem}
+.cf-ta{min-height:92px}
+
+/* Gallery: use the full width and remove the awkward empty-looking layout */
+.gal-grid{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  grid-auto-rows:190px;
+  gap:.8rem;
+  max-width:1100px;
+  margin:0 auto;
+}
+.gal-item.tall{grid-row:span 2}
+.gal-item.wide{grid-column:span 2}
+.gal-item{background:#e9e4d9}.gal-item.img-failed,.ext-img.img-failed{background:linear-gradient(135deg,#e9e4d9,#d9d0c0);display:flex;align-items:center;justify-content:center}.gal-item.img-failed::after{content:'Kashi Dekho';color:rgba(31,42,68,.45);font-family:'Playfair Display',serif;font-size:1.1rem}
+.gal-item img{object-fit:cover}
+
 </style>
 </head>
 <body>
@@ -460,18 +556,7 @@ footer{background:#0F1623;color:rgba(255,255,255,.45);padding:4rem 0 2rem}
 </div>
 
 <section id="hero">
-  <div class="hero-bg">
-    <video class="hero-video"
-           autoplay
-           muted
-           loop
-           playsinline
-           preload="metadata"
-           poster="https://images.unsplash.com/photo-1564509027875-ba1c00cf09c1?w=1920&auto=format&fit=crop&q=90&ixlib=rb-4.0.3"
-           aria-hidden="true">
-      <source src="kashi-hero.mp4" type="video/mp4">
-    </video>
-  </div>
+  <div class="hero-bg"></div>
   <div class="hero-ov"></div>
   <div class="wrap"><div class="hero-c">
     <div class="h-ey">Kashi Dekho &middot; Varanasi</div>
@@ -652,14 +737,38 @@ footer{background:#0F1623;color:rgba(255,255,255,.45);padding:4rem 0 2rem}
   </div>
 </section>
 
-<section class="sec" style="background:var(--iv);padding:3rem 0" id="all-packages">
-  <div class="wrap" style="text-align:center">
-    <div class="eyebrow rev">12 Curated Packages</div>
-    <h2 class="sec-h rev" style="margin-bottom:.8rem">Every Combination,<br><em>One Perfect Journey</em></h2>
-    <div class="divider rev" style="margin-left:auto;margin-right:auto"></div>
-    <p class="sec-sub rev" style="margin:0 auto 2rem;max-width:500px">3 core Banaras experiences &times; 4 destination options. Click to browse all 12 packages with full details, itineraries and pricing.</p>
-    <button class="btn btn-prim rev" onclick="openAllPackages()" style="margin:0 auto">Browse All 12 Packages &rarr;</button>
-    <p style="font-size:.7rem;color:var(--lt);margin-top:1rem">* All prices starting from, per person, subject to change</p>
+<section class="sec" style="background:var(--iv)" id="all-packages">
+  <div class="wrap">
+    <div class="package-overview">
+      <div class="overview-copy">
+        <div class="eyebrow rev">12 Curated Packages</div>
+        <h2 class="sec-h rev">Every Combination,<br><em>One Perfect Journey</em></h2>
+        <div class="divider rev"></div>
+        <p class="sec-sub rev">Choose a Banaras experience and extend it to Ayodhya, Prayagraj or Vindhyachal &amp; Chunar. Browse all 12 combinations with complete itineraries and pricing.</p>
+        <div class="package-cta">
+          <button class="btn btn-prim rev" onclick="openAllPackages()">Browse All 12 Packages &rarr;</button>
+          <span class="package-note">Prices shown per person*</span>
+        </div>
+      </div>
+      <div class="package-map rev">
+        <div class="package-tile">
+          <div class="pt-icon">ॐ</div>
+          <div><strong>Varanasi</strong><span>3 core Kashi experiences</span></div>
+        </div>
+        <div class="package-tile">
+          <div class="pt-icon">॥</div>
+          <div><strong>+ Ayodhya</strong><span>Ram Mandir · Saryu Aarti</span></div>
+        </div>
+        <div class="package-tile">
+          <div class="pt-icon">◉</div>
+          <div><strong>+ Prayagraj</strong><span>Triveni Sangam · Sangam Boat</span></div>
+        </div>
+        <div class="package-tile">
+          <div class="pt-icon">✦</div>
+          <div><strong>+ Vindhyachal &amp; Chunar</strong><span>Shakti Peetha · Chunar Fort</span></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1150,13 +1259,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  const heroVideo = document.querySelector('.hero-video');
-  if (!heroVideo) return;
-  heroVideo.addEventListener('error', () => {
-    heroVideo.style.display = 'none';
-    const bg = heroVideo.parentElement;
-    bg.style.background =
-      'url("https://images.unsplash.com/photo-1564509027875-ba1c00cf09c1?w=1920&auto=format&fit=crop&q=90&ixlib=rb-4.0.3") center 35%/cover no-repeat';
+  document.querySelectorAll('.gal-item img, .ext-img img').forEach(img => {
+    img.addEventListener('error', () => {
+      img.style.display = 'none';
+      const holder = img.closest('.gal-item, .ext-img');
+      if (holder) holder.classList.add('img-failed');
+    }, {once:true});
   });
 });
 </script>
