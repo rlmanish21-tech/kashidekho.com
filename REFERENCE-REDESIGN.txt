@@ -1,0 +1,5 @@
+KashiDekho reference redesign
+
+Inspired by the information architecture of Experience Abu Dhabi: discovery categories, inspiration/facts, itinerary planning and clear CTAs. No third-party branding or assets were copied.
+
+Homepage improvements: Discover Kashi layer, Kashi highlights strip, stronger package CTA hierarchy, improved tour modal, planner/enquiry responsiveness, and brand consistency.
