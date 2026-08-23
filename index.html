@@ -889,6 +889,19 @@ html,body{width:100%;min-width:100%;margin:0;padding:0;overflow-x:hidden}
 @media(max-width:768px){.discover-sec{padding:3.5rem 0}.discover-head{display:block;margin-bottom:1.5rem}.discover-head .sec-sub{margin:.8rem 0 0;max-width:620px}.discover-grid{grid-template-columns:1fr 1fr;gap:.75rem}.discover-card{min-height:225px;padding:1.05rem}.discover-card h3{font-size:1rem}.discover-card p{font-size:.7rem}.facts-sec{padding:1.15rem 0}.facts-track{grid-template-columns:1fr 1fr;row-gap:1rem}.facts-track article:nth-child(2){border-right:0}.facts-track article:nth-child(3),.facts-track article:nth-child(4){border-top:1px solid rgba(255,255,255,.08);padding-top:.9rem}.facts-track article:nth-child(4){border-right:0}.pcard{padding:1.2rem;border-radius:14px}.pnav{flex-direction:column}.pnav button{width:100%;justify-content:center}.modal-box{width:100%;height:min(92vh,900px);border-radius:16px 16px 0 0;align-self:flex-end}.modal-hero{height:185px}.modal-scroll{padding:1.25rem 1rem 1.4rem}.modal-title{font-size:1.5rem}.modal-footer{flex-direction:column;align-items:stretch;padding:.8rem .9rem;gap:.65rem}.modal-footer-price{width:100%}.mpf-acts{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:.55rem}.mpf-book,.mpf-wa{width:100%;display:flex;align-items:center;justify-content:center}}
 @media(max-width:520px){.discover-grid{grid-template-columns:1fr}.discover-card{min-height:190px}.facts-track{grid-template-columns:1fr 1fr}.facts-track article{padding:0 .7rem}.offer-inner{padding:.72rem .85rem}.offer-title{font-size:.96rem}.offer-btn{padding:.58rem .7rem}}
 </style>
+
+<style id="tourplaner-inspired-upgrade">
+/* Travel-planner inspired UX layer: search first, discover second, book with confidence. */
+.trip-finder{background:#fffdf8;border:1px solid rgba(31,42,68,.10);box-shadow:0 18px 45px rgba(31,42,68,.12);border-radius:16px;max-width:1120px;margin:-28px auto 0;position:relative;z-index:12;padding:18px}
+.trip-finder-top{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:12px}.trip-finder-title{font:700 1.15rem/1.2 "Playfair Display",Georgia,serif;color:var(--mn)}.trip-finder-sub{font-size:.68rem;color:var(--lt);margin-top:.18rem}.trip-finder-label{font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sf);font-weight:800}
+.trip-finder-grid{display:grid;grid-template-columns:1.25fr 1fr 1fr 1.05fr auto;gap:8px}.finder-field{min-height:58px;border:1px solid var(--bd);background:#fff;border-radius:9px;padding:9px 11px;display:flex;flex-direction:column;justify-content:center}.finder-field label{font-size:.54rem;color:var(--lt);text-transform:uppercase;letter-spacing:.1em;font-weight:800;margin-bottom:3px}.finder-field select,.finder-field input{border:0;outline:0;background:transparent;color:var(--mn);font:600 .78rem "DM Sans",Arial;width:100%;padding:0}.finder-btn{border:0;border-radius:9px;background:var(--sf);color:#fff;padding:0 17px;font-size:.68rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;white-space:nowrap}.finder-btn:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.quick-choices{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}.quick-choices a{font-size:.6rem;color:var(--mn);background:var(--iv);border:1px solid var(--bd);padding:.42rem .62rem;border-radius:999px;font-weight:700}.quick-choices a:hover{border-color:var(--gd);color:var(--sf)}
+.plan-path{background:var(--mn);color:#fff;padding:3.2rem 0}.plan-path-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:1.7rem}.path-card{border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.055);border-radius:12px;padding:18px;position:relative}.path-no{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:rgba(212,175,55,.15);color:var(--gd);font-weight:800;font-size:.72rem;margin-bottom:12px}.path-card h3{font:700 1.05rem Georgia,serif;margin:0 0 6px}.path-card p{margin:0;color:rgba(255,255,255,.65);font-size:.7rem;line-height:1.6}.path-card b{display:block;margin-top:12px;color:#edc949;font-size:.62rem;text-transform:uppercase;letter-spacing:.08em}
+.dest-mini-strip{background:#fff;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:1.1rem 0}.dest-mini-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.dest-mini{display:flex;align-items:center;gap:9px;padding:10px;border:1px solid var(--bd);border-radius:9px;background:var(--paper);transition:.2s}.dest-mini:hover{transform:translateY(-2px);border-color:var(--gd);box-shadow:0 8px 20px rgba(31,42,68,.07)}.dest-mini-icon{width:34px;height:34px;border-radius:50%;background:#f4e9dc;color:var(--sf);display:grid;place-items:center;font-weight:800;flex:0 0 auto}.dest-mini strong{display:block;color:var(--mn);font-size:.7rem}.dest-mini span{display:block;color:var(--lt);font-size:.58rem;margin-top:2px}
+@media(max-width:900px){.trip-finder{margin:0 1rem;padding:14px}.trip-finder-grid{grid-template-columns:1fr 1fr}.finder-btn{min-height:58px}.dest-mini-grid{grid-template-columns:1fr 1fr}.plan-path-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.trip-finder-top{align-items:flex-start;flex-direction:column}.trip-finder-grid{grid-template-columns:1fr}.finder-btn{height:52px}.quick-choices{overflow:auto;flex-wrap:nowrap;padding-bottom:2px}.quick-choices a{white-space:nowrap}.dest-mini-grid{grid-template-columns:1fr 1fr}.dest-mini{padding:8px}.dest-mini-icon{width:30px;height:30px}.dest-mini strong{font-size:.64rem}.dest-mini span{font-size:.54rem}}
+</style>
+
 </head>
 <body>
 
@@ -975,6 +988,27 @@ html,body{width:100%;min-width:100%;margin:0;padding:0;overflow-x:hidden}
     <div class="scrl-dot"></div><span>Scroll</span>
   </div>
 </section>
+
+
+<section class="trip-finder-wrap" aria-label="Quick trip finder">
+  <div class="wrap">
+    <div class="trip-finder">
+      <div class="trip-finder-top">
+        <div><div class="trip-finder-label">Plan your Kashi trip</div><div class="trip-finder-title">Where would you like to begin?</div><div class="trip-finder-sub">Choose your destination, pace and group — we’ll take you to the right journey.</div></div>
+        <div class="trip-finder-label">Personalised planning · WhatsApp support</div>
+      </div>
+      <div class="trip-finder-grid">
+        <div class="finder-field"><label>Destination</label><select id="finderDestination"><option value="Kashi / Varanasi">Kashi / Varanasi</option><option value="Kashi + Ayodhya">Kashi + Ayodhya</option><option value="Kashi + Prayagraj">Kashi + Prayagraj</option><option value="Kashi + Vindhyachal & Chunar">Kashi + Vindhyachal & Chunar</option></select></div>
+        <div class="finder-field"><label>Trip length</label><select id="finderDuration"><option>2 Days</option><option>3 Days</option><option>4 Days</option><option>5 Days</option></select></div>
+        <div class="finder-field"><label>Travelling with</label><select id="finderTravellers"><option>Solo</option><option>Couple</option><option>Family</option><option>Friends</option><option>Group</option></select></div>
+        <div class="finder-field"><label>Travel date</label><input id="finderDate" type="date"></div>
+        <button class="finder-btn" type="button" onclick="sendFinderEnquiry()">Find My Journey →</button>
+      </div>
+      <div class="quick-choices"><a href="/subah-e-kashi/">2-day Kashi</a><a href="/shivnagari-kashi-yatra/">3-day Kashi Yatra</a><a href="/rang-e-banaras/">4-day Banaras</a><a href="/varanasi-ayodhya-tour/">Kashi + Ayodhya</a><a href="/varanasi-prayagraj-tour/">Kashi + Prayagraj</a></div>
+    </div>
+  </div>
+</section>
+
 <section class="offer-banner" id="raksha-offer" aria-label="Raksha Bandhan special offer">
   <div class="wrap offer-inner">
     <div class="offer-copy">
@@ -1082,6 +1116,20 @@ html,body{width:100%;min-width:100%;margin:0;padding:0;overflow-x:hidden}
     </div>
   </div>
 </section>
+
+
+<section class="plan-path" aria-label="How KashiDekho works">
+  <div class="wrap">
+    <div class="center"><div class="eyebrow" style="color:#edc949">How KashiDekho Works</div><h2 class="sec-h" style="color:#fff;margin-top:.5rem">From Idea to <em style="color:#edc949">Kashi</em></h2><div class="divider" style="margin-left:auto;margin-right:auto"></div></div>
+    <div class="plan-path-grid">
+      <div class="path-card"><div class="path-no">01</div><h3>Choose your experience</h3><p>Start with a short Kashi escape, a deeper Kashi Yatra or the complete Banaras experience.</p><b>Explore experiences →</b></div>
+      <div class="path-card"><div class="path-no">02</div><h3>Extend your journey</h3><p>Add Ayodhya, Prayagraj or Vindhyachal &amp; Chunar when you want more than Varanasi.</p><b>Build your combination →</b></div>
+      <div class="path-card"><div class="path-no">03</div><h3>Talk to a local expert</h3><p>Confirm dates, group size, pickup and inclusions directly on WhatsApp before you book.</p><b>Get a personalised quote →</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="dest-mini-strip" aria-label="Popular Kashi destinations"><div class="wrap"><div class="dest-mini-grid"><a class="dest-mini" href="#experiences"><span class="dest-mini-icon">ॐ</span><span><strong>Kashi Vishwanath</strong><span>Temple &amp; Yatra</span></span></a><a class="dest-mini" href="#destinations"><span class="dest-mini-icon">◒</span><span><strong>Ganga Ghats</strong><span>Boat &amp; Aarti</span></span></a><a class="dest-mini" href="#extensions"><span class="dest-mini-icon">↗</span><span><strong>Ayodhya</strong><span>Sacred extension</span></span></a><a class="dest-mini" href="#extensions"><span class="dest-mini-icon">✦</span><span><strong>Prayagraj</strong><span>Triveni Sangam</span></span></a></div></div></section>
 
 <section class="sec why-sec" id="why">
   <div class="wrap">
@@ -1946,5 +1994,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+
+<script id="tourplaner-finder-js">
+function sendFinderEnquiry(){
+ const d=document.getElementById('finderDestination').value, dur=document.getElementById('finderDuration').value, who=document.getElementById('finderTravellers').value, date=document.getElementById('finderDate').value||'Not selected';
+ const msg=`Hi KashiDekho! I want help planning a trip.\n\nDestination: ${d}\nTrip length: ${dur}\nTravelling with: ${who}\nPreferred date: ${date}\n\nPlease recommend the best package.`;
+ window.open('https://wa.me/918318893914?text='+encodeURIComponent(msg),'_blank');
+}
+</script>
 </body>
 </html>
