@@ -684,6 +684,42 @@ footer{background:#0F1623;color:rgba(255,255,255,.45);padding:4rem 0 2rem}
 @media(max-width:1120px){#nav{padding:0 1.2rem}.nav-logo{min-width:190px}.nav-links a{padding-left:.5rem;padding-right:.5rem}.nav-wa-link{padding:.58rem .72rem}}
 @media(max-width:900px){#nav{height:66px}.nav-logo{min-width:auto}.nav-links,.nav-wa-link{display:none}.nav-mob-btn{display:block}}
 
+
+
+/* KashiDekho homepage restructuring */
+.kb-section-label{
+  display:flex;align-items:center;gap:.65rem;
+  margin:0 auto 1.25rem;max-width:1100px;
+  font-family:Inter,sans-serif;font-size:.68rem;font-weight:800;
+  letter-spacing:.15em;text-transform:uppercase;color:#c56a2d;
+}
+.kb-section-label:after{
+  content:"";height:1px;flex:1;background:var(--bd,#e7ddd0);
+}
+.kb-extension-divider{
+  height:1px;background:linear-gradient(90deg,transparent,var(--bd,#e7ddd0),transparent);
+  margin:4.75rem 0 3.5rem;
+}
+.kb-extension-heading{text-align:center;margin-bottom:2rem}
+.kb-extension-title{
+  font-family:"Playfair Display",Georgia,serif;
+  color:var(--mn,#1f2a44);font-size:clamp(1.7rem,3vw,2.5rem);
+  line-height:1.1;margin:.45rem 0 .55rem;
+}
+.kb-extension-title em{color:var(--sf,#c56a2d);font-style:normal}
+.kb-extension-heading .sec-sub{margin:0 auto}
+.kb-packages-cta{
+  margin:2.5rem auto 0;padding-top:1.5rem;border-top:1px solid var(--bd,#e7ddd0);
+  display:flex;justify-content:center;align-items:center;gap:.45rem;
+  font-family:Inter,sans-serif;font-size:.78rem;color:var(--lt,#8c8479);
+}
+.kb-packages-cta a{color:var(--sf,#c56a2d);font-weight:800}
+@media(max-width:768px){
+  .kb-section-label{margin-bottom:1rem}
+  .kb-extension-divider{margin:3.5rem 0 2.75rem}
+  .kb-packages-cta{display:block;text-align:center;line-height:1.8}
+  .kb-packages-cta a{display:block}
+}
 </style>
 <link href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2730%27 fill=%27%231F2A44%27/%3E%3Ctext x=%2732%27 y=%2741%27 text-anchor=%27middle%27 font-family=%27Georgia%27 font-size=%2727%27 fill=%27%23D4AF37%27%3EKD%3C/text%3E%3C/svg%3E" rel="icon"/>
 <script type="application/ld+json">
@@ -900,10 +936,10 @@ html,body{width:100%;min-width:100%;margin:0;padding:0;overflow-x:hidden}
 </a>
 <ul class="nav-links">
 <li><a href="#discover">Discover</a></li>
-<li><a href="#experiences">Experiences</a></li>
+<li><a href="#explore">Explore</a></li>
 <li><a href="/varanasi-tour-packages/">Packages</a></li>
 <li><a href="/about-us/">About</a></li>
-<li><a href="#extensions">Add-ons</a></li>
+<li><a href="#explore">Add-ons</a></li>
 <li><a class="nav-plan" href="#planner">Plan Journey</a></li>
 <li><a href="#gallery">Gallery</a></li>
 <li><a href="#contact">Contact</a></li>
@@ -918,8 +954,8 @@ html,body{width:100%;min-width:100%;margin:0;padding:0;overflow-x:hidden}
 </nav>
 <div class="mob-menu" id="mobMenu">
 <a href="#discover" onclick="toggleMob()">Discover Kashi</a>
-<a href="#experiences" onclick="toggleMob()">Experiences</a>
-<a href="#extensions" onclick="toggleMob()">Journey Add-ons</a>
+<a href="#explore" onclick="toggleMob()">Explore</a>
+<a href="#explore" onclick="toggleMob()">Journey Add-ons</a>
 <a href="#planner" onclick="toggleMob()">Plan My Journey</a>
 <a href="#raksha-offer" onclick="toggleMob()">Raksha Bandhan Offer</a>
 <a href="#gallery" onclick="toggleMob()">Gallery</a>
@@ -955,7 +991,7 @@ html,body{width:100%;min-width:100%;margin:0;padding:0;overflow-x:hidden}
 <h1 class="h-h1">Beyond Sightseeing,<br/><em>Experience Banaras</em></h1>
 <p class="h-sub"><span id="typing-text"></span><span class="typing-cursor">|</span></p>
 <div class="h-ctas">
-<a class="btn btn-prim" href="#experiences">Explore Kashi →</a>
+<a class="btn btn-prim" href="#explore">Explore Kashi →</a>
 <a class="btn btn-ghost" href="https://wa.me/918318893914" target="_blank">💬 WhatsApp Us</a>
 </div>
 <div class="h-trust">
@@ -969,7 +1005,6 @@ html,body{width:100%;min-width:100%;margin:0;padding:0;overflow-x:hidden}
 <div class="scrl-dot"></div><span>Scroll</span>
 </div>
 </section>
-
 <section aria-label="Raksha Bandhan special offer" class="offer-banner" id="raksha-offer">
 <div class="wrap offer-inner">
 <div class="offer-copy">
@@ -986,29 +1021,16 @@ html,body{width:100%;min-width:100%;margin:0;padding:0;overflow-x:hidden}
 </div>
 </div>
 </section>
-<section class="discover-sec" id="discover">
-<div class="wrap">
-<div class="discover-head">
-<div><div class="eyebrow rev">Discover Kashi</div><h2 class="sec-h rev">Explore Kashi, <em>Your Way</em></h2></div>
-<p class="sec-sub rev">From sacred temples and sunrise boats to Banarasi food and nearby pilgrimage circuits, choose the kind of Kashi experience you want first.</p>
-</div>
-<div class="discover-grid">
-<a class="discover-card rev" href="#experiences"><div><div class="discover-icon">ॐ</div><span>SPIRITUAL</span><h3>Temple &amp; Kashi Yatra</h3><p>Kashi Vishwanath, Kal Bhairav, Sankat Mochan and the rituals that define the city.</p></div><b>Explore →</b></a>
-<a class="discover-card rev" href="#destinations"><div><div class="discover-icon">◒</div><span>RIVER &amp; GHATS</span><h3>Ganga &amp; Banaras</h3><p>Sunrise boat rides, ancient ghats, evening Aarti and the atmosphere of the old city.</p></div><b>Explore →</b></a>
-<a class="discover-card rev" href="#destinations"><div><div class="discover-icon">✦</div><span>CULTURE</span><h3>Food, Galis &amp; Craft</h3><p>Banarasi food trails, silk weaving, old lanes, local markets and living traditions.</p></div><b>Explore →</b></a>
-<a class="discover-card rev" href="#extensions"><div><div class="discover-icon">↗</div><span>BEYOND KASHI</span><h3>Sacred Day Extensions</h3><p>Extend your journey to Ayodhya, Prayagraj or Vindhyachal &amp; Chunar.</p></div><b>Explore →</b></a>
-</div>
-</div>
-</section>
-<section class="sec" id="experiences" style="background:#fff">
+
+<section class="sec" id="explore" style="background:#fff">
 <div class="wrap">
 <div class="center" style="margin-bottom:3.5rem">
 <div class="eyebrow rev">Our Experiences</div>
-<h2 class="sec-h rev">The Heart of<br/><em>Every Journey</em></h2>
+<h2 class="sec-h rev">Explore Kashi &amp; Beyond</h2>
 <div class="divider rev"></div>
-<p class="sec-sub rev">Three core Banaras experiences, each crafted with depth. Start here — then extend to nearby sacred destinations.</p>
+<p class="sec-sub rev">Start with a signature Kashi experience, then extend your journey to nearby sacred destinations.</p>
 </div>
-<div class="exp-grid">
+<div class="kb-section-label rev">Core Kashi Experiences</div><div class="exp-grid">
 <div class="exp-card rev" onclick="openTour('subah-e-kashi')">
 <div class="exp-img"><img alt="Subah-e-Kashi Varanasi ghats sunrise tour" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1564509027875-ba1c00cf09c1?w=700&amp;auto=format&amp;fit=crop&amp;q=85&amp;ixlib=rb-4.0.3"/><div class="exp-rib rib-mn">2 Days</div></div>
 <div class="exp-body">
@@ -1040,36 +1062,8 @@ html,body{width:100%;min-width:100%;margin:0;padding:0;overflow-x:hidden}
 </div>
 </div>
 </div>
-
 </div>
-</section>
-
-
-<section class="sec why-sec" id="why">
-<div class="wrap">
-<div class="center" style="margin-bottom:3.5rem">
-<div class="eyebrow rev">Why Choose Us</div>
-<h2 class="sec-h rev">Not Just a Tour.<br/><em>A Real Experience.</em></h2>
-<div class="divider rev"></div>
-</div>
-<div class="why-grid">
-<div class="why-card rev"><div class="why-ic">🏛</div><h4 class="why-t">Local Expertise</h4><p class="why-d">Born and raised in Banaras. We know every ghat, gali and temple by heart — and by story.</p></div>
-<div class="why-card rev" style="transition-delay:.08s"><div class="why-ic">🎨</div><h4 class="why-t">Personalized Journeys</h4><p class="why-d">No generic itineraries. Every trip is shaped around your interests, pace and spiritual needs.</p></div>
-<div class="why-card rev" style="transition-delay:.16s"><div class="why-ic">🕉</div><h4 class="why-t">Spiritual Experiences</h4><p class="why-d">Genuine connections with temples, rituals, priests and the living traditions of Kashi.</p></div>
-<div class="why-card rev" style="transition-delay:.24s"><div class="why-ic">🛵</div><h4 class="why-t">Comfortable Support</h4><p class="why-d">From pickup to drop, accommodation to temple queues — we handle everything.</p></div>
-<div class="why-card rev" style="transition-delay:.32s"><div class="why-ic">👥</div><h4 class="why-t">Flexible Groups</h4><p class="why-d">Solo travellers, couples, families, large pilgrimages. We always adapt.</p></div>
-</div>
-</div>
-</section>
-<section class="sec ext-sec" id="extensions">
-<div class="wrap ext-wrap">
-<div class="center" style="margin-bottom:3.5rem">
-<div class="eyebrow rev">Journey Add-ons</div>
-<h2 class="sec-h rev">Banaras &amp; <em>Beyond</em></h2>
-<div class="divider rev"></div>
-<p class="sec-sub rev" style="color:rgba(255,255,255,.5)">Every core experience can be extended to nearby sacred destinations.</p>
-</div>
-<div class="ext-grid">
+<div class="kb-extension-divider"></div><div class="kb-extension-heading"><div class="eyebrow rev">Extend Your Journey</div><h3 class="kb-extension-title rev">Take Kashi <em>Further</em></h3><p class="sec-sub rev">Add Ayodhya, Prayagraj or Vindhyachal &amp; Chunar to your Kashi journey.</p></div><div class="ext-grid">
 <div class="ext-card rev" onclick="openTour('rang-ayodhya')">
 <div class="ext-img"><img alt="Ayodhya Ram Mandir tour from Varanasi KashiDekho" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1655885333110-22b955d35667?w=700&amp;auto=format&amp;fit=crop&amp;q=85&amp;ixlib=rb-4.0.3"/></div>
 <div class="ext-body">
@@ -1100,8 +1094,21 @@ html,body{width:100%;min-width:100%;margin:0;padding:0;overflow-x:hidden}
 <div style="display:flex;align-items:center;justify-content:space-between"><div class="ext-from">from <span data-rate="kashi-ayodhya-2n">₹9,999</span> <sub>/person*</sub></div><span style="font-size:.68rem;color:rgba(212,175,55,.65);font-weight:600">2N/3D → 4N/5D ›</span></div>
 </div>
 </div>
+</div><div class="kb-packages-cta"><span>Looking for a different combination?</span><a href="/varanasi-tour-packages/">Explore all 12 curated journeys →</a></div></section>
+<section class="sec why-sec" id="why">
+<div class="wrap">
+<div class="center" style="margin-bottom:3.5rem">
+<div class="eyebrow rev">Why Choose Us</div>
+<h2 class="sec-h rev">Not Just a Tour.<br/><em>A Real Experience.</em></h2>
+<div class="divider rev"></div>
 </div>
-<p style="text-align:center;margin-top:1.8rem;font-size:.76rem;color:rgba(255,255,255,.28)">Each extension available with all three core experiences. <a href="#all-packages" style="color:rgba(212,175,55,.65);font-weight:600">See all 12 packages ›</a></p>
+<div class="why-grid">
+<div class="why-card rev"><div class="why-ic">🏛</div><h4 class="why-t">Local Expertise</h4><p class="why-d">Born and raised in Banaras. We know every ghat, gali and temple by heart — and by story.</p></div>
+<div class="why-card rev" style="transition-delay:.08s"><div class="why-ic">🎨</div><h4 class="why-t">Personalized Journeys</h4><p class="why-d">No generic itineraries. Every trip is shaped around your interests, pace and spiritual needs.</p></div>
+<div class="why-card rev" style="transition-delay:.16s"><div class="why-ic">🕉</div><h4 class="why-t">Spiritual Experiences</h4><p class="why-d">Genuine connections with temples, rituals, priests and the living traditions of Kashi.</p></div>
+<div class="why-card rev" style="transition-delay:.24s"><div class="why-ic">🛵</div><h4 class="why-t">Comfortable Support</h4><p class="why-d">From pickup to drop, accommodation to temple queues — we handle everything.</p></div>
+<div class="why-card rev" style="transition-delay:.32s"><div class="why-ic">👥</div><h4 class="why-t">Flexible Groups</h4><p class="why-d">Solo travellers, couples, families, large pilgrimages. We always adapt.</p></div>
+</div>
 </div>
 </section>
 
@@ -1126,21 +1133,10 @@ html,body{width:100%;min-width:100%;margin:0;padding:0;overflow-x:hidden}
 </div>
 </div>
 </section>
-<section class="sec" id="all-packages" style="background:var(--iv)">
-<div class="wrap package-gateway">
-<div class="gateway-copy">
-<div class="eyebrow">12 Curated Journeys</div>
-<h2 class="sec-h">Find the <em>Right Journey</em></h2>
-<p class="sec-sub">Three core Kashi experiences, with options to extend your trip to Ayodhya, Prayagraj or Vindhyachal &amp; Chunar.</p>
-</div>
-<div class="gateway-actions">
-<a class="btn btn-prim" href="/varanasi-tour-packages/">View All Packages →</a>
-<a class="gateway-text" href="#planner">Not sure what fits? Use the planner →</a>
-</div>
-</div></section>
+
 <section class="sec seo-search-section" id="varanasi-tour-packages">
 <div class="wrap seo-compact">
-<div><div class="eyebrow">Plan Your Visit</div><h2 class="sec-h">Varanasi Tour Packages &amp; <em>Kashi Yatra</em></h2></div>
+<div><div class="eyebrow">Plan Your Visit</div><h2 class="sec-h">Explore All Varanasi Tour Packages</h2></div>
 <div><p>Explore curated Varanasi tour packages for 2, 3 and 4 days, with Kashi Vishwanath, Ganga Aarti, sunrise boat rides, heritage walks and optional Ayodhya, Prayagraj or Vindhyachal extensions.</p><div class="seo-mini-links"><a href="/varanasi-tour-packages/">All Packages</a><a href="/kashi-yatra/">Kashi Yatra</a><a href="/varanasi-ayodhya-tour/">Kashi + Ayodhya</a><a href="/varanasi-prayagraj-tour/">Kashi + Prayagraj</a></div></div>
 </div></section>
 <section class="sec" id="faq" style="background:#fff">
@@ -1164,7 +1160,6 @@ html,body{width:100%;min-width:100%;margin:0;padding:0;overflow-x:hidden}
 <a class="btn btn-prim" href="/about-us/">Meet the Founder →</a>
 </div>
 </section>
-
 <section class="sec" id="gallery" style="background:var(--iv)">
 <div class="wrap">
 <div class="center" style="margin-bottom:3rem">
@@ -1318,9 +1313,9 @@ html,body{width:100%;min-width:100%;margin:0;padding:0;overflow-x:hidden}
 <li><a href="#" onclick="openTour('subah-e-kashi');return false">Subah-e-Kashi</a></li>
 <li><a href="#" onclick="openTour('shivnagari-kashi');return false">Shivnagari Kashi Yatra</a></li>
 <li><a href="#" onclick="openTour('rang-e-banaras');return false">Rang-e-Banaras</a></li>
-<li><a href="#extensions">+ Ayodhya</a></li>
-<li><a href="#extensions">+ Prayagraj</a></li>
-<li><a href="#extensions">+ Vindhyachal &amp; Chunar</a></li>
+<li><a href="#explore">+ Ayodhya</a></li>
+<li><a href="#explore">+ Prayagraj</a></li>
+<li><a href="#explore">+ Vindhyachal &amp; Chunar</a></li>
 </ul>
 </div>
 <div>

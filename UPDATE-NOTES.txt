@@ -12,3 +12,11 @@ KashiDekho update
    - Offer remains linked to the 12 package pricing logic.
 
 3. Existing homepage package cards remain linked to their dedicated package pages.
+
+
+HOMEPAGE RESTRUCTURE - 2026-08-23
+- Removed redundant Discover Kashi section.
+- Merged Core Kashi Experiences and Journey Extensions into one Explore Kashi & Beyond section.
+- Removed the duplicate 12 Curated Journeys homepage teaser.
+- Kept the SEO-focused Varanasi Tour Packages section as the gateway to the full packages page.
+- Preserved package pages, planner, FAQ, About Us, gallery, enquiry, robots.txt, sitemap.xml and vercel.json.
