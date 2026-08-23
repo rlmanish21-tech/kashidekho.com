@@ -772,6 +772,91 @@ html,body{width:100%;min-width:100%;margin:0;padding:0;overflow-x:hidden}
   .popts,.popts.c2,.popts.c3{display:grid !important;grid-template-columns:1fr !important}
 }
 </style>
+
+<style id="kashidekho-mobile-sections-final">
+/* FINAL MOBILE FIX: package overview + enquiry */
+@media (max-width: 768px){
+  /* Package overview: never keep the desktop two-column composition on phones */
+  #all-packages{padding:3.6rem 0 !important;overflow:hidden}
+  .package-overview{
+    display:flex !important;
+    flex-direction:column !important;
+    width:100% !important;
+    max-width:100% !important;
+    gap:1.6rem !important;
+    align-items:stretch !important;
+    text-align:center !important;
+  }
+  .package-overview .overview-copy{
+    width:100% !important;
+    max-width:100% !important;
+  }
+  .package-overview .sec-h{font-size:clamp(2rem,10vw,2.8rem) !important;line-height:1.05 !important}
+  .package-overview .sec-sub{font-size:.9rem !important;line-height:1.7 !important;margin-left:auto !important;margin-right:auto !important;max-width:32rem !important}
+  .package-overview .divider{margin-left:auto !important;margin-right:auto !important}
+  .package-overview .package-cta{justify-content:center !important}
+  .package-overview .package-cta .btn{width:100% !important;max-width:320px !important;justify-content:center !important}
+  .package-map{
+    width:100% !important;
+    max-width:520px !important;
+    margin:0 auto !important;
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:.7rem !important;
+  }
+  .package-tile{width:100% !important;box-sizing:border-box !important;min-height:76px !important;text-align:left !important}
+  .package-note{text-align:center !important}
+
+  /* Enquiry/contact: single-column, edge-to-edge within the phone */
+  #contact{overflow:hidden !important}
+  .ct-inner{
+    width:100% !important;
+    max-width:none !important;
+    display:flex !important;
+    flex-direction:column !important;
+    gap:1.8rem !important;
+    align-items:stretch !important;
+  }
+  .ct-inner > *{width:100% !important;min-width:0 !important;max-width:none !important;box-sizing:border-box !important}
+  .ct-form{width:100% !important;box-sizing:border-box !important;padding:1.15rem !important;border-radius:12px !important}
+  .cf-topbar{margin:-1.15rem -1.15rem 1.15rem !important}
+  .cf-row{display:grid !important;grid-template-columns:1fr !important;gap:.7rem !important;margin-bottom:.7rem !important}
+  .cf-grp{width:100% !important;min-width:0 !important}
+  .cf-inp,.cf-sel,.cf-ta{width:100% !important;max-width:100% !important;box-sizing:border-box !important;font-size:16px !important}
+  .cf-ta{min-height:110px !important}
+  .cf-sub-btn{width:100% !important;min-height:50px !important;font-size:.78rem !important;line-height:1.35 !important}
+  .ct-chs{gap:.65rem !important}
+  .ct-ch{padding:.8rem .85rem !important}
+
+  /* Package picker opens as a phone-sized modal, not a clipped dropdown */
+  .pkg-menu{
+    position:fixed !important;
+    left:50% !important;
+    top:50% !important;
+    width:calc(100vw - 28px) !important;
+    max-width:520px !important;
+    max-height:82vh !important;
+    transform:translate(-50%,-50%) !important;
+    z-index:1000 !important;
+  }
+  .pkg-groups{max-height:calc(82vh - 70px) !important;overflow-y:auto !important;-webkit-overflow-scrolling:touch}
+  .pkg-options{grid-template-columns:1fr !important}
+  .pkg-option{min-height:64px !important;padding:.7rem .75rem !important}
+
+  /* Prevent long package labels/buttons from creating horizontal overflow */
+  .pkg-option b,.pkg-option small,.pkg-custom b,.pkg-custom small{overflow-wrap:anywhere}
+}
+
+@media (max-width:480px){
+  .package-overview .eyebrow{font-size:.58rem !important}
+  .package-overview .sec-h{font-size:2.15rem !important}
+  .package-overview .sec-sub{font-size:.86rem !important}
+  .package-tile{padding:.85rem !important}
+  .ct-form{padding:1rem !important}
+  .cf-topbar{margin:-1rem -1rem 1rem !important}
+}
+</style>
+
 </head>
 <body>
 
@@ -1247,7 +1332,7 @@ html,body{width:100%;min-width:100%;margin:0;padding:0;overflow-x:hidden}
   <div class="wrap">
     <div class="ft-grid">
       <div>
-        <div class="nav-logo" style="margin-bottom:.8rem"><div class="nav-lmark">BT</div><div class="nav-ltext" style="--mn:#fff">KashiDekho<span>Experience Kashi</span></div></div>
+        <div class="nav-logo" style="margin-bottom:.8rem"><div class="nav-lmark">KD</div><div class="nav-ltext" style="--mn:#fff">KashiDekho<span>Experience Kashi</span></div></div>
         <p class="ft-tagline">"Beyond Sightseeing,<br>Experience Banaras"</p>
         <div class="ft-cl"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.22 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.66-.65a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>+91 83188 93914</div>
         <div class="ft-cl"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span data-contact="email">help@kashidekho.com</span></div>
