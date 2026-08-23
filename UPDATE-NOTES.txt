@@ -1,0 +1,14 @@
+KashiDekho update
+
+1. Tour detail modal redesigned:
+   - Sticky booking footer stays visible while itinerary scrolls.
+   - Discounted Raksha Bandhan price is shown in the modal.
+   - Book This Tour and WhatsApp actions stay accessible.
+   - Improved mobile modal sizing and button layout.
+
+2. Raksha Bandhan offer:
+   - Converted the large campaign card into a compact promotional strip directly below the hero.
+   - Responsive on mobile.
+   - Offer remains linked to the 12 package pricing logic.
+
+3. Existing homepage package cards remain linked to their dedicated package pages.

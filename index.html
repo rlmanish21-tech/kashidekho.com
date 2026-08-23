@@ -208,21 +208,22 @@ button{cursor:pointer;font-family:"Inter",sans-serif}
 .modal-itin{list-style:none;counter-reset:itin;display:flex;flex-direction:column;gap:.65rem}
 .modal-itin li{font-size:.82rem;color:var(--mt);line-height:1.6;padding:.68rem 1rem .68rem 1.1rem;border-left:2px solid var(--gd);background:rgba(212,175,55,.04);border-radius:0 6px 6px 0;counter-increment:itin;position:relative}
 .modal-itin li::before{content:"Day " counter(itin);position:absolute;left:-1px;top:-.5rem;background:var(--gd);color:var(--mn);font-size:.53rem;font-weight:700;padding:.1rem .4rem;border-radius:2px;letter-spacing:.07em}
-.modal-pf{
-  position:sticky;bottom:0;z-index:5;display:flex;align-items:center;justify-content:space-between;
-  flex-wrap:wrap;gap:1rem;margin-top:1.5rem;padding:1rem 1.15rem;
-  background:rgba(247,244,238,.97);backdrop-filter:blur(8px);
-  border-radius:10px;border:1px solid var(--bd);box-shadow:0 -8px 22px rgba(25,35,56,.08);
+.modal-footer{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.9rem 1.15rem;flex-shrink:0;background:rgba(248,244,236,.98);
+  border-top:1px solid var(--bd);box-shadow:0 -8px 22px rgba(25,35,56,.08);
+  backdrop-filter:blur(10px);
 }
-display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-top:1.6rem;padding:1.2rem;background:var(--iv);border-radius:8px;border:1px solid var(--bd)}
-.mpf-lbl{font-size:.61rem;color:var(--lt);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem}
-.mpf-price{font-family:"Playfair Display",serif;font-size:1.55rem;font-weight:700;color:var(--mn)}
-.mpf-price sub{font-family:"Inter",sans-serif;font-size:.4em;font-weight:400;color:var(--lt)}
-.mpf-tc{font-size:.63rem;color:var(--lt);margin-top:.2rem}
-.mpf-acts{display:flex;gap:.55rem;flex-wrap:wrap}
-.mpf-book{background:var(--sf);color:#fff;border:none;padding:.68rem 1.5rem;border-radius:5px;font-size:.8rem;font-weight:700;cursor:pointer;transition:all .25s;box-shadow:0 4px 16px rgba(197,106,45,.28)}
+.modal-footer[hidden]{display:none}
+.modal-footer-price{min-width:0}
+.mpf-lbl{font-size:.59rem;color:var(--lt);text-transform:uppercase;letter-spacing:.09em;margin-bottom:.15rem}
+.mpf-price{font-family:"Playfair Display",serif;font-size:1.45rem;font-weight:700;color:var(--mn);line-height:1.05}
+.mpf-price sub{font-family:"Inter",sans-serif;font-size:.42em;font-weight:400;color:var(--lt)}
+.mpf-tc{font-size:.58rem;color:var(--lt);margin-top:.18rem}
+.mpf-acts{display:flex;gap:.55rem;flex-wrap:wrap;flex-shrink:0}
+.mpf-book{background:var(--sf);color:#fff;border:none;padding:.68rem 1.35rem;border-radius:6px;font-size:.78rem;font-weight:700;cursor:pointer;transition:all .25s;box-shadow:0 4px 16px rgba(197,106,45,.28);text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
 .mpf-book:hover{background:var(--sf-l);transform:translateY(-1px)}
-.mpf-wa{background:#25D366;color:#fff;border:none;padding:.68rem 1.3rem;border-radius:5px;font-size:.8rem;font-weight:700;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:.4rem;text-decoration:none}
+.mpf-wa{background:#25D366;color:#fff;border:none;padding:.68rem 1.15rem;border-radius:6px;font-size:.78rem;font-weight:700;transition:all .2s;display:inline-flex;align-items:center;gap:.4rem;text-decoration:none}
 .mpf-wa:hover{background:#1ebe5d}
 
 /* TOAST */
@@ -658,15 +659,19 @@ footer{background:#0F1623;color:rgba(255,255,255,.45);padding:4rem 0 2rem}
 @media(max-width:600px){.seo-local-copy{padding:1rem 1.2rem;font-size:.62rem}}
 
 @media(max-width:700px){
-  .modal-bg{padding:.5rem}
-  .modal-box{width:100%;height:min(92vh,760px);border-radius:14px}
-  .modal-hero{height:145px}
-  .modal-scroll{padding:1.2rem 1rem 1.5rem}
-  .modal-title{font-size:1.4rem}
+  .modal-bg{padding:.35rem}
+  .modal-box{width:100%;height:min(94vh,780px);border-radius:14px}
+  .modal-hero{height:125px}
+  .modal-scroll{padding:1.05rem .95rem 1.25rem}
+  .modal-title{font-size:1.32rem}
+  .modal-sub{font-size:.76rem;margin-bottom:.85rem}
   .modal-hl,.modal-ig{grid-template-columns:1fr}
-  .modal-pf{align-items:stretch;flex-direction:column}
-  .mpf-acts{width:100%}
-  .mpf-book,.mpf-wa{flex:1}
+  .modal-footer{padding:.75rem .8rem;gap:.7rem;align-items:center}
+  .modal-footer-price{min-width:105px}
+  .mpf-price{font-size:1.25rem}
+  .mpf-tc{font-size:.52rem;max-width:145px}
+  .mpf-acts{flex:1;width:auto}
+  .mpf-book,.mpf-wa{flex:1;min-width:0;padding:.68rem .55rem;font-size:.72rem}
 }
 
 /* KASHIDEKHO.COM BRAND NAVIGATION */
@@ -859,18 +864,18 @@ html,body{width:100%;min-width:100%;margin:0;padding:0;overflow-x:hidden}
 
 
 <style id="raksha-offer-styles">
-/* Raksha Bandhan campaign */
-.offer-banner{background:linear-gradient(135deg,#1f2a44 0%,#293754 62%,#c56a2d 160%);color:#fff;position:relative;overflow:hidden}
-.offer-banner:before{content:"";position:absolute;inset:auto -80px -150px auto;width:360px;height:360px;border:1px solid rgba(212,175,55,.3);border-radius:50%;box-shadow:0 0 0 55px rgba(212,175,55,.05),0 0 0 110px rgba(212,175,55,.035)}
-.offer-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:2rem 0}
-.offer-copy{display:flex;align-items:center;gap:1.2rem}.offer-icon{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:rgba(212,175,55,.13);border:1px solid rgba(212,175,55,.35);font-size:1.55rem;flex:0 0 auto}
-.offer-ey{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:#e8c84a;font-weight:800;margin-bottom:.3rem}.offer-title{font:700 clamp(1.35rem,2.8vw,2rem)/1.1 "Playfair Display",Georgia,serif;margin:0}.offer-title em{color:#edc949}.offer-sub{margin:.35rem 0 0;color:rgba(255,255,255,.72);font-size:.78rem;line-height:1.5}.offer-code{display:inline-block;margin-left:.4rem;padding:.2rem .45rem;border:1px dashed rgba(255,255,255,.35);border-radius:4px;color:#fff;font-weight:800;letter-spacing:.08em}
-.offer-cta{display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;justify-content:flex-end}.offer-saving{text-align:right}.offer-saving strong{display:block;color:#edc949;font:700 1.35rem Georgia,serif}.offer-saving span{font-size:.64rem;color:rgba(255,255,255,.62)}
-.offer-btn{display:inline-flex;align-items:center;gap:.35rem;background:#c56a2d;color:#fff;padding:.78rem 1.05rem;border-radius:6px;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;box-shadow:0 8px 24px rgba(0,0,0,.16)}
-.offer-btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
-.price-offer{display:flex;align-items:baseline;gap:.4rem;flex-wrap:wrap}.price-old{text-decoration:line-through;color:#9a8e7e;font-size:.76rem;font-weight:500}.price-new{color:#c56a2d;font-weight:800}.offer-badge{display:inline-block;background:#c56a2d;color:#fff;border-radius:4px;padding:.2rem .38rem;font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;font-weight:800;margin-left:.3rem;vertical-align:middle}
-.exp-actions{display:flex;gap:.5rem;align-items:center}.exp-actions .exp-btn{flex:1}.exp-wa{display:inline-flex;align-items:center;justify-content:center;width:42px;height:38px;border:1px solid #20c866;color:#168e49;background:#effcf4;border-radius:6px;font-size:1rem} .exp-wa:hover{background:#20c866;color:#fff}
-@media(max-width:760px){.offer-inner{align-items:flex-start;flex-direction:column;padding:1.55rem 0;gap:1rem}.offer-copy{align-items:flex-start}.offer-icon{width:48px;height:48px;font-size:1.25rem}.offer-cta{width:100%;justify-content:space-between}.offer-saving{text-align:left}.offer-btn{flex:1;justify-content:center}.exp-actions{width:100%}.exp-actions .exp-btn{min-width:0}}
+/* Raksha Bandhan campaign — compact conversion strip */
+.offer-banner{background:linear-gradient(100deg,#1f2a44 0%,#273652 65%,#c56a2d 145%);color:#fff;position:relative;overflow:hidden;border-top:1px solid rgba(212,175,55,.16);border-bottom:1px solid rgba(212,175,55,.16)}
+.offer-banner:before{content:"";position:absolute;right:-100px;top:-170px;width:390px;height:390px;border:1px solid rgba(212,175,55,.22);border-radius:50%;box-shadow:0 0 0 55px rgba(212,175,55,.04),0 0 0 110px rgba(212,175,55,.025)}
+.offer-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:1rem 0}
+.offer-copy{display:flex;align-items:center;gap:.85rem;min-width:0}.offer-icon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:rgba(212,175,55,.13);border:1px solid rgba(212,175,55,.35);font-size:1.15rem;flex:0 0 auto}
+.offer-ey{font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:#e8c84a;font-weight:800;margin-bottom:.12rem}.offer-title{font:700 clamp(1.05rem,2vw,1.45rem)/1.12 "Playfair Display",Georgia,serif;margin:0}.offer-title em{color:#edc949}.offer-sub{margin:.18rem 0 0;color:rgba(255,255,255,.7);font-size:.68rem;line-height:1.35}.offer-code{display:inline-block;margin-left:.4rem;padding:.15rem .4rem;border:1px dashed rgba(255,255,255,.35);border-radius:4px;color:#fff;font-weight:800;letter-spacing:.08em}
+.offer-cta{display:flex;align-items:center;gap:.75rem;flex-wrap:nowrap;justify-content:flex-end;flex:0 0 auto}.offer-saving{text-align:right}.offer-saving strong{display:block;color:#edc949;font:700 1.05rem Georgia,serif}.offer-saving span{font-size:.56rem;color:rgba(255,255,255,.6)}
+.offer-btn{display:inline-flex;align-items:center;justify-content:center;gap:.35rem;background:#c56a2d;color:#fff;padding:.65rem .9rem;border-radius:5px;font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;box-shadow:0 6px 18px rgba(0,0,0,.16);white-space:nowrap;text-decoration:none}.offer-btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.price-old{text-decoration:line-through;color:#9a8e7e;font-size:.76rem;font-weight:500}.price-new{color:#c56a2d;font-weight:800}.offer-badge{display:inline-block;background:#c56a2d;color:#fff;border-radius:4px;padding:.2rem .38rem;font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;font-weight:800;margin-left:.3rem;vertical-align:middle}
+.exp-actions{display:flex;gap:.5rem;align-items:center}.exp-actions .exp-btn{flex:1}.exp-wa{display:inline-flex;align-items:center;justify-content:center;width:42px;height:38px;border:1px solid #20c866;color:#168e49;background:#effcf4;border-radius:6px;font-size:1rem}.exp-wa:hover{background:#20c866;color:#fff}
+@media(max-width:760px){.offer-inner{align-items:center;flex-direction:row;padding:.8rem 1rem;gap:.65rem}.offer-copy{align-items:center;flex:1}.offer-icon{width:36px;height:36px;font-size:1rem}.offer-ey{font-size:.48rem}.offer-title{font-size:1rem}.offer-sub{font-size:.58rem}.offer-cta{gap:.45rem}.offer-saving{display:none}.offer-btn{padding:.58rem .65rem;font-size:.58rem}.exp-actions{width:100%}.exp-actions .exp-btn{min-width:0}}
+@media(max-width:430px){.offer-inner{padding:.72rem .85rem}.offer-title{font-size:.92rem}.offer-sub{display:none}.offer-btn{font-size:.55rem;padding:.55rem .58rem}.offer-icon{width:32px;height:32px}}
 </style>
 </head>
 <body>
@@ -905,6 +910,7 @@ html,body{width:100%;min-width:100%;margin:0;padding:0;overflow-x:hidden}
   <a href="#experiences" onclick="toggleMob()">Experiences</a>
   <a href="#extensions" onclick="toggleMob()">Journey Add-ons</a>
   <a href="#planner" onclick="toggleMob()">Plan My Journey</a>
+  <a href="#raksha-offer" onclick="toggleMob()">Raksha Bandhan Offer</a>
   
   <a href="#gallery" onclick="toggleMob()">Gallery</a>
   <a href="#contact" onclick="toggleMob()">Contact</a>
@@ -918,6 +924,17 @@ html,body{width:100%;min-width:100%;margin:0;padding:0;overflow-x:hidden}
       <h2 class="modal-title" id="mTitle"></h2>
       <p class="modal-sub" id="mSub"></p>
       <div id="mBody"></div>
+    </div>
+    <div class="modal-footer" id="mFooter" hidden>
+      <div class="modal-footer-price">
+        <div class="mpf-lbl">Starting Price</div>
+        <div class="mpf-price" id="mPrice"></div>
+        <div class="mpf-tc">*Indicative price. Contact us for a confirmed quote.</div>
+      </div>
+      <div class="mpf-acts">
+        <a class="mpf-book" id="mBook" href="#contact">Book This Tour</a>
+        <a class="mpf-wa" id="mWa" href="#" target="_blank" rel="noopener">&#x1F4AC; WhatsApp</a>
+      </div>
     </div>
   </div>
 </div>
@@ -951,7 +968,7 @@ html,body{width:100%;min-width:100%;margin:0;padding:0;overflow-x:hidden}
       <div>
         <div class="offer-ey">Raksha Bandhan Special</div>
         <h2 class="offer-title">Celebrate Kashi Together — <em>10% OFF</em></h2>
-        <p class="offer-sub">Save 10% on every KashiDekho tour package for a limited period. Offer prices are shown across eligible packages.</p>
+        <p class="offer-sub">Save 10% on every tour package for a limited period. Discounted prices are shown on package cards and details.</p>
       </div>
     </div>
     <div class="offer-cta">
@@ -1601,6 +1618,8 @@ function openModal(img,title,sub,body){
   const hero=document.getElementById('mHero');
   const image=document.getElementById('mImg');
   const scroll=document.querySelector('.modal-scroll');
+  const footer=document.getElementById('mFooter');
+  if(footer) footer.hidden=true;
 
   hero.classList.remove('no-image');
   hero.style.height='190px';
@@ -1644,10 +1663,26 @@ function openTour(id){
   const itin=t.itin.map(d=>`<li>${d}</li>`).join('');
   const inc=t.inc.map(i=>`<div class="modal-ii inc">${i}</div>`).join('');
   const exc=t.exc.map(i=>`<div class="modal-ii exc">${i}</div>`).join('');
-  openModal(t.img,t.name,`${t.days} · Starting from ${t.price}/person`,`<p class="modal-text">${t.desc}</p><div class="modal-div"></div><div class="modal-st">Day-by-Day Itinerary</div><ol class="modal-itin">${itin}</ol><div class="modal-div"></div><div class="modal-st">What’s Included</div><div class="modal-ig">${inc}</div><div class="modal-st" style="margin-top:1rem">Not Included</div><div class="modal-ig">${exc}</div><div class="modal-pf"><div><div class="mpf-lbl">Starting Price</div><div class="mpf-price">${t.price} <sub>${t.per}</sub></div><div class="mpf-tc">*Subject to change. Contact us for confirmed quote.</div></div><div class="mpf-acts"><button class="mpf-book" onclick="closeModal();setTimeout(()=>document.getElementById('contact').scrollIntoView({behavior:'smooth'}),250)">Book This Tour</button><a class="mpf-wa" href="${waLink(packageWhatsAppMessage(t.name, TOUR_RATES[t.id]))}" target="_blank" rel="noopener">&#x1F4AC; WhatsApp</a></div></div>`);
+  const discounted=offerPrice(id);
+  const priceHtml=RAKSHA_BANDHAN_OFFER.active
+    ? `<span class="price-old">${money(TOUR_RATES[id])}</span> <span class="price-new">${money(discounted)}</span> <sub>/${t.per.replace('per person*','person')}</sub>`
+    : `${money(TOUR_RATES[id])} <sub>/${t.per.replace('per person*','person')}</sub>`;
+
+  openModal(t.img,t.name,`${t.days} · ${RAKSHA_BANDHAN_OFFER.active ? 'Raksha Bandhan offer price' : 'Starting price'}`,`<p class="modal-text">${t.desc}</p><div class="modal-div"></div><div class="modal-st">Day-by-Day Itinerary</div><ol class="modal-itin">${itin}</ol><div class="modal-div"></div><div class="modal-st">What’s Included</div><div class="modal-ig">${inc}</div><div class="modal-st" style="margin-top:1rem">Not Included</div><div class="modal-ig">${exc}</div>`);
+
+  const footer=document.getElementById('mFooter');
+  const price=document.getElementById('mPrice');
+  const book=document.getElementById('mBook');
+  const wa=document.getElementById('mWa');
+  footer.hidden=false;
+  price.innerHTML=priceHtml;
+  book.href='#contact';
+  book.onclick=(e)=>{e.preventDefault();closeModal();setTimeout(()=>document.getElementById('contact').scrollIntoView({behavior:'smooth'}),180)};
+  wa.href=waLink(packageWhatsAppMessage(t.name, discounted));
 }
 function openPhoto(src,cap){
   openModal(src,cap,'KashiDekho — Gallery','');
+  document.getElementById('mFooter').hidden=true;
   const hero=document.getElementById('mHero');
   const img=document.getElementById('mImg');
   hero.style.height='auto';
