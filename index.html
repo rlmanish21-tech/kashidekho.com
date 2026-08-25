@@ -10,6 +10,8 @@
 <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
 <meta content="KashiDekho.com" name="author"/>
 <meta content="#1F2A44" name="theme-color"/>
+<link href="/favicon.png" rel="icon" type="image/png"/>
+<link href="/favicon.png" rel="apple-touch-icon"/>
 <!-- Open Graph -->
 <meta content="website" property="og:type"/>
 <meta content="KashiDekho" property="og:site_name"/>
@@ -32,6 +34,7 @@
   "@id": "https://kashidekho.com/#business",
   "name": "KashiDekho",
   "url": "https://kashidekho.com/",
+  "logo": "https://kashidekho.com/kashidekho-lockup.png",
   "description": "Curated Varanasi and Kashi Yatra experiences including Ganga Aarti, temple visits, heritage journeys and tours to Ayodhya, Prayagraj and Vindhyachal.",
   "telephone": "+91 83188 93914",
   "email": "help@kashidekho.com",
@@ -125,7 +128,8 @@ button{cursor:pointer;font-family:"Inter",sans-serif}
 #nav{position:fixed;top:0;left:0;right:0;z-index:800;height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;background:rgba(248,244,236,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(226,217,200,.5);transition:box-shadow .3s}
 #nav.sc{box-shadow:var(--sh-md)}
 .nav-logo{display:flex;align-items:center;gap:.7rem}
-.nav-lmark{width:36px;height:36px;background:var(--mn);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Playfair Display",serif;font-size:.95rem;font-weight:700;color:var(--gd);flex-shrink:0}
+.nav-lmark{width:42px;height:42px;background:var(--mn);border-radius:50%;display:grid;place-items:center;overflow:hidden;flex:0 0 auto;border:1px solid rgba(201,162,39,.35);box-shadow:0 4px 14px rgba(23,38,64,.12)}
+.nav-lmark img{width:58px;height:58px;max-width:none;object-fit:contain;display:block}
 .nav-ltext{font-family:"Playfair Display",serif;font-size:1.05rem;font-weight:700;color:var(--mn);line-height:1.1}
 .nav-ltext span{display:block;font-family:"Inter",sans-serif;font-size:.58rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--sf)}
 .nav-links{display:flex;align-items:center;gap:.3rem;list-style:none}
@@ -487,6 +491,7 @@ button{cursor:pointer;font-family:"Inter",sans-serif}
 
 /* FOOTER */
 footer{background:#0F1623;color:rgba(255,255,255,.45);padding:4rem 0 2rem}
+.footer-brand-lockup{width:min(260px,100%);margin-bottom:1rem}.footer-brand-lockup img{width:100%;height:auto;display:block}
 .ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
 .ft-tagline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:.98rem;color:rgba(255,255,255,.3);line-height:1.65;margin-top:.5rem;margin-bottom:1.1rem}
 .ft-cl{display:flex;align-items:center;gap:.45rem;font-size:.78rem;margin-bottom:.38rem}
@@ -672,7 +677,7 @@ footer{background:#0F1623;color:rgba(255,255,255,.45);padding:4rem 0 2rem}
 /* KASHIDEKHO.COM BRAND NAVIGATION */
 #nav{height:72px;padding:0 clamp(1rem,3.5vw,3.5rem);background:rgba(248,244,236,.97);box-shadow:0 1px 0 rgba(31,42,68,.06)}
 .nav-logo{gap:.65rem;min-width:210px}
-.nav-lmark{width:40px;height:40px;font-size:.78rem;letter-spacing:.02em}
+.nav-lmark{width:40px;height:40px}.nav-lmark img{width:56px;height:56px}
 .nav-ltext{font-size:1.08rem;letter-spacing:-.01em}
 .nav-ltext span{font-size:.52rem;letter-spacing:.16em;margin-top:2px}
 .nav-links{gap:.05rem;margin:0 auto}
@@ -734,7 +739,8 @@ footer{background:#0F1623;color:rgba(255,255,255,.45);padding:4rem 0 2rem}
 .seo-link-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}.seo-link-card{display:flex;flex-direction:column;gap:.45rem;padding:1.2rem;background:#fff;border:1px solid var(--bd);border-radius:10px;color:var(--mn);text-decoration:none;transition:.25s}.seo-link-card:hover{transform:translateY(-3px);box-shadow:var(--sh);border-color:var(--gd)}.seo-link-card strong{font-family:"Playfair Display",serif;font-size:1.02rem}.seo-link-card span{font-size:.76rem;line-height:1.55;color:var(--mt)}
 .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;max-width:900px;margin:0 auto}.faq-item{border:1px solid var(--bd);border-radius:9px;padding:1rem 1.1rem;background:#fff}.faq-item summary{cursor:pointer;font-weight:700;color:var(--mn);font-size:.9rem}.faq-item p{margin:.8rem 0 0;color:var(--mt);font-size:.8rem;line-height:1.7}
 .proof-sec{background:var(--iv)}.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}.proof-card{background:#fff;border:1px solid var(--bd);border-radius:10px;padding:1.35rem}.proof-card b{font-size:.7rem;letter-spacing:.12em;color:var(--sf)}.proof-card h3{font-family:"Playfair Display",serif;color:var(--mn);font-size:1.1rem;margin:.6rem 0}.proof-card p{color:var(--mt);font-size:.78rem;line-height:1.65;margin:0}
-@media(max-width:900px){.seo-link-grid{grid-template-columns:1fr 1fr}.proof-grid{grid-template-columns:1fr 1fr}.faq-grid{grid-template-columns:1fr}}@media(max-width:560px){.seo-link-grid,.proof-grid{grid-template-columns:1fr}}
+@media(max-width:900px){.seo-link-grid{grid-template-columns:1fr 1fr}.proof-grid{grid-template-columns:1fr 1fr}.faq-grid{grid-template-columns:1fr}}@media(max-width:560px){.footer-brand-lockup{width:220px}}
+@media(max-width:560px){.seo-link-grid,.proof-grid{grid-template-columns:1fr}}
 </style>
 <style id="kashidekho-mobile-final-fix">
 /* FINAL MOBILE LAYOUT FIX */
@@ -931,7 +937,7 @@ html,body{width:100%;min-width:100%;margin:0;padding:0;overflow-x:hidden}
 </a>
 <nav aria-label="Primary navigation" id="nav">
 <a aria-label="KashiDekho.com home" class="nav-logo" href="#hero">
-<div class="nav-lmark">KD</div>
+<div class="nav-lmark"><img src="/kashidekho-mark.png" alt="KashiDekho logo mark"/></div>
 <div class="nav-ltext">KashiDekho<span>Experience Kashi</span></div>
 </a>
 <ul class="nav-links">
@@ -1301,7 +1307,7 @@ html,body{width:100%;min-width:100%;margin:0;padding:0;overflow-x:hidden}
 <div class="wrap">
 <div class="ft-grid">
 <div>
-<div class="nav-logo" style="margin-bottom:.8rem"><div class="nav-lmark">KD</div><div class="nav-ltext" style="--mn:#fff">KashiDekho<span>Experience Kashi</span></div></div>
+<div class="footer-brand-lockup"><img src="/kashidekho-lockup.png" alt="KashiDekho — Experience Kashi logo"/></div>
 <p class="ft-tagline">"Beyond Sightseeing,<br/>Experience Banaras"</p>
 <div class="ft-cl"><svg viewbox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.22 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.66-.65a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"></path></svg>+91 83188 93914</div>
 <div class="ft-cl"><svg viewbox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg><span data-contact="email">help@kashidekho.com</span></div>
